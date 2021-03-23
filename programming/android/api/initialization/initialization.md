@@ -11,7 +11,7 @@ breadcrumbText: Java
 
 ## Initialization and other basic settings
 
-- [`CameraEnhancer`](#CameraEnhancer-&-addCameraView)
+- [`CameraEnhancer`](#CameraEnhancer-and-addCameraView)
 - [`addCameraView`](#CameraEnhancer-&-addCameraView)
 - [`initLicenseFromLTS`](#initLicenseFromLTS)
 - [`getDeviceLevel`](#getDeviceLevel)
@@ -19,7 +19,7 @@ breadcrumbText: Java
 - [`getApiVersion`](#getApiVersion-&-setApiVersion)
 - [`setEnableBeepSound`](#setEnableBeepSound)
 
-### CameraEnhancer & addCameraView
+### CameraEnhancer and addCameraView
 
 These 2 APIs are created for the initialization of DCE. For more initialization detail please view [Android user guide]().
     
