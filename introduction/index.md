@@ -36,6 +36,6 @@ This documentation aims at helping you on learning, understanding and using Dyna
 
 ## Quick links
 - [Get and set up license](license/License.md)
-- [Programming guides](programming/index.md)
-- [Get help on debugging](trouble-shooting/index.md)
+- [Programming guides](../programming/index.md)
+- [Get help on debugging](../trouble-shooting/index.md)
 - [Contact us](../trouble-shooting/contact-us/index.md)
