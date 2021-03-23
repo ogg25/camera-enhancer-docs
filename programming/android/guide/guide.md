@@ -11,9 +11,9 @@ breadcrumbText: Java
 
 ## Quick access
 
-- [Installation]()
-- [Get start with DCE]()
-- [Set DCE in you DBR project]()
+- [Installation](#Installation)
+- [Get start with DCE](#Get-Start)
+- [Add DCE to your project](#Add-DCE-to-your-project)
 
 ## System Requirements
 
@@ -204,7 +204,7 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
 
 
 
-### Add DCE to your app
+## Add DCE to your project
 
 If you have a completed project and you want to add Dynamsoft Camera Enhancer into your app, the following guide might help you on quick installation. For Dynamsoft Barcode reader (DBR) developers, we provide following APIs in our 8.3+ version to easily set up DCE in your DBR project.
 
