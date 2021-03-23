@@ -24,7 +24,7 @@ breadcrumbText: Java (Android)
 
 ## Android Release Note:
 
-- [Android Release Note](release-note.md)
+- [Android Release Note](release-note/release-note.md)
 
 ## Online Store
 
