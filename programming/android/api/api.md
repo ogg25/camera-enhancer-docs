@@ -13,12 +13,12 @@ breadcrumbText: Java
 
 | Method | Description |
 |-----------------|---------------|
-| [`CameraEnhancer`](initialization/initialization.md#CameraEnhancer-&-addCameraView) | Initialize Camera Enhancer object |
-| [`addCameraView`](initialization/initialization.md#CameraEnhancer-&-addCameraView) | Add Camera View |
+| [`CameraEnhancer`](initialization/initialization.md#CameraEnhancer-and-addCameraView) | Initialize Camera Enhancer object |
+| [`addCameraView`](initialization/initialization.md#CameraEnhancer-and-addCameraView) | Add Camera View |
 |[`initLicenseFromLTS`](initialization/initialization.md#initLicenseFromLTS)| Init license from license tracking server |
 |[`getDeviceLevel`](initialization/initialization.md#getDeviceLevel)| Get device level |
-|[`setApiVersion`](initialization/initialization.md#getApiVersion-&-setApiVersion)| Set API version |
-|[`getApiVersion`](initialization/initialization.md#getApiVersion-&-setApiVersion)| Get current API version |
+|[`setApiVersion`](initialization/initialization.md#getApiVersion-and-setApiVersion)| Set API version |
+|[`getApiVersion`](initialization/initialization.md#getApiVersion-and-setApiVersion)| Get current API version |
 |[`setEnableBeepSound`](initialization/initialization.md#setEnableBeepSound)| Set enable beep sound true/false (Only for DBR) |
 
 ## Camera Setting
@@ -28,23 +28,23 @@ breadcrumbText: Java
 | Method | Description |
 |-----------------|---------------|
 | [`setErrorCode`](basic-settings/basic-settings.md#setErrorCode) | Set error code |
-| [`setCameraDesireState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-&-setCameraDesireState) | Set Camera on/off |
-| [`getCameraDesireState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-&-setCameraDesireState) | Get camera desired state |
-| [`getCameraCurrentState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-&-setCameraDesireState) | Get camera current state |
-| [`pauseCamera`](basic-settings/basic-settings.md#pauseCamera-&-resumeCamera) | Pause Camera |
-| [`resumeCamera`](basic-settings/basic-settings.md#pauseCamera-&-resumeCamera) | Resume Camera |
-| [`startScanning`](basic-settings/basic-settings.md#stopScanning-&-startScanning) | Start scanning |
-| [`stopScanning`](basic-settings/basic-settings.md#stopScanning-&-startScanning) | Stop scanning |
-| [`addCameraListener`](basic-settings/basic-settings.md#addCameraListener-&-removeCameraListener) | Add camera listener (on preview original, filtered or fast frames) |
-| [`removeCameraListener`](basic-settings/basic-settings.md#addCameraListener-&-removeCameraListener) | Remove camera listener |
-| [`setTorchDesiredState`](basic-settings/basic-settings.md#getTorchCurrentState-getTorchDesiredState-&-setTorchDesiredState) | Set torch state |
-| [`getTorchDesiredState`](basic-settings/basic-settings.md#getTorchCurrentState-getTorchDesiredState-&-setTorchDesiredState) | Get torch desired state |
-| [`getTorchCurrentState`](basic-settings/basic-settings.md#getTorchCurrentState-getTorchDesiredState-&-setTorchDesiredState) | Get torch current state |
+| [`setCameraDesireState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Set Camera on/off |
+| [`getCameraDesireState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera desired state |
+| [`getCameraCurrentState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera current state |
+| [`pauseCamera`](basic-settings/basic-settings.md#pauseCamera-and-resumeCamera) | Pause Camera |
+| [`resumeCamera`](basic-settings/basic-settings.md#pauseCamera-and-resumeCamera) | Resume Camera |
+| [`startScanning`](basic-settings/basic-settings.md#stopScanning-and-startScanning) | Start scanning |
+| [`stopScanning`](basic-settings/basic-settings.md#stopScanning-and-startScanning) | Stop scanning |
+| [`addCameraListener`](basic-settings/basic-settings.md#addCameraListener-and-removeCameraListener) | Add camera listener (on preview original, filtered or fast frames) |
+| [`removeCameraListener`](basic-settings/basic-settings.md#addCameraListener-and-removeCameraListener) | Remove camera listener |
+| [`setTorchDesiredState`](basic-settings/basic-settings.md#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState) | Set torch state |
+| [`getTorchDesiredState`](basic-settings/basic-settings.md#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState) | Get torch desired state |
+| [`getTorchCurrentState`](basic-settings/basic-settings.md#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState) | Get torch current state |
 | [`addTorchListener`](basic-settings/basic-settings.md#addTorchListener) | Add torch listener |
-| [`getCameraPosition`](basic-settings/basic-settings.md#getCameraPosition-&-switchCameraPosition) | Get current camera position |
-| [`switchCameraPosition`](basic-settings/basic-settings.md#getCameraPosition-&-switchCameraPosition) | Switch camera position front/back |
-| [`setResolution`](basic-settings/basic-settings.md#getResolution-&-setResolution) | Set resolution |
-| [`getResolution`](basic-settings/basic-settings.md#getResolution-&-setResolution) | Get current resolution setting |
+| [`getCameraPosition`](basic-settings/basic-settings.md#getCameraPosition-and-switchCameraPosition) | Get current camera position |
+| [`switchCameraPosition`](basic-settings/basic-settings.md#getCameraPosition-and-switchCameraPosition) | Switch camera position front/back |
+| [`setResolution`](basic-settings/basic-settings.md#getResolution-and-setResolution) | Set resolution |
+| [`getResolution`](basic-settings/basic-settings.md#getResolution-and-setResolution) | Get current resolution setting |
 
 ### Focus & Zoom setting
 

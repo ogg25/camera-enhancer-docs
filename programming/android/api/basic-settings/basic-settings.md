@@ -11,29 +11,29 @@ breadcrumbText: Java
 
 ## Camera settings - Basic Setting
 - [`setErrorCode`](#setErrorCode)
-- [`getCameraDesireState`](#getCameraCurrentState-getCameraDesireState-&-setCameraDesireState)
-- [`setCameraDesireState`](#getCameraCurrentState-getCameraDesireState-&-setCameraDesireState)
-- [`getCameraCurrentState`](#getCameraCurrentState-getCameraDesireState-&-setCameraDesireState)
-- [`pauseCamera`](#pauseCamera-&-resumeCamera)
-- [`resumeCamera`](#pauseCamera-&-resumeCamera)
-- [`startScanning`](#stopScanning-&-startScanning)
-- [`stopScanning`](#stopScanning-&-startScanning)
-- [`addCameraListener`](#addCameraListener-&-removeCameraListener)
-- [`removeCameraListener`](#addCameraListener-&-removeCameraListener)
-- [`setTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-&-setTorchDesiredState)
-- [`getTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-&-setTorchDesiredState)
-- [`getTorchCurrentState`](#getTorchCurrentState-getTorchDesiredState-&-setTorchDesiredState)
+- [`getCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
+- [`setCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
+- [`getCameraCurrentState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
+- [`pauseCamera`](#pauseCamera-and-resumeCamera)
+- [`resumeCamera`](#pauseCamera-and-resumeCamera)
+- [`startScanning`](#stopScanning-and-startScanning)
+- [`stopScanning`](#stopScanning-and-startScanning)
+- [`addCameraListener`](#addCameraListener-and-removeCameraListener)
+- [`removeCameraListener`](#addCameraListener-and-removeCameraListener)
+- [`setTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
+- [`getTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
+- [`getTorchCurrentState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
 - [`addTorchListener`](#addTorchListener)
-- [`getCameraPosition`](#getCameraPosition-&-switchCameraPosition)
-- [`switchCameraPosition`](#getCameraPosition-&-switchCameraPosition)
-- [`getResolution`](#getResolution-&-setResolution)
-- [`setResolution`](#getResolution-&-setResolution)
+- [`getCameraPosition`](#getCameraPosition-and-switchCameraPosition)
+- [`switchCameraPosition`](#getCameraPosition-and-switchCameraPosition)
+- [`getResolution`](#getResolution-and-setResolution)
+- [`setResolution`](#getResolution-and-setResolution)
 
 ### setErrorCode
 ```java
     mCamera.setErrorCode(true);
 ```
-### getCameraCurrentState, getCameraDesireState & setCameraDesireState
+### getCameraCurrentState, getCameraDesireState and setCameraDesireState
     
 Get camera current status (on/off). 
 ```java
@@ -55,7 +55,7 @@ Use `CameraState.CAMERA_STATE_ON` to set camera on and use `CameraState.CAMERA_S
     }
 ```
     
-### pauseCamera & resumeCamera
+### pauseCamera and resumeCamera
 Note: these APIs are created for pause & resume camera but camera module is still working when being paused. if you want to shut down camera module please use `stopScanning`.
 ```java
     try {
@@ -65,7 +65,7 @@ Note: these APIs are created for pause & resume camera but camera module is stil
         e.printStackTrace();
     }
 ```
-### stopScanning & startScanning
+### stopScanning and startScanning
 Contorl the stop & start of camera module.
 ```java
     try {
@@ -75,7 +75,7 @@ Contorl the stop & start of camera module.
         e.printStackTrace();
     }
 ```
-### addCameraListener & removeCameraListener
+### addCameraListener and removeCameraListener
 Add Camera Listener
 ```java
     mCamera.addCameraListener(new CameraListener() {
@@ -98,7 +98,7 @@ Remove Camera Listener
 ```java
     mCamera.removeCameraListener();
 ```
-### getTorchCurrentState, getTorchDesiredState & setTorchDesiredState
+### getTorchCurrentState, getTorchDesiredState and setTorchDesiredState
 
 Get current torch state (on/off)
 ```java
@@ -129,7 +129,7 @@ Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_
     });
 ```
 
-### getCameraPosition & switchCameraPosition
+### getCameraPosition and switchCameraPosition
 DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
 To get camera position:
 ```java
@@ -143,7 +143,7 @@ To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front 
         e.printStackTrace();
     }
 ```
-### getResolution & setResolution
+### getResolution and setResolution
 These APIs are created for you to get or change camera resolution settings. 
 ```java
     mCamera.getResolution();

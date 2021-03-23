@@ -12,11 +12,11 @@ breadcrumbText: Java
 ## Initialization and other basic settings
 
 - [`CameraEnhancer`](#CameraEnhancer-and-addCameraView)
-- [`addCameraView`](#CameraEnhancer-&-addCameraView)
+- [`addCameraView`](#CameraEnhancer-and-addCameraView)
 - [`initLicenseFromLTS`](#initLicenseFromLTS)
 - [`getDeviceLevel`](#getDeviceLevel)
-- [`setApiVersion`](#getApiVersion-&-setApiVersion)
-- [`getApiVersion`](#getApiVersion-&-setApiVersion)
+- [`setApiVersion`](#getApiVersion-and-setApiVersion)
+- [`getApiVersion`](#getApiVersion-and-setApiVersion)
 - [`setEnableBeepSound`](#setEnableBeepSound)
 
 ### CameraEnhancer and addCameraView
@@ -62,7 +62,7 @@ Get your device level. It will be helpful on automatically turn off DCE on high 
     mCamera.getDeviceLevel();
 ```
 
-### getApiVersion & setApiVersion
+### getApiVersion and setApiVersion
 
 Get and set API version
 ```java
