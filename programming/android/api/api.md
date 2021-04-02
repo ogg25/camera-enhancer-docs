@@ -8,6 +8,11 @@ breadcrumbText: Java
 ---
 
 # Dynamsoft Camera Enhancer - Android API references
+- [Initialization](#Initialization-License-and-other-basic-settings)
+- [Camera Setting](#Camera-Setting)
+    - [Basic Camera Setting](#Basic-camera-setting)
+    - [Focus & Zoom Setting](#Focus-and-Zoom-setting)
+- [Filter Setting](#Filter-Setting)
 
 ## Initialization, License and other basic settings
 
@@ -46,7 +51,7 @@ breadcrumbText: Java
 | [`setResolution`](basic-settings/basic-settings.md#getResolution-and-setResolution) | Set resolution |
 | [`getResolution`](basic-settings/basic-settings.md#getResolution-and-setResolution) | Get current resolution setting |
 
-### Focus & Zoom setting
+### Focus and Zoom setting
 
 | Method | Description |
 |-----------------|---------------|

@@ -11,18 +11,25 @@ breadcrumbText: Java
 
 ## Overview of Dynamsoft Camera Enhancer
 
-Dynamsoft Camera Enhancer (DCE) is an SDK specifically designed for improving the accuracy and efficiency of decode and other camera related works. DCE contains a developed camera module with video frame filter function. When DCE is working, only high quality frames will be transfered from your camera to your decode program. This process can largely reduce the rate of misreading. You can start your camera related app development with DCE and also you can install it into your developed app to improve its performance. 
+Dynamsoft Camera Enhancer (DCE) is an SDK specifically designed for improving video frame decoding. Before video frames is transfered to decode process, DCE will do a series of pre-treatment including camera control and frame filter. This process can largely reduce the rate of misreading. You can start your decode program development with DCE and also you can import DEC algorithm in your developed app to improve its performance. 
 
 ## Main features
 
-- Improve camera working efficiency (Improve efficiency of scanning and barcode reading)
-    - Reduce hardware influence
-    - Reduce scaning and reading time consumption
-    - Optimize storage structure
-- Includes an completely developed camera module.
-    - Save time on development. Developers don't need to spend time on creating new camera module
-- Be friendly to all systems
-    - DCE can provide assistance to all camera related softwares not only for Dynamsoft products
+- Auto focus
+- Sensor control
+- frame filter
+- Auto zoom
+
+## Principle
+Sensor control, auto focus and frame filter are the core principle of Dynamsoft Camera Enhancer. Sensor control and auto focus are aimed at creating higher quality frames by controlling camera. These two process are making sure the camera can capture frames as clear as possible. 
+The following action, Frame filter, give all frames captured by camera a quick scan to detect its clarity degree. 
+
+
+
+<div align="center">
+    <p><img src="overview/assets/DCE-process.png" width="50%" alt="How DCE works"></p>
+    <p>How Principle</p>
+</div>
 
 ## Programming language 
 

@@ -27,7 +27,7 @@ breadcrumbText: Java
 
 2. Put the `.aar` file under the dictionary `/app/libs` in your project. 
 
-3. Add following code into `build.gradle(Module: app)`
+3. Add following code into `build.gradle(Module: app)`.
     ```Java
     repositories {
         flatDir {
@@ -38,14 +38,14 @@ breadcrumbText: Java
 
 4. Also in `build.gradle(Module: app)` add reference in dependencies:
     ```java
-        implementation(name: 'DynamsoftBarcodeReaderAndroid', ext: 'aar')
+        implementation(name: 'DynamsoftCameraEnhancer-release', ext: 'aar')
     ```
 
 5. Sync the project with gradle and after that `DynamsoftCameraEnhancer-release.aar` is added to your project.
 
 ## License initialization
 
-To initialize your license, you have to connect to the License Tracking Server for online verification. There is the code for you to initialize your license. 
+To initialize your license, you are suggested to connect to the License Tracking Server (LTS) for online verification. There is the code for you to initialize your license from LTS. 
 ```Java
     CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
     info.sessionPassword = "******";
@@ -91,9 +91,15 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
             //Initialize your camera
             mCamera = new CameraEnhancer(MainActivity.this);
             mCamera.addCameraView(cameraView);
-            //Set camera state on
+            //Set camera on
             try {
                 mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
+            } catch (CameraEnhancerException e) {
+                e.printStackTrace();
+            }
+            //Start Scan
+            try {
+                mCamera.startScanning();
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
@@ -106,7 +112,7 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
         <uses-permission android:name="android.permission.CAMERA" />
     ```
 
-4. Run the project and now your camera module is running. If you have any question on the program, you can [download samples]() to have better understandings.
+4. Run the project and now your camera module is running. If you have any question on the program, you can view `samples` we provided in the package you download to have better understandings. Also, you can get help from our online customer service.
 
 ### Quick settings for DCE
 
@@ -118,43 +124,43 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         CameraEnhancer mCamera;
         CameraView cameraView;
         protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_ACTION_BAR);
-        setContentView(R.layout.activity_main);
-        cameraView = findViewById(R.id.cameraView);
-        mCamera = new CameraEnhancer(MainActivity.this);
-        mCamera.addCameraView(cameraView);
-        try {
-            mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
-        } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-        }
-        //License Initialization
-        CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
-        info.sessionPassword = "******";
-        info.handshakeCode ="******";
-        mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
-            @Override
-            public void LTSLicenseVerificationCallback(boolean b, Exception e) {
-                if(!b && e != null){
-                    e.printStackTrace();
-                }
+            super.onCreate(savedInstanceState);
+            requestWindowFeature(Window.FEATURE_ACTION_BAR);
+            setContentView(R.layout.activity_main);
+            cameraView = findViewById(R.id.cameraView);
+            mCamera = new CameraEnhancer(MainActivity.this);
+            mCamera.addCameraView(cameraView);
+            try {
+                mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
+            } catch (CameraEnhancerException e) {
+                e.printStackTrace();
             }
-        });
-        //Start camera scanning
-        try {
-            mCamera.startScanning();
-        } catch (CameraEnhancerException e) {
-            e.printStackTrace();
+            //License Initialization
+            CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
+            info.sessionPassword = "******";
+            info.handshakeCode ="******";
+            mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+                    if(!b && e != null){
+                        e.printStackTrace();
+                    }
+                }
+            });
+            //Start camera scanning
+            try {
+                mCamera.startScanning();
+            } catch (CameraEnhancerException e) {
+                e.printStackTrace();
+            }
+            //FIlter, zoom & Focus settings
+            mCamera.setErrorCode(true);        
+            mCamera.setSensorControl(true);
+            mCamera.setAutoZoom(true);
+            mCamera.setForceAutoFocus(true);
+            mCamera.setUseFrameFilter(true);
+            mCamera.setFastMode(true);
         }
-        //FIlter, zoom & Focus settings
-        mCamera.setErrorCode(true);        
-        mCamera.setSensorControl(true);
-        mCamera.setAutoZoom(true);
-        mCamera.setForceAutoFocus(true);
-        mCamera.setUseFrameFilter(true);
-        mCamera.setFastMode(true);
-    }
     ```
 
 2. Camera setting
@@ -201,16 +207,13 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         mCamera.setUseFrameFilter(ifNeedFilter);
     ```
 
-
-
-
 ## Add DCE to your project
 
 If you have a completed project and you want to add Dynamsoft Camera Enhancer into your app, the following guide might help you on quick installation. For Dynamsoft Barcode reader (DBR) developers, we provide following APIs in our 8.3+ version to easily set up DCE in your DBR project.
 
 |API names|Description|
 |---------|-----------|
-|`setDCE`||
-|`startDCE`||
-|`endDCE`||
-|`setDCEresultCallback`||
+| `setDCE` |  |
+| `startDCE` |  |
+| `endDCE` |  |
+| `setDCEresultCallback` |  |
