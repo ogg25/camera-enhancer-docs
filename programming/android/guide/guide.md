@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Android
-description: This is the documentation - Guide on Android page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Guide on Android
+title: Dynamsoft Camera Enhancer - Guide on Java(Android)
+description: This is the documentation - Guide on Java(Android) page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Guide on Java(Android)
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: Java(Android)
 ---
 
-# Dynamsoft Camera Enhancer - Guide on Android
+# Dynamsoft Camera Enhancer - Guide on Java(Android)
 
 ## Quick access
 
@@ -23,7 +23,7 @@ breadcrumbText: Java
 
 ## Installation
 
-1. [Download 30 days free trial]() to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancer-release.aar`. 
+1. [Download Dynamsoft Camera Enhancer]() from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancer-release.aar`. 
 
 2. Put the `.aar` file under the dictionary `/app/libs` in your project. 
 
@@ -119,7 +119,7 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
 In this section, you can find some useful APIs that helps you on initialize DCE efficiently.
 
 1. Setting Template
-    The following template of DCE setting is strongly recommended to be applicated in your first attempt on DCE. This setting will be friendly to the majority of mobile devices. 
+    The following template is strongly recommended to be applicated in your first attempt on DCE. This template will be friendly to the majority of mobile devices. By using and optimizing on this template, you will quickly be familiar with DCE. 
     ```java
         CameraEnhancer mCamera;
         CameraView cameraView;
@@ -158,31 +158,35 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             mCamera.setSensorControl(true);
             mCamera.setAutoZoom(true);
             mCamera.setForceAutoFocus(true);
-            mCamera.setUseFrameFilter(true);
             mCamera.setFastMode(true);
         }
     ```
 
-2. Camera setting
+2. Fast mode setting
 
-    DCE will use back camera by default. You can use `switchCameraPosition` to change this setting. `CameraPosition.CAMERA_POSITION_USER` stands for front camera and `CameraPosition.CAMERA_POSITION_WORLD` stands for back camera. There is a sample for how you can write a function to switch your camera position. 
+    DCE fast mode is specially designed for accelerating on single barcode decoding. This mode will reduce the time consumption on single barcode decoding by 50%. Fast mode is strongly recommended to be enabled on single barcode decoding. To turn on Fast mode, you can use `setFastMode` to make the setting:
     
     ```Java
-        public void switch_camera_position(View view){
-        if(mCamera.getCameraPosition() == CameraPosition.CAMERA_POSITION_WORLD){
-            try {
-                mCamera.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_ACTION_BAR);
+        setContentView(R.layout.activity_main);
+        cameraView = findViewById(R.id.cameraView);
+        mCamera = new CameraEnhancer(MainActivity.this);
+        mCamera.addCameraView(cameraView);
+        try {
+            mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
-        }
-        else {
-            try {
-                mCamera.switchCameraPosition(CameraPosition.CAMERA_POSITION_WORLD);
+        try {
+                mCamera.startScanning();
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
-        }
+
+        //***************Turn on Fast mode**********************
+        mCamera.setFastMode(true);
     }
     ```
 

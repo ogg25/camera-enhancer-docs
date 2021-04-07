@@ -25,6 +25,7 @@ breadcrumbText: Java
 |[`setApiVersion`](initialization/initialization.md#getApiVersion-and-setApiVersion)| Set API version |
 |[`getApiVersion`](initialization/initialization.md#getApiVersion-and-setApiVersion)| Get current API version |
 |[`setEnableBeepSound`](initialization/initialization.md#setEnableBeepSound)| Set enable beep sound true/false (Only for DBR) |
+| [`updateCameraSettingFromJson`](filter-setting/filter.md#updateCameraSettingFromJson) | Update camera filter and focus settings from Json |
 
 ## Camera Setting
 
@@ -69,6 +70,5 @@ breadcrumbText: Java
 | [`setUseFrameFilter`](filter-setting/filter.md#setUseFrameFilter) | Set use frame filter true/false |
 | [`setMaxFrameRate`](filter-setting/filter.md#setMaxFrameRate) | Set max frame rate |
 | [`setSensorControl`](filter-setting/filter.md#setSensorControl) | Set sensor control true/false |
-| [`updateCameraSettingFromJson`](filter-setting/filter.md#updateCameraSettingFromJson) | Update camera filter and focus settings from Json |
 | [`setFastMode`](filter-setting/filter.md#setFastMode) | Set fast mode |
 | [`setAutoModeLevelParam`](filter-setting/filter.md#setAutoModeLevelParam) | Set auto mode level parameter |
