@@ -30,7 +30,7 @@ Turn on(off) DCE filter (recommended to be true).
 Set max frame rate.
 ```java
     try {
-        mCamera.setMaxFrameRate(int);
+        mCamera.setMaxFrameRate(24);
     } catch (CameraEnhancerException e) {
         e.printStackTrace();
     } 

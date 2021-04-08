@@ -19,7 +19,6 @@ breadcrumbText: Java (Android)
 
 ## Android Demo:
 
-- [Camera Enhancer X (Android)]()
 - [Barcode scanner x (Android)]()
 
 ## Android Release Note:

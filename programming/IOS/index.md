@@ -19,7 +19,6 @@ breadcrumbText: Objective-C & Swift (IOS)
 
 ## Android Demo:
 
-- [Camera Enhancer X (IOS)]()
 - [Barcode scanner x (IOS)]()
 
 ## Objective-C & Swift Release Note:

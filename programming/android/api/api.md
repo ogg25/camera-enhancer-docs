@@ -34,8 +34,8 @@ breadcrumbText: Java
 | Method | Description |
 |-----------------|---------------|
 | [`setErrorCode`](basic-settings/basic-settings.md#setErrorCode) | Set error code |
-| [`setCameraDesireState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Set Camera on/off |
-| [`getCameraDesireState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera desired state |
+| [`setCameraDesiredState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Set Camera on/off |
+| [`getCameraDesiredState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera desired state |
 | [`getCameraCurrentState`](basic-settings/basic-settings.md#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera current state |
 | [`pauseCamera`](basic-settings/basic-settings.md#pauseCamera-and-resumeCamera) | Pause Camera |
 | [`resumeCamera`](basic-settings/basic-settings.md#pauseCamera-and-resumeCamera) | Resume Camera |

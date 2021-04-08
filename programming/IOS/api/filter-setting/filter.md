@@ -42,8 +42,8 @@ Turn on(off) DCE filter (recommended to be true).
 Set max frame rate.
 
 ```objectivec
-    [dce setMaxFrameRate:2];
+    [dce setMaxFrameRate:24];
 ```
 ```Swift
-    dce.setUseFrameFilter(true);
+    dce.setMaxFrameRate(24);
 ```

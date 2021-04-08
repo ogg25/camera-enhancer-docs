@@ -13,6 +13,7 @@ breadcrumbText: Objective-C & Swift
 
 - [Installation](#Installation)
 - [Get start with DCE](#Get-Start)
+    - [Quick Setup](#Quick-Settings-for-DCE)
 - [Add DCE to your project](#Add-DCE-to-your-project)
 
 ## System Requirements
@@ -53,6 +54,8 @@ If you have completed the installation of DCE, you can add following code to you
 
 Objective-C
 ```objectivec
+#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+
 @interface ViewController ()
 @end
 @implementation ViewController

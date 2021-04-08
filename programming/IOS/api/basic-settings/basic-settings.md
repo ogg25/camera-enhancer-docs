@@ -100,11 +100,12 @@ Get camera desired status (on/off).
     dce.getCameraDesiredState();
 ```
     
-Use `DCEnhancerStateOn` to set camera on and use `DCEnhancerStateOff` to set it off.
+Use `This content will be changed` to set camera on and use `This content will be changed` to set it off.
 
 ```objectivec
     [dce setCameraDesiredState:DCEnhancerStateOn];
 ```
+Use `This content will be changed` to set camera on and use `This content will be changed` to set it off.
 ```Swift
     dce.setCameraDesiredState(CameraState.off);
 ```
@@ -127,8 +128,8 @@ Note: these APIs are created for pause & resume camera but camera module is stil
 Contorl the stop & start of camera module.
 
 ```objectivec
-    [dce stopScanning];
     [dce startScanning];
+    [dce stopScanning];
 ```
 ```Swift
     dce.startScanning();
@@ -175,7 +176,7 @@ Get desired torch state (on/off)
     dce.getTorchDesiredState();
 ```
 
-Use `DCETorchStateOn` to set torch on and use `DCETorchStateOff` to set it off.
+Use `<!--This content will be changed-->` to set torch on and use `<!--This content will be changed-->` to set it off.
 
 ```objectivec
     [dce setTorchDesiredState:DCETorchStateOn];
