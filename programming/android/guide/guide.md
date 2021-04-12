@@ -45,7 +45,8 @@ breadcrumbText: Java(Android)
 
 ## License initialization
 
-To initialize your license, you are suggested to connect to the License Tracking Server (LTS) for online verification. There is the code for you to initialize your license from LTS. 
+If you have already got a full key license from `License Tracking Server`, you can use the following code to set it up in your project:
+
 ```Java
     CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
     info.sessionPassword = "******";
@@ -59,6 +60,15 @@ To initialize your license, you are suggested to connect to the License Tracking
         }
     });
 ```
+
+If you don't have a full key license:
+
+- 7 days trial license is available for new devices that have never setup Dynamsoft Camera Enhancer.
+- To extend your trial license, please send "Private trial" to trial@dynamsoft.com to get 30 days private trial key.
+
+Or you can
+
+- [Learn more about full key license]()
 
 ## Get Start
 
@@ -77,32 +87,44 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
             tools:layout_editor_absoluteY="0dp" />
     ```
 
-2. Set up for your camera in the cameraView section. Please add following code in your activity for camera.
+2. Set up for your camera in the `cameraView` section. Please add following code in your activity for camera. The following code is an example of setting camera view in `MainActivity`
 
     ```java
-            //Add two parameters in your Activity
-            CameraEnhancer mCamera;
-            CameraView cameraView;
-    ```
-    ``` java
-            //To initialize your cameraView, please add following codes into your onCreate
-            //Please fill in the id you created for your camera view, in our sample, it is "cameraView"
+    import com.dynamsoft.dce.CameraEnhancer;
+    import com.dynamsoft.dce.CameraEnhancerException;
+    import com.dynamsoft.dce.CameraState;
+    import com.dynamsoft.dce.CameraView;
+    //You can change the MainActivity to your prefer Activity 
+    public class MainActivity extends AppCompatActivity {
+        //Here will add License intialization
+        CameraEnhancer mCamera;
+        CameraView cameraView;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            //******************************************************
+            //Remember to use your personal settings in this section
+            //******************************************************            
+            setContentView(R.layout.activity_main);
             cameraView = findViewById(R.id.cameraView);
-            //Initialize your camera
             mCamera = new CameraEnhancer(MainActivity.this);
+            //******************************************************
+            //******************************************************
             mCamera.addCameraView(cameraView);
-            //Set camera on
+            //Turn on camera
             try {
                 mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
-            //Start Scan
+            //Start scanning
             try {
                 mCamera.startScanning();
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
+        }
+    }
     ```
 
 3. Remember to add use permission to your project.
@@ -153,7 +175,7 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
-            //FIlter, zoom & Focus settings
+            //Filter, zoom & Focus settings
             mCamera.setErrorCode(true);        
             mCamera.setSensorControl(true);
             mCamera.setAutoZoom(true);

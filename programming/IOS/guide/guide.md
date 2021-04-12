@@ -44,6 +44,37 @@ import DynamsoftCameraEnhancer
 
 ## License Initialization
 
+To setup DCE license by License Tracking Server
+
+Objective-C:
+```objectivec
+    DynamsoftCameraEnhancer *dce;
+    iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+    lts.handshakeCode = @"Your handshakeCode";
+    lts.sessionPassword = @"******";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:lts verificationDelegate:self];
+    - (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+    {
+            //TODO add your code for license verification
+    }
+```
+Swift:
+```Swift
+    let lts = iCameraLTSConnectionParameters()
+    lts.handshakeCode = "Your handshakeCode"
+    lts.mainServerURL = "https://mtplres.dynamsoft.com"
+    dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+```
+
+If you don't have a full key license:
+
+- 7 days trial license is available for new devices that have never setup Dynamsoft Camera Enhancer.
+- To extend your trial license, please send "Private trial" to trial@dynamsoft.com to get 30 days private trial key.
+
+Or you can
+
+- [Learn more about full key license]()
+
 ## Get Start
 
 ### Create a Camera Module
@@ -72,15 +103,27 @@ Objective-C
 Swift:
 ```Swift
 import DynamsoftCameraEnhancer
+
 class ViewController: UIViewController {
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECaptureView! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        do {
-            let dce = DynamsoftCameraEnhancer.init(view:);
-            dce.setCameraDesiredState(CameraState.on);
-            dce.startScanning();
-        }
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.isEnable = true
+    }
+    func configurationDCE() {
+        dceDate = NSDate()
+        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView.addOverlay(color, fill: color)
+        self.view.insertSubview(dceView, belowSubview: displayView)
+        //Setup license
+        let lts = iCameraLTSConnectionParameters()
+        lts.handshakeCode = "100014901-8002module-test"
+        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
     }
 }
 ```
@@ -110,21 +153,45 @@ Objective-C:
     [dce enableAutoZoom];
     [dce setForceAutoFocus:true];
 
-    dce.isEnable = false;
+    dce.isEnable = true;
 }
 ```
 
 Swift:
 ```Swift
-    do {
-        let dce = DynamsoftCameraEnhancer.init(view:);
-        dce.setCameraDesiredState(CameraState.on);
-        dce.startScanning();
-        dce.setFastMode(true);
-        dce.setForceAutoFocus(true);
-        dce.setUseFrameFilter(true);
-        dce.enableAutoZoom = true;
+import DynamsoftCameraEnhancer
+
+class ViewController: UIViewController {
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECaptureView! = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Turn on camera
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.isEnable = true
     }
+    func configurationDCE() {
+        dceDate = NSDate()
+        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView.addOverlay(color, fill: color)
+        self.view.insertSubview(dceView, belowSubview: displayView)
+        
+        //Setup license
+        let lts = iCameraLTSConnectionParameters()
+        lts.handshakeCode = "100014901-8002module-test"
+        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        
+        //DCE recommended settings 
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.startScanning()
+        dce.setFastMode(true)
+        dce.setUseFrameFilter(true)
+        dce.setForceAutoFocus(true)
+        dce.enableAutoZoom = true
+    }
+}
 ```
 2. Fast mode setting
 
@@ -147,12 +214,31 @@ Objective-C
 
 Swift:
 ```Swift
-    do {
-        let dce = DynamsoftCameraEnhancer.init(view:);
-        dce.setCameraDesiredState(CameraState.on);
-        dce.startScanning();
-        dce.setFastMode(true);
+import DynamsoftCameraEnhancer
+
+class ViewController: UIViewController {
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECaptureView! = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.isEnable = true
     }
+    func configurationDCE() {
+        dceDate = NSDate()
+        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView.addOverlay(color, fill: color)
+        self.view.insertSubview(dceView, belowSubview: displayView)
+        let lts = iCameraLTSConnectionParameters()
+        lts.handshakeCode = "100014901-8002module-test"
+        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.startScanning()
+        //Turn on fast mode
+        dce.setFastMode(true)
+    }
+}
 ```
 
 3. Filter, Focus and Zoom setting
@@ -179,9 +265,26 @@ Objective-C
 
 Swift:
 ```Swift
-    do {
-        let dce = DynamsoftCameraEnhancer.init(view:)
-        dce.setCameraDesiredState(CameraState.on)
+import DynamsoftCameraEnhancer
+
+class ViewController: UIViewController {
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECaptureView! = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.isEnable = true
+    }
+    func configurationDCE() {
+        dceDate = NSDate()
+        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView.addOverlay(color, fill: color)
+        self.view.insertSubview(dceView, belowSubview: displayView)
+        let lts = iCameraLTSConnectionParameters()
+        lts.handshakeCode = "100014901-8002module-test"
+        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.startScanning()
         //Turn on/off auto focus
         dce.setForceAutoFocus(true)
@@ -190,6 +293,7 @@ Swift:
         //Turn on/off auto zoom
         dce.enableAutoZoom = true
     }
+}
 ```
 
 Specially, for auto focus there are APIs `setAutoFocusPoint` and `manualFocusOnce` designed for changing the default focus point. The value of this property is a CGPoint that determines the receiver's focus point of interest, if it has one. A value of (0,0) indicates that the camera should focus on the top left corner of the image, while a value of (1,1) indicates that it should focus on the bottom right. The default value is (0.5,0.5).
