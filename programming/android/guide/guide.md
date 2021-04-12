@@ -113,7 +113,7 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
             mCamera.addCameraView(cameraView);
             //Turn on camera
             try {
-                mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
+                mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
@@ -153,7 +153,7 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             mCamera = new CameraEnhancer(MainActivity.this);
             mCamera.addCameraView(cameraView);
             try {
-                mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
+                mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
@@ -197,7 +197,7 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         mCamera = new CameraEnhancer(MainActivity.this);
         mCamera.addCameraView(cameraView);
         try {
-            mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
+            mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             } catch (CameraEnhancerException e) {
                 e.printStackTrace();
             }
