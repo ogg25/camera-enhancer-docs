@@ -10,6 +10,13 @@ breadcrumbText: Java
 # Dynamsoft Camera Enhancer - Android API references
 
 ## Camera settings - Basic Setting
+
+- [`getDeviceLevel`](#getDeviceLevel)
+- [`setApiVersion`](#getApiVersion-and-setApiVersion)
+- [`getApiVersion`](#getApiVersion-and-setApiVersion)
+- [`setEnableBeepSound`](#setEnableBeepSound)
+- [`updateCameraSettingFromJson`](#updateCameraSettingFromJson-and-updateCameraSettingFromFile)
+- [`updateCameraSettingFromFile`](#updateCameraSettingFromJson-and-updateCameraSettingFromFile)
 - [`setErrorCode`](#setErrorCode)
 - [`getCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
 - [`setCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
@@ -28,6 +35,34 @@ breadcrumbText: Java
 - [`switchCameraPosition`](#getCameraPosition-and-switchCameraPosition)
 - [`getResolution`](#getResolution-and-setResolution)
 - [`setResolution`](#getResolution-and-setResolution)
+
+### getDeviceLevel
+
+Get your device level. It will be helpful on automatically turn off DCE on high level mobile devices. 
+```java
+    mCamera.getDeviceLevel();
+```
+
+### getApiVersion and setApiVersion
+
+Get and set API version
+```java
+    mCamera.getApiVersion();
+    mCamera.setApiVersion(int);
+```
+
+### setEnableBeepSound
+
+Turn on beep sound. Currently only available for DBR users.
+```java
+    mCamera.setEnableBeepSound(true);
+```
+
+### updateCameraSettingFromJson and updateCameraSettingFromFile
+
+```Java
+    
+```
 
 ### setErrorCode
 ```java
