@@ -1,6 +1,6 @@
 repositoryUrl: https://github.com/Dynamsoft/camera-enhancer-docs/blob/master
 repository: Dynamsoft/camera-enhancer-docs
-docFullPath: https://www.dynamsoft.com/camera-enhancer/docs/
+docFullPath: https://www.dynamsoft.com/camera-enhancer/docs
 firstLevelUrl: /camera-enhancer/docs
 docHomePage: /camera-enhancer/docs/programming/
 
@@ -13,29 +13,29 @@ parameters: /camera-enhancer/docs/parameters/
 trouble-shooting: /camera-enhancer/docs/trouble-shooting/
 
 ios: /camera-enhancer/docs/programming/ios/
-ios-guide: /camera-enhancer/docs/programming/ios/guide
-ios-api: /camera-enhancer/docs/programming/ios/api
-ios-basic-setting: /camera-enhancer/docs/programming/ios/api/basic-setting
-ios-filter-setting: /camera-enhancer/docs/programming/ios/api/filter-setting
-ios-zoom-setting: /camera-enhancer/docs/programming/ios/api/zoom-setting
-ios-release-note: /camera-enhancer/docs/programming/ios/release-note
+ios-guide: /camera-enhancer/docs/programming/ios/guide/
+ios-api: /camera-enhancer/docs/programming/ios/api/
+ios-basic-setting: /camera-enhancer/docs/programming/ios/api/basic-setting/
+ios-filter-setting: /camera-enhancer/docs/programming/ios/api/filter-setting/
+ios-zoom-setting: /camera-enhancer/docs/programming/ios/api/zoom-setting/
+ios-release-note: /camera-enhancer/docs/programming/ios/release-note/
 
-introduction-license: /camera-enhancer/docs/introduction/license
+introduction-license: /camera-enhancer/docs/introduction/license/
 
 android: /camera-enhancer/docs/programming/android/
-android-guide: /camera-enhancer/docs/programming/android/guide
-android-api: /camera-enhancer/docs/programming/android/api
-android-basic-setting: /camera-enhancer/docs/programming/android/api/basic-setting
-android-filter-setting: /camera-enhancer/docs/programming/android/api/filter-setting
-android-zoom-setting: /camera-enhancer/docs/programming/android/api/zoom-setting
-android-release-note: /camera-enhancer/docs/programming/android/release-note
+android-guide: /camera-enhancer/docs/programming/android/guide/
+android-api: /camera-enhancer/docs/programming/android/api/
+android-basic-setting: /camera-enhancer/docs/programming/android/api/basic-setting/
+android-filter-setting: /camera-enhancer/docs/programming/android/api/filter-setting/
+android-zoom-setting: /camera-enhancer/docs/programming/android/api/zoom-setting/
+android-release-note: /camera-enhancer/docs/programming/android/release-note/
 
 reference: /camera-enhancer/docs/parameters/reference/
 enumerations: /camera-enhancer/docs/parameters/enumerations/
 
-trouble-shooting: /camera-enhancer/docs/trouble-shooting
-license-error: /camera-enhancer/docs/trouble-shooting/license-error
-contact-us: /camera-enhancer/docs/trouble-shooting/contact-us
+trouble-shooting: /camera-enhancer/docs/trouble-shooting/
+license-error: /camera-enhancer/docs/trouble-shooting/license-error/
+contact-us: /camera-enhancer/docs/trouble-shooting/contact-us/
 
 assets: /camera-enhancer/docs/assets/
 
