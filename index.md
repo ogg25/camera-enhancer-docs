@@ -12,19 +12,19 @@ breadcrumbText: Java
 ## Introduction
 
 - [Overview]({{site.introduction}})
-- [License introduction](/introduction/license/License.md)
+- [License introduction]({{site.introduction-license}}License.md)
 
 ## Programming
 
-- [Android](/programming/android/index.md)
-- [iOS](/programming/IOS/index.md)
+- [Android]({{site.android}})
+- [iOS]({{site.ios}})
 
 ## Parameters
 
-- [Parameter reference](/parameters/reference/index.md)
-- [Enumerations](/parameters/enumerations/index.md)
+- [Parameter reference]({{site.reference}})
+- [Enumerations]({{site.enumerations}})
 
 ## Trouble shooting
 
-- [License error](/trouble-shooting/license-error/index.md)
-- [Contact us](/trouble-shooting/contact-us/index.md)
+- [License error]({{site.license-error}})
+- [Contact us]({{site.contact-us}})
