@@ -1,0 +1,27 @@
+repositoryUrl: https://github.com/Dynamsoft/camera-enhancer-docs
+repository: Dynamsoft/camera-enhancer-docs
+docFullPath: https://www.dynamsoft.com/camera-enhancer/docs/
+firstLevelUrl: /camera-enhancer-docs
+docHomePage: /barcode-reader/programming/
+
+productUrl: https://www.dynamsoft.com/Products/camera-enhancer.aspx
+productName: Dynamsoft Camera Enhancer
+
+introduction: /camera-enhancer/introduction/
+programming: /camera-enhancer/programming/
+parameters: /camera-enhancer/parameters/
+trouble-shooting: /camera-enhancer/trouble-shooting/
+
+oc: /camera-enhancer/programming/IOS/
+
+android: /camera-enhancer/programming/android/
+
+reference: /camera-enhancer/parameters/reference/
+enumerations: /camera-enhancer/parameters/enumerations/
+
+license-error: /camera-enhancer/trouble-shooting/license-error
+contact-us: /camera-enhancer/trouble-shooting/contact-us
+
+baseurl: "/camera-enhancer"
+plugins:
+  - jemoji
