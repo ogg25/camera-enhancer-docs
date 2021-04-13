@@ -9,5 +9,5 @@ breadcrumbText: Java
 
 # Dynamsoft Camera Enhancer - Trouble Shooting
 
-- [License issue](license-error/index.md)
-- [Contact us](contact-us/index.md)
+- [License issue]({{site.license-error}})
+- [Contact us]({{site.contact-us}})

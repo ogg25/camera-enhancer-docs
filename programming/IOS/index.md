@@ -11,11 +11,11 @@ breadcrumbText: Objective-C & Swift (IOS)
 
 ## Getting start:
 
-- [User guide for Objective-C & Swift]({{site.ios-guide}}guide.md)
+- [User guide for Objective-C & Swift]({{site.ios-guide}}guide.html)
 
 ## API reference for Objective-C & Swift Edition:
 
-- [API reference]({{site.ios-api}}api.md)
+- [API reference]({{site.ios-api}}api.html)
 
 ## iOS Demo:
 
@@ -23,4 +23,4 @@ breadcrumbText: Objective-C & Swift (IOS)
 
 ## Objective-C & Swift Release Note:
 
-- [Objective-C & Swift Release Note]({{site.ios-release-note}}release-note.md)
+- [Objective-C & Swift Release Note]({{site.ios-release-note}}release-note.html)
