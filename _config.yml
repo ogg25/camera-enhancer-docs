@@ -1,27 +1,29 @@
-repositoryUrl: https://github.com/Dynamsoft/camera-enhancer-docs/blob/master
+repositoryUrl: https://github.com/Dynamsoft/camera-enhancer-docs/tree/henry
 repository: Dynamsoft/camera-enhancer-docs
 docFullPath: https://www.dynamsoft.com/camera-enhancer/docs/
 firstLevelUrl: /camera-enhancer/docs
-docHomePage: /camera-enhancer/programming/
+docHomePage: /camera-enhancer/docs/programming/
 
 productUrl: https://www.dynamsoft.com/Products/camera-enhancer.aspx
 productName: Dynamsoft Camera Enhancer
 
-introduction: /camera-enhancer/introduction/
-programming: /camera-enhancer/programming/
-parameters: /camera-enhancer/parameters/
-trouble-shooting: /camera-enhancer/trouble-shooting/
+introduction: /camera-enhancer/docs/introduction/
+programming: /camera-enhancer/docs/programming/
+parameters: /camera-enhancer/docs/parameters/
+trouble-shooting: /camera-enhancer/docs/trouble-shooting/
 
-oc: /camera-enhancer/programming/IOS/
+oc: /camera-enhancer/docs/programming/IOS/
 
-android: /camera-enhancer/programming/android/
+android: /camera-enhancer/docs/programming/android/
 
-reference: /camera-enhancer/parameters/reference/
-enumerations: /camera-enhancer/parameters/enumerations/
+reference: /camera-enhancer/docs/parameters/reference/
+enumerations: /camera-enhancer/docs/parameters/enumerations/
 
-license-error: /camera-enhancer/trouble-shooting/license-error
-contact-us: /camera-enhancer/trouble-shooting/contact-us
+license-error: /camera-enhancer/docs/trouble-shooting/license-error
+contact-us: /camera-enhancer/docs/trouble-shooting/contact-us
 
-baseurl: "/camera-enhancer"
+assets: /camera-enhancer/docs/assets/
+
+baseurl: "/camera-enhancer/docs/"
 plugins:
   - jemoji
