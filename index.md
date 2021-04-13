@@ -11,7 +11,7 @@ breadcrumbText: Java
 
 ## Introduction
 
-- [Overview](/introduction/index.md)
+- [Overview]({{site.introduction})
 - [License introduction](/introduction/license/License.md)
 
 ## Programming
