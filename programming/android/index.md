@@ -11,11 +11,11 @@ breadcrumbText: Java (Android)
 
 ## Getting start:
 
-- [User guide for Android](guide/guide.md)
+- [User guide for Android]({{site.android-guide}}guide.md)
 
 ## API reference for Android Edition:
 
-- [API reference](api/api.md)
+- [API reference]({{site.android-api}}api.md)
 
 ## Android Demo:
 
@@ -23,8 +23,4 @@ breadcrumbText: Java (Android)
 
 ## Android Release Note:
 
-- [Android Release Note](release-note/release-note.md)
-
-## Online Store
-
-- [For Mobile App]()
+- [Android Release Note]({{site.android-release-note}}release-note.md)

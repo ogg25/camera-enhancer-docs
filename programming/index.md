@@ -10,9 +10,10 @@ breadcrumbText: Java (Android)
 
 Dynamsoft Camera Enhancer is now available for following programming languages:
 
-- [Java (Android)](android/index.md)
-- [Objective-C & Swift (IOS)](IOS/index.md)
+- [Java (Android)]({{site.android}})
+- [Objective-C & Swift (IOS)]({{site.ios}})
 
 Also there are Demo Apps available for you to understand more on Dynamsoft Camera Enhancer:
 
 - Barcode Reader X (DCE edition Android) [download]()
+- Barcode Reader X (DCE edition iOS) [download]()

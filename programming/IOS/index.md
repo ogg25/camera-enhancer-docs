@@ -11,20 +11,16 @@ breadcrumbText: Objective-C & Swift (IOS)
 
 ## Getting start:
 
-- [User guide for Objective-C & Swift](guide/guide.md)
+- [User guide for Objective-C & Swift]({{site.ios-guide}}guide.md)
 
 ## API reference for Objective-C & Swift Edition:
 
-- [API reference](api/api.md)
+- [API reference]({{site.ios-api}}api.md)
 
-## Android Demo:
+## iOS Demo:
 
 - [Barcode scanner x (IOS)]()
 
 ## Objective-C & Swift Release Note:
 
-- [Objective-C & Swift Release Note](release-note/release-note.md)
-
-## Online Store
-
-- [For Mobile App]()
+- [Objective-C & Swift Release Note]({{site.ios-release-note}}release-note.md)

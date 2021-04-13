@@ -8,5 +8,5 @@ breadcrumbText: Java (Android), Objective-C (IOS)
 ---
 # Dynamsoft Camera Enhancer - Parameters
 ## Reference
-- [Reference of parameters](parameter/index.md)
-- [Reference of Enumerations](enumerations/index.md)
+- [Parameters reference]({{site.reference}})
+- [Enumerations]({{site.enumerations}})

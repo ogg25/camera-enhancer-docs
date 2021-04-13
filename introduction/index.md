@@ -42,7 +42,7 @@ Dynamsoft Camera Enhancer is now available for following programming languages:
 This documentation aims at helping you on learning, understanding and using Dynamsoft Camera Enhancer. In this documentation you can find useful information that guide you step by step from installation to further development. 
 
 ## Quick links
-- [Get and set up license](license/License.md)
-- [Programming guides](../programming/index.md)
-- [Get help on debugging](../trouble-shooting/index.md)
-- [Contact us](../trouble-shooting/contact-us/index.md)
+- [Get and set up license]({{site.introduction-license}}License.md)
+- [Programming guides]({{site.programming}})
+- [Get help on debugging]({{site.trouble-shooting}})
+- [Contact us]({{site.contact-us}})
