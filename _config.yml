@@ -38,6 +38,12 @@ license-error: /camera-enhancer/docs/trouble-shooting/license-error/
 contact-us: /camera-enhancer/docs/trouble-shooting/contact-us/
 
 assets: /camera-enhancer/docs/assets/
+edit_icon: /barcode-reader/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader/assets/img-icon/icon-dnt.svg
 
 baseurl: "/camera-enhancer/docs/"
 plugins:

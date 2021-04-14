@@ -13,23 +13,14 @@ This section covers the following topics:
 - [How to set up a trial license.](#Set-up-trial-license)
 - [How to set up a full license.](#Sep-up-full-license)
 
-## Set up trial license
+## Get a trial key
 
-### Get a trial key
-
-- If you are a new user, you can [download free trial here]().
+- If you are a new user, trial license will be available for 7 days since you download DCE.
 - If your free key is expired, you can [request for a trial extension online]().
 
-### Update your key in your code
+## Get full key license
 
-```Java
-```
-
-## Sep up full license
-
-### Get Your license
-
-[Click here to get a full license for DCE](). After getting the license, you will receive a default generated Handshake code. What you have to do to set up your license is to:
+[Purchase DCE in online shop](). After getting a full key license, you will receive a default generated Handshake code. What you have to do to set up your license is to:
 - Set up your `Handshake Code`.
     - You can use the defaulf generated one and also can edit it or add new Handshake codes.
 - Set up your `Session Password`.
