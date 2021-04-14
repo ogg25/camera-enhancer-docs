@@ -12,7 +12,7 @@ breadcrumbText: Java
 ## Introduction
 
 - [Overview]({{site.introduction}})
-- [License introduction]({{site.introduction-license}}License.md)
+- [License introduction]({{site.introduction-license}}License.html)
 
 ## Programming
 
