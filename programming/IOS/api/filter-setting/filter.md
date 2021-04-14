@@ -19,9 +19,12 @@ breadcrumbText: Java
     
 Turn on(off) sensor control
 
+Objective-C
 ```objectivec
     [dce sensorControl:3];
 ```
+
+Swift
 ```Swift
     dce.sensorControl(3);
 ```
@@ -30,9 +33,12 @@ Turn on(off) sensor control
 
 Turn on(off) DCE filter (recommended to be true).
 
+Objective-C
 ```objectivec
     [dce setUseFrameFilter:true];
 ```
+
+Swift
 ```Swift
     dce.setUseFrameFilter(true);
 ```
@@ -41,9 +47,12 @@ Turn on(off) DCE filter (recommended to be true).
 
 Set max frame rate.
 
+Objective-C
 ```objectivec
     [dce setMaxFrameRate:24];
 ```
+
+Swift
 ```Swift
     dce.setMaxFrameRate(24);
 ```
