@@ -21,9 +21,12 @@ breadcrumbText: Java
 ### setAutoFocusPoint
     
 Set the position you want to auto focus at.
+
+Objective-C
 ```objectivec
     [dce setAutoFocusPoint:CGPointMake(0.5, 0.5)];
 ```
+Swift
 ```Swift
     dce.setAutoFocus(CGPoint(x: 0.5, y: 0.5));
 ```
@@ -31,9 +34,13 @@ Set the position you want to auto focus at.
 ### manualFocusOnce
 
 Set the position you want to manually focus at
+
+Objective-C
 ```objectivec
     [dce manualFocusOnce:CGPointMake(0.5, 0.5)];
 ```
+
+Swift
 ```Swift
     dce.manualFocusOnce(CGPoint(x: 0.5, y: 0.5));
 ```
@@ -41,9 +48,13 @@ Set the position you want to manually focus at
 ### setForcedFocusLength
 
 Set focal length (float).
+
+Objective-C
 ```objectivec
     [dce setForcedFocusLength:2];
 ```
+
+Swift
 ```Swift
     dce.setForcedFocusLength(2);
 ```
@@ -51,9 +62,13 @@ Set focal length (float).
 ### setForceAutoFocus
 
 Turn on force auto focus.
+
+Objective-C
 ```objectivec
     [dce setForceAutoFocus:true];
 ```
+
+Swift
 ```Swift
     dce.setForceAutoFocus(true);
 ```
@@ -61,9 +76,13 @@ Turn on force auto focus.
 ### enableAutoZoom
 
 Turn on auto zoom.
+
+Objective-C
 ```objectivec
     [dce enableAutoZoom];
 ```
+
+Swift
 ```Swift
     dce.enableAutoZoom = true;
 ```
@@ -71,9 +90,13 @@ Turn on auto zoom.
 ### setZoomFactor
 
 Set zoom factor (float).
+
+Objective-C
 ```objectivec
     [dce setZoomFactor:2];
 ```
+
+Swift
 ```Swift
     dce.setZoomFactor(2);
 ```
