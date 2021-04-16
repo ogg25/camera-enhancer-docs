@@ -1,0 +1,8 @@
+<li><a href="{{ site.license_activation }}" class="otherLinkColour">License Activation</a>
+    <ul>
+        {%- if page.url contains '/trouble-shooting/' or page.url contains '/trouble-shooting-v' -%}
+        <li><a href="{{ site.license-error }}" class="otherLinkColour">License Error</a></li>
+        <li><a href="{{ site.contact-us }}" class="otherLinkColour">Contact Us</a></li>
+        {%- endif -%}
+    </ul>
+</li>
