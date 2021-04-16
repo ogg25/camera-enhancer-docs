@@ -1,0 +1,15 @@
+<li><a href="{{ site.android }}" class="otherLinkColour">Java (Android)</a>
+    <ul>
+        {%- if page.url contains '/android/' or page.url contains '/android-v' -%}
+        <li><a href="{{ site.android-guide }}guide.html" class="otherLinkColour">User Guide</a></li>
+        <li><a href="{{ site.android-api }}api.html" class="otherLinkColour">API Reference</a>
+            <ul>
+                <li><a href="{{ site.android-basic-setting }}basic-setting.html/" class="otherLinkColour">Basic Settings</a></li>
+                <li><a href="{{ site.android-filter-setting }}filter-setting.html/" class="otherLinkColour">Filter Settings</a></li>
+                <li><a href="{{ site.android-zoom-setting }}zoom-focus.html" class="otherLinkColour">Focus & Zoom Settings</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ site.android-release-note }}release-note.html" class="otherLinkColour">Release Notes</a></li>
+        {%- endif -%}
+    </ul>
+</li>

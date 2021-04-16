@@ -1,0 +1,8 @@
+<li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
+    <ul>
+        {%- if page.url contains '/parameters/' or page.url contains '/parameters-v' -%}
+        <li><a href="{{ site.reference }}" class="otherLinkColour">Reference</a></li>
+        <li><a href="{{ site.enumerations }}" class="otherLinkColour">Enumerations</a></li>
+        {%- endif -%}
+    </ul>
+</li>
