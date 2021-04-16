@@ -11,12 +11,21 @@ breadcrumbText: Java
 
 ## Camera settings - Zoom & Focus Setting
 
+- [`enableAutoFocus`](#enableAutoFocus)
 - [`setAutoFocusAt`](#setAutoFocusAt)
-- [`manualFocusOnce`](#manualFocusOnce)
+- [`setManualFocusAt`](#setManualFocusAt)
 - [`setForcedFocusLength`](#setForcedFocusLength)
-- [`setForceAutoFocus`](#setForceAutoFocus)
-- [`setAutoZoom`](#setAutoZoom)
+- [`enableRegularAutoFocus`](#enableRegularAutoFocus)
+- [`enableAutoFocusOnSharpnessChange`](#enableAutoFocusOnSharpnessChange)
+- [`enableAutoZoom`](#enableAutoZoom)
 - [`setZoomFactor`](#setZoomFactor)
+
+### enableAutoFocus
+
+Turn on auto focus.
+```java
+    mCamera.enableAutoFocus(true);
+```
 
 ### setAutoFocusAt
     
@@ -24,31 +33,48 @@ Set the position you want to auto focus at.
 ```java
     mCamera.setAutoFocusAt(int,int);
 ```
-### manualFocusOnce
+### setManualFocusAt
+
 Set the position you want to manually focus at
 ```java
-    mCamera.manualFocusOnce(int,int);
+    mCamera.setManualFocusAt(int,int);
 ```
-### setForcedFocusLength
+
+### setFocalLength
+
 Set focal length (float).
 ```java
     try {
-        mCamera.setForcedFocusLength(float);
+        mCamera.setFocalLength(float);
     } catch (CameraEnhancerException e) {
         e.printStackTrace();
     }
 ```
-### setForceAutoFocus
-Turn on force auto focus.
+
+### enableRegularAutoFocus
+
+Set auto focus interval
 ```java
-    mCamera.setForceAutoFocus(true);
+    //Auto focus for every 3000ms. 
+    mCameraEnhancer.enableRegularAutoFocus(true);
 ```
+
+### enableAutoFocusOnSharpnessChange
+
+Enable camera to focus when clarity changes
+```java
+    mCameraEnhancer.enableAutoFocusOnSharpnessChange(true);
+```
+
 ### setAutoZoom
+
 Turn on auto zoom.
 ```java
     mCamera.setAutoZoom(true);
 ```
+
 ### setZoomFactor
+
 Set zoom factor (float).
 ```java
     try {

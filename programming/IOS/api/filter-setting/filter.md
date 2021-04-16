@@ -11,36 +11,36 @@ breadcrumbText: Java
 
 ## Filter Setting
 
-- [`sensorControl`](#sensorControl)
-- [`setUseFrameFilter`](#setUseFrameFilter)
+- [`enableSensorControl`](#enableSensorControl)
+- [`enableFrameFilter`](#enableFrameFilter)
 - [`setMaxFrameRate`](#setMaxFrameRate)
 
-### sensorControl
+### enableSensorControl
     
 Turn on(off) sensor control
 
 Objective-C
 ```objectivec
-    [dce sensorControl:3];
+    [dce enableSensorControl:50];
 ```
 
 Swift
 ```Swift
-    dce.sensorControl(3);
+    dce.enableSensorControl(50);
 ```
 
-### setUseFrameFilter
+### enableFrameFilter
 
 Turn on(off) DCE filter (recommended to be true).
 
 Objective-C
 ```objectivec
-    [dce setUseFrameFilter:true];
+    [dce enableFrameFilter:true];
 ```
 
 Swift
 ```Swift
-    dce.setUseFrameFilter(true);
+    dce.enableFrameFilter(true);
 ```
 
 ### setMaxFrameRate

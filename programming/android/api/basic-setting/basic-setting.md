@@ -14,9 +14,8 @@ breadcrumbText: Java
 - [`getDeviceLevel`](#getDeviceLevel)
 - [`setApiVersion`](#getApiVersion-and-setApiVersion)
 - [`getApiVersion`](#getApiVersion-and-setApiVersion)
-- [`setEnableBeepSound`](#setEnableBeepSound)
-- [`updateCameraSettingFromJson`](#updateCameraSettingFromJson-and-updateCameraSettingFromFile)
-- [`updateCameraSettingFromFile`](#updateCameraSettingFromJson-and-updateCameraSettingFromFile)
+- [`updateCameraSetting`](#updateCameraSettingFromJson-and-updateCameraSetting)
+- [`enableFastMode`](#enableFastMode)
 - [`setErrorCode`](#setErrorCode)
 - [`getCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
 - [`setCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
@@ -51,23 +50,24 @@ Get and set API version
     mCamera.setApiVersion(int);
 ```
 
-### setEnableBeepSound
-
-Turn on beep sound. Currently only available for DBR users.
-```java
-    mCamera.setEnableBeepSound(true);
-```
-
 ### updateCameraSettingFromJson and updateCameraSettingFromFile
 
-```Java
+```Json
     
+```
+
+### enableFastMode
+    
+Turn on(off) fast mode. It is recommended to turned on when decoding single barcode.
+```java
+    mCamera.enableFastMode(true);
 ```
 
 ### setErrorCode
 ```java
     mCamera.setErrorCode(true);
 ```
+
 ### getCameraCurrentState, getCameraDesireState and setCameraDesireState
     
 Get camera current status (on/off). 
