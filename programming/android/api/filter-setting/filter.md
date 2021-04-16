@@ -11,14 +11,12 @@ breadcrumbText: Java
 
 ## Filter Setting
 
-- [`setUseFrameFilter`](#setUseFrameFilter)
+- [`enableFrameFilter`](#setUseFrameFilter)
 - [`setMaxFrameRate`](#setMaxFrameRate)
-- [`setSensorControl`](#setSensorControl)
-- [`updateCameraSettingFromJson`](#updateCameraSettingFromJson)
-- [`setFastMode`](#setFastMode)
+- [`enableSensorControl`](#setSensorControl)
 - [`setAutoModeLevelParam`](#setAutoModeLevelParam)
 
-### setUseFrameFilter
+### enableFrameFilter
 
 Turn on(off) DCE filter (recommended to be true).
 ```java
@@ -36,25 +34,12 @@ Set max frame rate.
     } 
 ```
 
-### setSensorControl
+### enableSensorControl
     
-Turn on(off) sensor control
-```java
-    mCamera.setSensorControl(true);
-```
+Two parameters are required in this API. Please use true(false) to turn on(off) sensor control and fill in a threshold for sensor filter.
 
-### updateCameraSettingFromJson
-
-Update focus and filter settings by Json
 ```java
-    mCamera.updateCameraSettingFromJson("Put your json String & data here");
-```
-
-### setFastMode
-    
-Turn on(off) fast mode. It is recommended to turned on when decoding single barcode.
-```java
-    mCamera.setFastMode(true);
+    mCamera.enableSensorControl(true, 50);
 ```
 
 ### setAutoModeLevelParam

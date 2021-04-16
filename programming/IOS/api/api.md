@@ -20,13 +20,12 @@ breadcrumbText: Objective-C & Swift (IOS)
 |-----------------|---------------|
 | [`updateCameraSettingFromJson`]({{site.ios-basic-setting}}basic-setting.html#updateCameraSettingFromJson) | Update camera filter and focus settings from Json |
 | [`updateCameraSettingFromFile`]({{site.ios-basic-setting}}basic-setting.html#updateCameraSettingFromFile) | Update camera filter and focus settings from file |
-| [`enableBeepSound`]({{site.ios-basic-setting}}basic-setting.html#enableBeepSound) | Set enable beep sound true/false (Only for DBR) |
 
 ## Fast mode
 
 | Method | Description |
 |-----------------|---------------|
-| [`setFastmode`]({{site.ios-basic-setting}}basic-setting.html#setFastmode) | Set fast mode |
+| [`enableFastMode`]({{site.ios-basic-setting}}basic-setting.html#setFastmode) | Enable fast mode (true/false) |
 
 ## Camera Setting
 
@@ -57,17 +56,19 @@ breadcrumbText: Objective-C & Swift (IOS)
 
 | Method | Description |
 |-----------------|---------------|
-| [`setAutoFocusPoint`]({{site.ios-zoom-setting}}zoom-focus.html#setAutoFocusPoint) | Set auto focus position |
-| [`manualFocusOnce`]({{site.ios-zoom-setting}}zoom-focus.html#manualFocusOnce) | Set manual focus position |
-| [`setForcedFocusLength`]({{site.ios-zoom-setting}}zoom-focus.html#setForcedFocusLength) | Set forced focus length |
-| [`setForceAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#setForceAutoFocus) | Set force auto focus true/false |
-| [`enableAutoZoom`]({{site.ios-zoom-setting}}zoom-focus.html#enableAutoZoom) | Turn on auto zoom |
+| [`enableAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableAutoFocus) | Enable auto focus (true/false) |
+| [`setAutoFocusAt`]({{site.ios-zoom-setting}}zoom-focus.html#setAutoFocusPoint) | Set auto focus position |
+| [`setManualFocusAt`]({{site.ios-zoom-setting}}zoom-focus.html#setManualFocusAt) | Set manual focus position |
+| [`setFocalLength`]({{site.ios-zoom-setting}}zoom-focus.html#setFocalLength) | Set focal length |
+| [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableRegularAutoFocus) | Enable auto focus for every 3 seconds |
+| [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableAutoFocusOnSharpnessChange) | Enable camera to focus when clarity changes |
+| [`enableAutoZoom`]({{site.ios-zoom-setting}}zoom-focus.html#enableAutoZoom) | Enable auto zoom (true/false) |
 | [`setZoomFactor`]({{site.ios-zoom-setting}}zoom-focus.html#setZoomFactor) | Set zoom factor |
 
 ## Filter Setting
 
 | Method | Description |
 |-----------------|---------------|
-| [`sensorControl`]({{site.ios-filter-setting}}filter.html#setSensorControl) | Set sensor control true/false |
-| [`setUseFrameFilter`]({{site.ios-filter-setting}}filter.html#setUseFrameFilter) | Set use frame filter true/false |
+| [`enableSensorControl`]({{site.ios-filter-setting}}filter.html#setSensorControl) | Enable sensor control (true/false) |
+| [`enableFrameFilter`]({{site.ios-filter-setting}}filter.html#setUseFrameFilter) | Enable use frame filter (true/false) |
 | [`setMaxFrameRate`]({{site.ios-filter-setting}}filter.html#setMaxFrameRate) | Set max frame rate |

@@ -63,33 +63,21 @@ Objective-C
 
 Swift
 ```Swift
-    dce.updateCameraSetting(fromFile: "Your file path");
+    dce.updateCameraSettingFromFile(fromFile: "Your file path");
 ```
 
-### enableBeepSound
-
-Objective-C
-```objectivec
-    [dce enableBeepSound];
-```
-
-Swift
-```Swift
-    dce.enableBeepSound = true;
-```
-
-### setFastmode
+### enableFastMode
 
 Turn on fast mode
 
 Objective-C
 ```objectivec
-    [dce setFastMode:true];
+    [dce enableFastMode:true];
 ```
 
 Swift
 ```Swift
-    dce.setFastMode(true);
+    dce.enableFastMode(true);
 ```
 
 ### getCameraCurrentState, getCameraDesiredState and setCameraDesiredState

@@ -11,66 +11,90 @@ breadcrumbText: Java
 
 ## Camera settings - Zoom & Focus Setting
 
-- [`setAutoFocusPoint`](#setAutoFocusPoint)
-- [`manualFocusOnce`](#manualFocusOnce)
+- [`enableAutoFocus`](#enableAutoFocus)
+- [`setAutoFocusAt`](#setAutoFocusAt)
+- [`setManualFocusAt`](#setManualFocusAt)
 - [`setForcedFocusLength`](#setForcedFocusLength)
-- [`setForceAutoFocus`](#setForceAutoFocus)
+- [`enableRegularAutoFocus`](#enableRegularAutoFocus)
+- [`enableAutoFocusOnSharpnessChange`](#enableAutoFocusOnSharpnessChange)
 - [`enableAutoZoom`](#enableAutoZoom)
 - [`setZoomFactor`](#setZoomFactor)
 
-### setAutoFocusPoint
-    
-Set the position you want to auto focus at.
-
-Objective-C
-```objectivec
-    [dce setAutoFocusPoint:CGPointMake(0.5, 0.5)];
-```
-Swift
-```Swift
-    dce.setAutoFocus(CGPoint(x: 0.5, y: 0.5));
-```
-
-### manualFocusOnce
-
-Set the position you want to manually focus at
-
-Objective-C
-```objectivec
-    [dce manualFocusOnce:CGPointMake(0.5, 0.5)];
-```
-
-Swift
-```Swift
-    dce.manualFocusOnce(CGPoint(x: 0.5, y: 0.5));
-```
-
-### setForcedFocusLength
-
-Set focal length (float).
-
-Objective-C
-```objectivec
-    [dce setForcedFocusLength:2];
-```
-
-Swift
-```Swift
-    dce.setForcedFocusLength(2);
-```
-
-### setForceAutoFocus
+### enableAutoFocus
 
 Turn on force auto focus.
 
 Objective-C
 ```objectivec
-    [dce setForceAutoFocus:true];
+    [dce enableAutoFocus:true];
 ```
 
 Swift
 ```Swift
-    dce.setForceAutoFocus(true);
+    dce.enableAutoFocus(true);
+```
+
+### setAutoFocusAt
+    
+Set the position you want to auto focus at.
+
+Objective-C
+```objectivec
+    [dce setAutoFocusAt:CGPointMake(0.5, 0.5)];
+```
+Swift
+```Swift
+    dce.setAutoFocusAt(CGPoint(x: 0.5, y: 0.5));
+```
+
+### setManualFocusAt
+
+Set the position you want to manually focus at
+
+Objective-C
+```objectivec
+    [dce setManualFocusAt:CGPointMake(0.5, 0.5)];
+```
+
+Swift
+```Swift
+    dce.setManualFocusAt(CGPoint(x: 0.5, y: 0.5));
+```
+
+### setFocalLength
+
+Set focal length (float).
+
+Objective-C
+```objectivec
+    [dce setFocalLength:2];
+```
+
+Swift
+```Swift
+    dce.setFocalLength(2);
+```
+
+### enableRegularAutoFocus
+
+Set auto focus interval
+Objective-C
+```objectivec
+```
+
+Swift
+```Swift
+```
+
+### enableAutoFocusOnSharpnessChange
+
+Enable camera to focus when clarity changes
+Objective-C
+```objectivec
+```
+
+Swift
+```Swift
 ```
 
 ### enableAutoZoom
