@@ -13,6 +13,7 @@ breadcrumbText: Java
 
 - [`enableFrameFilter`](#setUseFrameFilter)
 - [`setMaxFrameRate`](#setMaxFrameRate)
+- [`setFrameListLength`](#setFrameListLength)
 - [`enableSensorControl`](#setSensorControl)
 - [`setAutoModeLevelParam`](#setAutoModeLevelParam)
 
@@ -29,6 +30,18 @@ Set max frame rate.
 ```java
     try {
         mCamera.setMaxFrameRate(24);
+    } catch (CameraEnhancerException e) {
+        e.printStackTrace();
+    } 
+```
+
+### setFrameListLength
+
+Filtered frame will be stored in a list for decoding process. Decoder will always get the newest frame for decoding.
+```java
+    try {
+        //The default length of frame list will be 10 if you don't make any setting on it.
+        mCamera.setFrameListLength(8);
     } catch (CameraEnhancerException e) {
         e.printStackTrace();
     } 
