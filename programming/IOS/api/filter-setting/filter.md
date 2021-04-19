@@ -14,6 +14,7 @@ breadcrumbText: Java
 - [`enableSensorControl`](#enableSensorControl)
 - [`enableFrameFilter`](#enableFrameFilter)
 - [`setMaxFrameRate`](#setMaxFrameRate)
+- [`setFrameListLength`](#setFrameListLength)
 
 ### enableSensorControl
     
@@ -55,4 +56,18 @@ Objective-C
 Swift
 ```Swift
     dce.setMaxFrameRate(24);
+```
+
+### setFrameListLength
+
+Filtered frame will be stored in a list for decoding process. Decoder will always get the newest frame for decoding. The default length of frame list will be 10 if you don't make any setting on it.
+
+Objective-C
+```objectivec
+    [dce setFrameListLength:8];
+```
+
+Swift
+```Swift
+    dce.setFrameListLength(8);
 ```

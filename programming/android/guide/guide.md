@@ -23,7 +23,9 @@ breadcrumbText: Java(Android)
 
 ## Installation
 
-1. [Download Dynamsoft Camera Enhancer]() from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancer-release.aar`. 
+1. [Download Dynamsoft Camera Enhancer]() from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`. 
+
+2. Create a new Android project in Android Studio.
 
 2. Put the `.aar` file under the dictionary `/app/libs` in your project. 
 
@@ -38,10 +40,10 @@ breadcrumbText: Java(Android)
 
 4. Also in `build.gradle(Module: app)` add reference in dependencies:
     ```java
-        implementation(name: 'DynamsoftCameraEnhancer-release', ext: 'aar')
+        implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
     ```
 
-5. Sync the project with gradle and after that `DynamsoftCameraEnhancer-release.aar` is added to your project.
+5. Sync the project with gradle and after that `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
 
 ## License initialization
 
@@ -49,8 +51,7 @@ If you have already got a full key license from `License Tracking Server`, you c
 
 ```Java
     CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
-    info.sessionPassword = "******";
-    info.handshakeCode ="******";
+    info.organizationID = "********";
     mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
         @Override
         public void LTSLicenseVerificationCallback(boolean b, Exception e) {
@@ -76,7 +77,7 @@ Or you can
 
 In this section you will be guide on using Dynamsoft Camera Enhancer to create a simple camera app with video frame filter function.
 
-1. Create a CameraView section in the XML file that you want to run a camera.
+1. Create a CameraView section in activity_main.xml.
 
     ```XML
         <com.dynamsoft.dce.CameraView
