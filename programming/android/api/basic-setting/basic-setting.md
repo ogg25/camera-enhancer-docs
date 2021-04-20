@@ -1,15 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references
-description: This is the documentation - Android API references page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android API references
+title: Dynamsoft Camera Enhancer - Android API references - Basic Settings
+description: This is the documentation - Android API references - Basic Settings page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android API references, Basic Settings
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: Android Basic Setting
 ---
 
-# Dynamsoft Camera Enhancer - Android API references
-
-## Camera settings - Basic Setting
+# API Reference - Basic Setting
 
 - [`getDeviceLevel`](#getDeviceLevel)
 - [`setApiVersion`](#getApiVersion-and-setApiVersion)
@@ -35,14 +33,14 @@ breadcrumbText: Java
 - [`getResolution`](#getResolution-and-setResolution)
 - [`setResolution`](#getResolution-and-setResolution)
 
-### getDeviceLevel
+## getDeviceLevel
 
 Get your device level. It will be helpful on automatically turn off DCE on high level mobile devices. 
 ```java
     mCamera.getDeviceLevel();
 ```
 
-### getApiVersion and setApiVersion
+## getApiVersion and setApiVersion
 
 Get and set API version
 ```java
@@ -50,25 +48,25 @@ Get and set API version
     mCamera.setApiVersion(int);
 ```
 
-### updateCameraSettingFromJson and updateCameraSettingFromFile
+## updateCameraSettingFromJson and updateCameraSettingFromFile
 
 ```Json
     
 ```
 
-### enableFastMode
+## enableFastMode
     
 Turn on(off) fast mode. It is recommended to turned on when decoding single barcode.
 ```java
     mCamera.enableFastMode(true);
 ```
 
-### setErrorCode
+## setErrorCode
 ```java
     mCamera.setErrorCode(true);
 ```
 
-### getCameraCurrentState, getCameraDesireState and setCameraDesireState
+## getCameraCurrentState, getCameraDesireState and setCameraDesireState
     
 Get camera current status (on/off). 
 ```java
@@ -90,7 +88,7 @@ Use `CameraState.CAMERA_STATE_ON` to set camera on and use `CameraState.CAMERA_S
     }
 ```
     
-### pauseCamera and resumeCamera
+## pauseCamera and resumeCamera
 Note: these APIs are created for pause & resume camera but camera module is still working when being paused. if you want to shut down camera module please use `stopScanning`.
 ```java
     try {
@@ -100,7 +98,7 @@ Note: these APIs are created for pause & resume camera but camera module is stil
         e.printStackTrace();
     }
 ```
-### stopScanning and startScanning
+## stopScanning and startScanning
 Contorl the stop & start of camera module.
 ```java
     try {
@@ -110,7 +108,7 @@ Contorl the stop & start of camera module.
         e.printStackTrace();
     }
 ```
-### addCameraListener and removeCameraListener
+## addCameraListener and removeCameraListener
 Add Camera Listener
 ```java
     mCamera.addCameraListener(new CameraListener() {
@@ -133,7 +131,7 @@ Remove Camera Listener
 ```java
     mCamera.removeCameraListener();
 ```
-### getTorchCurrentState, getTorchDesiredState and setTorchDesiredState
+## getTorchCurrentState, getTorchDesiredState and setTorchDesiredState
 
 Get current torch state (on/off)
 ```java
@@ -154,7 +152,7 @@ Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_
         e.printStackTrace();
     }
 ```
-### addTorchListener
+## addTorchListener
 ```java
     mCamera.addTorchListener(new TorchListener() {
         @Override
@@ -164,7 +162,7 @@ Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_
     });
 ```
 
-### getCameraPosition and switchCameraPosition
+## getCameraPosition and switchCameraPosition
 DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
 To get camera position:
 ```java
@@ -178,7 +176,7 @@ To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front 
         e.printStackTrace();
     }
 ```
-### getResolution and setResolution
+## getResolution and setResolution
 These APIs are created for you to get or change camera resolution settings. 
 ```java
     mCamera.getResolution();

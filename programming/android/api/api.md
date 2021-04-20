@@ -4,10 +4,10 @@ title: Dynamsoft Camera Enhancer - Android API references
 description: This is the documentation - Android API references page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android API references
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: Android API References
 ---
 
-# Dynamsoft Camera Enhancer - Android API references
+# Android API References
 - [Initialization](#Initialization-License-and-other-basic-settings)
 - [Camera Setting](#Camera-Setting)
     - [Basic Camera Setting](#Basic-camera-setting)

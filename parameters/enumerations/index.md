@@ -4,9 +4,9 @@ title: Dynamsoft Camera Enhancer - Enumerations
 description: This is the documentation - Enumerations page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations
 needAutoGenerateSidebar: true
-breadcrumbText: Java (Android), Objective-C (IOS)
+breadcrumbText: Enumerations
 ---
-# Dynamsoft Camera Enhancer - Enumerations
+# Enumerations
 
 ## DM_ChargeWay
 

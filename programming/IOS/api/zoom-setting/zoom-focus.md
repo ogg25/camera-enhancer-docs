@@ -1,15 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references
-description: This is the documentation - Android API references page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android API references
+title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Zoom & Focus Setting
+description: This is the documentation - Objective-C & Swift API references - Zoom & Focus Setting page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Objective-C & Swift API references, Zoom, Focus
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: iOS Zoom and Focus
 ---
 
-# Dynamsoft Camera Enhancer - Android API references
-
-## Camera settings - Zoom & Focus Setting
+# iOS API Reference - Zoom & Focus Setting
 
 - [`enableAutoFocus`](#enableAutoFocus)
 - [`setAutoFocusAt`](#setAutoFocusAt)
@@ -20,7 +18,7 @@ breadcrumbText: Java
 - [`enableAutoZoom`](#enableAutoZoom)
 - [`setZoomFactor`](#setZoomFactor)
 
-### enableAutoFocus
+## enableAutoFocus
 
 Turn on force auto focus.
 
@@ -34,7 +32,7 @@ Swift
     dce.enableAutoFocus(true);
 ```
 
-### setAutoFocusAt
+## setAutoFocusAt
     
 Set the position you want to auto focus at.
 
@@ -47,7 +45,7 @@ Swift
     dce.setAutoFocusAt(CGPoint(x: 0.5, y: 0.5));
 ```
 
-### setManualFocusAt
+## setManualFocusAt
 
 Set the position you want to manually focus at
 
@@ -61,7 +59,7 @@ Swift
     dce.setManualFocusAt(CGPoint(x: 0.5, y: 0.5));
 ```
 
-### setFocalLength
+## setFocalLength
 
 Set focal length (float).
 
@@ -75,7 +73,7 @@ Swift
     dce.setFocalLength(2);
 ```
 
-### enableRegularAutoFocus
+## enableRegularAutoFocus
 
 Set auto focus interval
 Objective-C
@@ -86,7 +84,7 @@ Swift
 ```Swift
 ```
 
-### enableAutoFocusOnSharpnessChange
+## enableAutoFocusOnSharpnessChange
 
 Enable camera to focus when clarity changes
 Objective-C
@@ -97,7 +95,7 @@ Swift
 ```Swift
 ```
 
-### enableAutoZoom
+## enableAutoZoom
 
 Turn on auto zoom.
 
@@ -111,7 +109,7 @@ Swift
     dce.enableAutoZoom = true;
 ```
 
-### setZoomFactor
+## setZoomFactor
 
 Set zoom factor (float).
 

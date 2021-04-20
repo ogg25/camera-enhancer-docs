@@ -4,10 +4,11 @@ title: Dynamsoft Camera Enhancer - Android Frame Class
 description: This is the documentation - Android Frame Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, Frame
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: Android Frame
 ---
 
 # Frame
+
 Exception for signalling camera enhancer errors
 
 ## Method

@@ -4,10 +4,10 @@ title: Dynamsoft Camera Enhancer - Get start on Objective-C & Swift
 description: This is the documentation - Get start on Objective-C & Swift page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Objective-C & Swift
 needAutoGenerateSidebar: true
-breadcrumbText: Objective-C & Swift (IOS)
+breadcrumbText: Start on iOS
 ---
 
-# Dynamsoft Camera Enhancer - Get start on Objective-C & Swift
+# Get start on Objective-C & Swift
 
 ## Getting start:
 

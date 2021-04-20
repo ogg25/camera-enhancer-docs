@@ -1,15 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references
-description: This is the documentation - Android API references page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android API references
+title: Dynamsoft Camera Enhancer - Android API references - Zoom & Focus Setting
+description: This is the documentation - Android API references - Zoom & Focus Setting page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Focus, Zoom, Android API Reference
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: Android Zoom and Focus
 ---
 
-# Dynamsoft Camera Enhancer - Android API references
-
-## Camera settings - Zoom & Focus Setting
+# Android API Reference - Zoom & Focus Setting
 
 - [`enableAutoFocus`](#enableAutoFocus)
 - [`setAutoFocusAt`](#setAutoFocusAt)
@@ -20,27 +18,27 @@ breadcrumbText: Java
 - [`enableAutoZoom`](#enableAutoZoom)
 - [`setZoomFactor`](#setZoomFactor)
 
-### enableAutoFocus
+## enableAutoFocus
 
 Turn on auto focus.
 ```java
     mCamera.enableAutoFocus(true);
 ```
 
-### setAutoFocusAt
+## setAutoFocusAt
     
 Set the position you want to auto focus at.
 ```java
     mCamera.setAutoFocusAt(int,int);
 ```
-### setManualFocusAt
+## setManualFocusAt
 
 Set the position you want to manually focus at
 ```java
     mCamera.setManualFocusAt(int,int);
 ```
 
-### setFocalLength
+## setFocalLength
 
 Set focal length (float).
 ```java
@@ -51,7 +49,7 @@ Set focal length (float).
     }
 ```
 
-### enableRegularAutoFocus
+## enableRegularAutoFocus
 
 Set auto focus interval
 ```java
@@ -59,21 +57,21 @@ Set auto focus interval
     mCameraEnhancer.enableRegularAutoFocus(true);
 ```
 
-### enableAutoFocusOnSharpnessChange
+## enableAutoFocusOnSharpnessChange
 
 Enable camera to focus when clarity changes
 ```java
     mCameraEnhancer.enableAutoFocusOnSharpnessChange(true);
 ```
 
-### setAutoZoom
+## setAutoZoom
 
 Turn on auto zoom.
 ```java
     mCamera.setAutoZoom(true);
 ```
 
-### setZoomFactor
+## setZoomFactor
 
 Set zoom factor (float).
 ```java

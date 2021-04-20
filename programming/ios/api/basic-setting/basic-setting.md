@@ -1,29 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Objective-C & Swift API references
-description: This is the documentation - Objective-C & Swift API references page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Objective-C & Swift API references
+title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Basic Setting
+description: This is the documentation - Objective-C & Swift API references - Basic Setting page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Objective-C & Swift API references, Basic Setting
 needAutoGenerateSidebar: true
-breadcrumbText: Objective-C & Swift
+breadcrumbText: iOS Basic Setting
 ---
 
-# Dynamsoft Camera Enhancer - Objective-C & Swift API references
+# iOS API Reference - Basic Setting
 
-## Basic Settings
-
-### Initialization
-
-- [`intiLicenseFromLTS`]()
-- [`initWithView`]()
-- [`enableBeepSound`]()
-- [`updateCameraSettingFromJson`]()
-- [`updateCameraSettingFromFile`]()
-
-### Fastmode
-
-- [`setFastmode`]()
-
-### Camera setting
+- [`updateCameraSettingFromJson`](#updateCameraSettingFromJson)
+- [`updateCameraSettingFromFile`](#updateCameraSettingFromFile)
+- [`enableFastMode`](#enableFastMode)
 - [`getCameraDesiredState`](#getCameraCurrentState-getCameraDesiredState-and-setCameraDesiredState)
 - [`setCameraDesiredState`](#getCameraCurrentState-getCameraDesiredState-and-setCameraDesiredState)
 - [`getCameraCurrentState`](#getCameraCurrentState-getCameraDesiredState-and-setCameraDesiredState)
@@ -42,7 +30,7 @@ breadcrumbText: Objective-C & Swift
 - [`getResolution`](#getResolution-and-setResolution)
 - [`setResolution`](#getResolution-and-setResolution)
 
-### updateCameraSettingFromJson
+## updateCameraSettingFromJson
 
 Objective-C
 ```objectivec
@@ -54,7 +42,7 @@ Swift
     dce.updateCameraSetting(fromJson: "Your json string");
 ```
 
-### updateCameraSettingFromFile
+## updateCameraSettingFromFile
 
 Objective-C
 ```objectivec
@@ -66,7 +54,7 @@ Swift
     dce.updateCameraSettingFromFile(fromFile: "Your file path");
 ```
 
-### enableFastMode
+## enableFastMode
 
 Turn on fast mode
 
@@ -80,7 +68,7 @@ Swift
     dce.enableFastMode(true);
 ```
 
-### getCameraCurrentState, getCameraDesiredState and setCameraDesiredState
+## getCameraCurrentState, getCameraDesiredState and setCameraDesiredState
     
 Get camera current status (on/off). 
 
@@ -118,7 +106,7 @@ Swift
     dce.setCameraDesiredState(CameraState.off);
 ```
     
-### pauseCamera and resumeCamera
+## pauseCamera and resumeCamera
 
 Note: these APIs are created for pause & resume camera but camera module is still working when being paused. if you want to shut down camera module please use `stopScanning`.
 
@@ -134,7 +122,7 @@ Swift
     dce.resumeCamera();
 ```
 
-### stopScanning and startScanning
+## stopScanning and startScanning
 
 Contorl the stop & start of camera module.
 
@@ -150,7 +138,7 @@ Swift
     dce.stopScanning();
 ```
 
-### addCameraListener and removeCameraListener
+## addCameraListener and removeCameraListener
 
 Add Camera Listener
 
@@ -176,7 +164,7 @@ Swift
     dce.removeCameraListener();
 ```
 
-### getTorchCurrentState, getTorchDesiredState and setTorchDesiredState
+## getTorchCurrentState, getTorchDesiredState and setTorchDesiredState
 
 Get current torch state (on/off)
 
@@ -214,7 +202,7 @@ Swift
     dce.setTorchDesiredState(TorchState.on);
 ```
 
-### addTorchListener and removeTorchListener
+## addTorchListener and removeTorchListener
 
 Objective-C
 ```objectivec
@@ -228,7 +216,7 @@ Swift
     dce.removeCameraListener();
 ```
 
-### getCameraPosition and switchCameraPosition
+## getCameraPosition and switchCameraPosition
 
 DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated currently.
 
@@ -254,7 +242,7 @@ Swift
     dce.switchCameraPosition();
 ```
 
-### getResolution and setResolution
+## getResolution and setResolution
 
 These APIs are created for you to get or change camera resolution settings. 
 
