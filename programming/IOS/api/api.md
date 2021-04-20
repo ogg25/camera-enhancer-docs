@@ -72,3 +72,17 @@ breadcrumbText: Objective-C & Swift (IOS)
 | [`enableSensorControl`]({{site.ios-filter-setting}}filter.html#setSensorControl) | Enable sensor control (true/false) |
 | [`enableFrameFilter`]({{site.ios-filter-setting}}filter.html#setUseFrameFilter) | Enable use frame filter (true/false) |
 | [`setMaxFrameRate`]({{site.ios-filter-setting}}filter.html#setMaxFrameRate) | Set max frame rate |
+| [`setFrameListLength`]({{site.ios-filter-setting}}filter.html#setFrameListLength) | Set how many frames will be stored in list. |
+
+## Class
+
+- [`CameraEnhancerException`]()
+- [`CameraException`]()
+- [`CameraLTSConnectionParameters`]()
+- [`CameraView`]()
+- [`DCEUsage`]()
+- [`Frame`]()
+- [`HardwareUtil`]()
+- [`Resolution`]()
+- [`TorchListener`]()
+- [`TorchState`]()
