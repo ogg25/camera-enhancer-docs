@@ -1,15 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android API references
-description: This is the documentation - Android API references page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Android API references
+title: Dynamsoft Camera Enhancer - Android API references - Filter Setting
+description: This is the documentation - Android API references - Filter Setting page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Android API references, Filter
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: Android Filter Setting
 ---
 
-# Dynamsoft Camera Enhancer - Android API references
-
-## Filter Setting
+# Android API Reference - Filter Setting
 
 - [`enableFrameFilter`](#setUseFrameFilter)
 - [`setMaxFrameRate`](#setMaxFrameRate)
@@ -17,14 +15,14 @@ breadcrumbText: Java
 - [`enableSensorControl`](#setSensorControl)
 - [`setAutoModeLevelParam`](#setAutoModeLevelParam)
 
-### enableFrameFilter
+## enableFrameFilter
 
 Turn on(off) DCE filter (recommended to be true).
 ```java
     mCamera.setUseFrameFilter(true);
 ```
 
-### setMaxFrameRate
+## setMaxFrameRate
 
 Set max frame rate.
 ```java
@@ -35,7 +33,7 @@ Set max frame rate.
     } 
 ```
 
-### setFrameListLength
+## setFrameListLength
 
 Filtered frame will be stored in a list for decoding process. Decoder will always get the newest frame for decoding.
 ```java
@@ -47,7 +45,7 @@ Filtered frame will be stored in a list for decoding process. Decoder will alway
     } 
 ```
 
-### enableSensorControl
+## enableSensorControl
     
 Two parameters are required in this API. Please use true(false) to turn on(off) sensor control and fill in a threshold for sensor filter.
 
@@ -55,7 +53,7 @@ Two parameters are required in this API. Please use true(false) to turn on(off) 
     mCamera.enableSensorControl(true, 50);
 ```
 
-### setAutoModeLevelParam
+## setAutoModeLevelParam
 Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2.
 ```java
     mCamera.setAutoModeLevelParam(int,int,int,int);

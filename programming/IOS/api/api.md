@@ -4,10 +4,10 @@ title: Dynamsoft Camera Enhancer - Objective-C & Swift API references
 description: This is the documentation - Objective-C & Swift API references page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Objective-C & Swift API references
 needAutoGenerateSidebar: true
-breadcrumbText: Objective-C & Swift (IOS)
+breadcrumbText: iOS API Reference
 ---
 
-# Dynamsoft Camera Enhancer - Objective-C & Swift API references
+# Objective-C & Swift (iOS) API references
 
 - [Initialization](#Initialization-License-and-other-basic-settings)
 - [Camera Setting](#Camera-Setting)

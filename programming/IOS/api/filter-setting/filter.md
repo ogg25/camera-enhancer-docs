@@ -1,22 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Objective-C & Swift API references
-description: This is the documentation - Objective-C & Swift API references page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Objective-C & Swift API references
+title: Dynamsoft Camera Enhancer - Objective-C & Swift API references - Filter setting
+description: This is the documentation - Objective-C & Swift API references - Filter setting page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Objective-C & Swift, API references, Filter
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: iOS Filter Setting
 ---
 
-# Dynamsoft Camera Enhancer - Objective-C & Swift API references
-
-## Filter Setting
+# iOS API Reference - Filter Setting
 
 - [`enableSensorControl`](#enableSensorControl)
 - [`enableFrameFilter`](#enableFrameFilter)
 - [`setMaxFrameRate`](#setMaxFrameRate)
 - [`setFrameListLength`](#setFrameListLength)
 
-### enableSensorControl
+## enableSensorControl
     
 Turn on(off) sensor control
 
@@ -30,7 +28,7 @@ Swift
     dce.enableSensorControl(50);
 ```
 
-### enableFrameFilter
+## enableFrameFilter
 
 Turn on(off) DCE filter (recommended to be true).
 
@@ -44,7 +42,7 @@ Swift
     dce.enableFrameFilter(true);
 ```
 
-### setMaxFrameRate
+## setMaxFrameRate
 
 Set max frame rate.
 
@@ -58,7 +56,7 @@ Swift
     dce.setMaxFrameRate(24);
 ```
 
-### setFrameListLength
+## setFrameListLength
 
 Filtered frame will be stored in a list for decoding process. Decoder will always get the newest frame for decoding. The default length of frame list will be 10 if you don't make any setting on it.
 

@@ -4,7 +4,7 @@ title: Dynamsoft Camera Enhancer - CameraLTSConnectionParameters Class
 description: This is the documentation - CameraLTSConnectionParameters Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, CameraLTSConnectionParameters Class
 needAutoGenerateSidebar: true
-breadcrumbText: Java
+breadcrumbText: Android CameraLTSConnectionParameters
 ---
 
 # CameraLTSConnectionParameters
@@ -25,7 +25,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`limitedLicenseModules`]() | list |
 | [`chargeWay`]() | int |
 
-### mainServerURL
+## mainServerURL
 
 The URL of the license tracking server.
 
@@ -43,7 +43,7 @@ String com.dynamsoft.dce.CameraLTSConnectionParameters.mainServerURL
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
-### standbyServerURL
+## standbyServerURL
 
 The URL of the standby license tracking server.
 
@@ -60,7 +60,7 @@ String com.dynamsoft.dce.CameraLTSConnectionParameters.standbyServerURL
 - **Remarks**   
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
-### handshakeCode
+## handshakeCode
 
 The handshake code.
 
@@ -74,7 +74,7 @@ String com.dynamsoft.dce.CameraLTSConnectionParameters.handshakeCode
 - **Default value**   
     null
 
-### organizationID
+## organizationID
 
 The organization ID
 
@@ -87,7 +87,7 @@ String com.dynamsoft.dce.CameraLTSConnectionParameters.organizationID
 - **Default value**   
     null
     
-### sessionPassword
+## sessionPassword
 
 The session password of the handshake code set in license tracking server.
 
@@ -102,7 +102,7 @@ String com.dynamsoft.dce.CameraLTSConnectionParameters.sessionPassword
     null
 
 
-### uuidGenerationMethod
+## uuidGenerationMethod
 
 Sets the method to generate UUID.
 
@@ -119,7 +119,7 @@ int com.dynamsoft.dce.CameraLTSConnectionParameters.uuidGenerationMethod
 - **See also**  
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)    
 
-### maxBufferDays
+## maxBufferDays
 
 Sets the max days to buffer the license info.
 
@@ -134,7 +134,7 @@ int com.dynamsoft.dce.CameraLTSConnectionParameters.maxBufferDays
     7   
 
 
-### limitedLicenseModules
+## limitedLicenseModules
 
 Sets the license modules to use.
 
@@ -151,7 +151,7 @@ List<Integer> com.dynamsoft.dce.CameraLTSConnectionParameters.limitedLicenseModu
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
 
-### chargeWay
+## chargeWay
 
 Sets the charge way.
 

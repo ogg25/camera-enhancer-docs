@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Contact us
-description: This is the documentation - Contact us page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Contact us
+title: Dynamsoft Camera Enhancer - Contact Us
+description: This is the documentation - Contact Us page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Contact Us
 needAutoGenerateSidebar: true
-breadcrumbText: Java/IOS
+breadcrumbText: Contact Us
 ---
 
-# Dynamsoft Camera Enhancer - Get Support From Us
+# Get Support From Us
 
 If you are facing any issue on using DCE or have any suggestions for us, please feel free to contact us throw the following methods. 
 

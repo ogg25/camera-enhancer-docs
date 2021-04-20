@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Parameters reference
-description: This is the documentation - Parameters reference page of Dynamsoft Camera Enhancer.
+title: Dynamsoft Camera Enhancer - Parameter reference
+description: This is the documentation - Parameter reference page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Parameters reference
 needAutoGenerateSidebar: true
-breadcrumbText: Java (Android), Objective-C (IOS)
+breadcrumbText: Parameter Reference
 ---
-# Dynamsoft Camera Enhancer - Parameters Reference
+# Parameter Reference
 
 ## Camera state
 | Member (Java/Android) | Value | Description |

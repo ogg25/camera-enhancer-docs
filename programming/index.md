@@ -4,9 +4,9 @@ title: Dynamsoft Camera Enhancer - Get start on programming
 description: This is the documentation - Get start on programming page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Get start on programming
 needAutoGenerateSidebar: true
-breadcrumbText: Java (Android)
+breadcrumbText: Start Programming
 ---
-## Get start on Programming
+# Get start on Programming
 
 Dynamsoft Camera Enhancer is now available for following programming languages:
 
