@@ -81,12 +81,5 @@ breadcrumbText: Java
 ## Class
 
 - [`CameraEnhancerException`]()
-- [`CameraException`]()
 - [`CameraLTSConnectionParameters`]()
-- [`CameraView`]()
-- [`DCEUsage`]()
 - [`Frame`]()
-- [`HardwareUtil`]()
-- [`Resolution`]()
-- [`TorchListener`]()
-- [`TorchState`]()
