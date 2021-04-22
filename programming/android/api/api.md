@@ -18,7 +18,7 @@ breadcrumbText: Android API References
 
 | Method | Description |
 |-----------------|---------------|
-|[`getDeviceLevel`]({{site.android-basic-setting}}basic-setting.html#getDeviceLevel)| Get device level. |
+|[`getDeviceLevel`]({{site.android-basic-setting}}basic-setting.html#getDeviceLevel)| Make a evaluation on the current device and define its level for further use. |
 |[`setApiVersion`]({{site.android-basic-setting}}basic-setting.html#getApiVersion-and-setApiVersion)| Set API version. |
 |[`getApiVersion`]({{site.android-basic-setting}}basic-setting.html#getApiVersion-and-setApiVersion)| Get current API version. |
 | [`updateCameraSetting`]({{site.android-basic-setting}}basic-setting.html#updateCameraSetting) | Update camera filter and focus settings from Json. |
@@ -35,7 +35,6 @@ breadcrumbText: Android API References
 
 | Method | Description |
 |-----------------|---------------|
-| [`setErrorCode`]({{site.android-basic-setting}}basic-setting.html#setErrorCode) | Set error code. |
 | [`setCameraDesiredState`]({{site.android-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Set Camera on/off. |
 | [`getCameraDesiredState`]({{site.android-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera desired state. |
 | [`getCameraCurrentState`]({{site.android-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera current state. |
