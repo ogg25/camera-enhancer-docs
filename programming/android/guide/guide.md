@@ -50,7 +50,8 @@ breadcrumbText: Android Guide
 If you have already got a full key license from `License Tracking Server`, you can use the following code to set it up in your project:
 
 ```Java
-    CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
+    //This code should be put in oncreate. There is an example below. 
+    DMLTSConnectionParameters info = new DMLTSConnectionParameters();
     info.organizationID = "********";
     mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
         @Override
@@ -97,12 +98,22 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
     import com.dynamsoft.dce.CameraView;
     //You can change the MainActivity to your prefer Activity 
     public class MainActivity extends AppCompatActivity {
-        //Here will add License intialization
         CameraEnhancer mCamera;
         CameraView cameraView;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            //Initialize your license
+            DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+            info.organizationID = "********";
+            mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+                    if(!b && e != null){
+                        e.printStackTrace();
+                    }
+                }
+            });
             //******************************************************
             //Remember to use your personal settings in this section
             //******************************************************            
@@ -159,9 +170,8 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
                 e.printStackTrace();
             }
             //License Initialization
-            CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
-            info.sessionPassword = "******";
-            info.handshakeCode ="******";
+            DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+            info.organizationID = "******";
             mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
                 @Override
                 public void LTSLicenseVerificationCallback(boolean b, Exception e) {
@@ -178,16 +188,16 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             }
             //Filter, zoom & Focus settings
             mCamera.setErrorCode(true);        
-            mCamera.setSensorControl(true);
-            mCamera.setAutoZoom(true);
-            mCamera.setForceAutoFocus(true);
-            mCamera.setFastMode(true);
+            mCamera.enableSensorControl(true);
+            mCamera.enableAutoZoom(true);
+            mCamera.enableAutoFocus(true);
+            mCamera.enableFastMode(true);
         }
     ```
 
 2. Fast mode setting
 
-    DCE fast mode is specially designed for accelerating on single barcode decoding. This mode will reduce the time consumption on single barcode decoding by 50%. Fast mode is strongly recommended to be enabled on single barcode decoding. To turn on Fast mode, you can use `setFastMode` to make the setting:
+    DCE fast mode is specially designed for accelerating on single barcode decoding. This mode will reduce the time consumption on single barcode decoding by 50%. Fast mode is strongly recommended to be enabled on single barcode decoding. To turn on Fast mode, you can use `enableFastMode` to make the setting:
     
     ```Java
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,7 +219,7 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             }
 
         //***************Turn on Fast mode**********************
-        mCamera.setFastMode(true);
+        mCamera.enableFastMode(true);
     }
     ```
 
@@ -230,8 +240,8 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         {
             ifNeedAutoFocus = false;
         }
-        mCamera.setForceAutoFocus(ifNeedAutoFocus);
-        mCamera.setUseFrameFilter(ifNeedFilter);
+        mCamera.enableAutoFocus(ifNeedAutoFocus);
+        mCamera.enableFrameFilter(ifNeedFilter);
     ```
 
 ## Add DCE to your project

@@ -14,7 +14,6 @@ breadcrumbText: Android Basic Setting
 - [`getApiVersion`](#getApiVersion-and-setApiVersion)
 - [`updateCameraSetting`](#updateCameraSettingFromJson-and-updateCameraSetting)
 - [`enableFastMode`](#enableFastMode)
-- [`setErrorCode`](#setErrorCode)
 - [`getCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
 - [`setCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
 - [`getCameraCurrentState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
@@ -59,11 +58,6 @@ Get and set API version
 Turn on(off) fast mode. It is recommended to turned on when decoding single barcode.
 ```java
     mCamera.enableFastMode(true);
-```
-
-## setErrorCode
-```java
-    mCamera.setErrorCode(true);
 ```
 
 ## getCameraCurrentState, getCameraDesireState and setCameraDesireState

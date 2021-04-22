@@ -7,4 +7,4 @@ needAutoGenerateSidebar: true
 breadcrumbText: License Error
 ---
 
-# Dynamsoft Camera Enhancer - License Error
+# License Error
