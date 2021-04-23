@@ -9,28 +9,28 @@ breadcrumbText: Android Filter Setting
 
 # Android API Reference - Filter Setting
 
-- [`enableFrameFilter`](#setUseFrameFilter)
+- [`enableFrameFilter`](#FrameFilter)
 - [`setMaxFrameRate`](#setMaxFrameRate)
 - [`setFrameListLength`](#setFrameListLength)
-- [`enableSensorControl`](#setSensorControl)
+- [`enableSensorControl`](#SensorControl)
 - [`setAutoModeLevelParam`](#setAutoModeLevelParam)
 
-## enableFrameFilter
+## FrameFilter
 
-Turn on(off) DCE filter (recommended to be true).
+Use `enableFrameFilter` to turn on/off frame filter. 
 ```java
-    mCamera.setUseFrameFilter(true);
+    mCamera.enableFrameFilter(true);
+```
+To check the status of frame filter mode, please use `getEnableFrameFilterStatus`
+```java
+    boolean x = mCamera.getEnableFrameFilterStatus();
 ```
 
 ## setMaxFrameRate
 
 Set max frame rate.
 ```java
-    try {
-        mCamera.setMaxFrameRate(24);
-    } catch (CameraEnhancerException e) {
-        e.printStackTrace();
-    } 
+    mCamera.setMaxFrameRate(24);
 ```
 
 ## setFrameListLength
@@ -45,12 +45,22 @@ Filtered frame will be stored in a list for decoding process. Decoder will alway
     } 
 ```
 
-## enableSensorControl
-    
-Two parameters are required in this API. Please use true(false) to turn on(off) sensor control and fill in a threshold for sensor filter.
+## SensorControl
 
+Use `enableSensorControl` to turn on/off sensor control mode. 
 ```java
-    mCamera.enableSensorControl(true, 50);
+    mCamera.enableSensorControl(true);
+```
+To check the status of sensor control mode, please use `getEnableSensorControlStatus`
+```java
+    boolean x = mCamera.getEnableSensorControlStatus();
+```
+
+## setSensorControlThreshold
+
+This API is designed for developers to apply different sensor sensitivity settings on different devices.
+```java
+    mCamera.setSensorControlThreshold(55);
 ```
 
 ## setAutoModeLevelParam

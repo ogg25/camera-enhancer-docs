@@ -19,7 +19,6 @@ breadcrumbText: Android API References
 | Method | Description |
 |-----------------|---------------|
 |[`getDeviceLevel`]({{site.android-basic-setting}}basic-setting.html#getDeviceLevel)| Make a evaluation on the current device and define its level for further use. |
-|[`setApiVersion`]({{site.android-basic-setting}}basic-setting.html#getApiVersion-and-setApiVersion)| Set API version. |
 |[`getApiVersion`]({{site.android-basic-setting}}basic-setting.html#getApiVersion-and-setApiVersion)| Get current API version. |
 | [`updateCameraSetting`]({{site.android-basic-setting}}basic-setting.html#updateCameraSetting) | Update camera filter and focus settings from Json. |
 
@@ -27,7 +26,8 @@ breadcrumbText: Android API References
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableFastMode`]({{site.android-basic-setting}}basic-setting.html#enableFastMode) | Enable fast mode (true/false). |
+| [`enableFastMode`]({{site.android-basic-setting}}basic-setting.html#FastMode) | Set `FastMode = true` to enable fast mode. |
+| [`getEnableFastModeStatus`]({{site.android-basic-setting}}basic-setting.html#FastMode) | Get the current status of fast mode (on/off). |
 
 ## Camera Setting
 
@@ -57,13 +57,16 @@ breadcrumbText: Android API References
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enableAutoFocus) | Enable auto focus (true/false). |
-| [`setAutoFocusAt`]({{site.android-zoom-setting}}zoom-focus.html#setAutoFocusPoint) | Set auto focus position. |
-| [`setManualFocusAt`]({{site.android-zoom-setting}}zoom-focus.html#setManualFocusAt) | Set manual focus position. |
+| [`enableDCEAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#AutoFocus) | Set true/false to turn on/off DCE auto focus |
+| [`getEnableDCEAutoFocusStatus`]({{site.android-zoom-setting}}zoom-focus.html#AutoFocus) | Get the status of DCE auto focus |
+| [`enableDefaultAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#AutoFocus) | Set true/false to turn on/off default auto focus |
+| [`getEnableDefaultAutoFocusStatus`]({{site.android-zoom-setting}}zoom-focus.html#AutoFocus) | Get the status of camera default auto focus |
+| [`setAutoFocusPosition`]({{site.android-zoom-setting}}zoom-focus.html#setAutoFocusPoint) | Set auto focus position. |
+| [`setManualFocusPosition`]({{site.android-zoom-setting}}zoom-focus.html#setManualFocusAt) | Set manual focus position. |
 | [`setFocalLength`]({{site.android-zoom-setting}}zoom-focus.html#setFocalLength) | Set focal length. |
-| [`enableRegularAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enableRegularAutoFocus) | Enable auto focus for every 3 seconds. |
-| [`enableAutoFocusOnSharpnessChange`]({{site.android-zoom-setting}}zoom-focus.html#enableAutoFocusOnSharpnessChange) | Enable camera to focus when clarity changes. |
-| [`enableAutoZoom`]({{site.android-zoom-setting}}zoom-focus.html#enableAutoZoom) | Enable auto zoom (true/false). |
+| [`RegularAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enableRegularAutoFocus) | If this is true, camera will auto focus for every 3 seconds. |
+| [`AutoFocusOnSharpnessChange`]({{site.android-zoom-setting}}zoom-focus.html#enableAutoFocusOnSharpnessChange) | If this is true, camera will auto focus when clarity changes. |
+| [`AutoZoom`]({{site.android-zoom-setting}}zoom-focus.html#AutoZoom) | Set `AutoZoom = true` to enable auto zoom |
 | [`setZoomFactor`]({{site.android-zoom-setting}}zoom-focus.html#setZoomFactor) | Set zoom factor. |
 
 
@@ -71,14 +74,15 @@ breadcrumbText: Android API References
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableFrameFilter`]({{site.android-filter-setting}}filter.html#enableFrameFilter) | Enable frame filter (true/false). |
+| [`FrameFilter`]({{site.android-filter-setting}}filter.html#FrameFilter) | Set `FrameFilter = true` to enable frame filter. |
 | [`setMaxFrameRate`]({{site.android-filter-setting}}filter.html#setMaxFrameRate) | Set max frame rate. |
 | [`setFrameListLength`]({{site.android-filter-setting}}filter.html#setFrameListLength) | Set how many frames will be stored in list. |
-| [`enableSensorControl`]({{site.android-filter-setting}}filter.html#enableSensorControl) | Enable sensor control (true/false). |
+| [`SensorControl`]({{site.android-filter-setting}}filter.html#SensorControl) | Set `SensorControl = true` to enable sensor control. |
+| [`setSensorControlThreshold`]({{site.android-filter-setting}}filter.html#setSensorControlThreshold) | Enable user to set sensor sensitivity (default value is 50). |
 | [`setAutoModeLevelParam`]({{site.android-filter-setting}}filter.html#setAutoModeLevelParam) | Set auto mode level parameter. |
 
 ## Class
 
-- [`CameraEnhancerException`]()
-- [`CameraLTSConnectionParameters`]()
-- [`Frame`]()
+- [`CameraEnhancerException`](class/camera-enhancer-exception.md)
+- [`CameraLTSConnectionParameters`](class/lts-connection.md)
+- [`Frame`](class/frame.md)
