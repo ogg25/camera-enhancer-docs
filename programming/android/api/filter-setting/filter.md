@@ -15,7 +15,7 @@ breadcrumbText: Android Filter Setting
 - [`enableSensorControl`](#SensorControl)
 - [`setAutoModeLevelParam`](#setAutoModeLevelParam)
 
-## FrameFilter
+## enableFrameFilter
 
 Use `enableFrameFilter` to turn on/off frame filter. 
 ```java
@@ -37,15 +37,11 @@ Set max frame rate.
 
 Filtered frame will be stored in a list for decoding process. Decoder will always get the newest frame for decoding.
 ```java
-    try {
-        //The default length of frame list will be 10 if you don't make any setting on it.
-        mCamera.setFrameListLength(8);
-    } catch (CameraEnhancerException e) {
-        e.printStackTrace();
-    } 
+    //The default length of frame list will be 10 if you don't make any setting on it.
+    mCamera.setFrameListLength(8);
 ```
 
-## SensorControl
+## enableSensorControl
 
 Use `enableSensorControl` to turn on/off sensor control mode. 
 ```java
@@ -58,7 +54,7 @@ To check the status of sensor control mode, please use `getEnableSensorControlSt
 
 ## setSensorControlThreshold
 
-This API is designed for developers to apply different sensor sensitivity settings on different devices.
+This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50 if user don't make any change.
 ```java
     mCamera.setSensorControlThreshold(55);
 ```

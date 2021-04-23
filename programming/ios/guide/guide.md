@@ -50,8 +50,7 @@ Objective-C:
 ```objectivec
     DynamsoftCameraEnhancer *dce;
     iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
-    lts.handshakeCode = @"Your handshakeCode";
-    lts.sessionPassword = @"******";
+    lts.organizationID = @"Your organizationID";
     dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:lts verificationDelegate:self];
     - (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
     {
@@ -60,9 +59,8 @@ Objective-C:
 ```
 Swift:
 ```Swift
-    let lts = iCameraLTSConnectionParameters()
-    lts.handshakeCode = "Your handshakeCode"
-    lts.mainServerURL = "https://mtplres.dynamsoft.com"
+    let lts = iDMLTSConnectionParameters()
+    lts.organizationID = "Your organizationID"
     dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
 ```
 

@@ -8,33 +8,25 @@ breadcrumbText: License Initialization
 ---
 # License initialization
 
-This section covers the following topics:
-
-- [How to set up a trial license.](#Set-up-trial-license)
-- [How to set up a full license.](#Sep-up-full-license)
-
 ## Get a trial key
 
-- If you are a new user, trial license will be available for 7 days since you download DCE.
-- If your free key is expired, you can [request for a trial extension online]().
+- 7 days public trial key is available for every new device that have never activated Dynamsoft Camera Enhancer.
+- If your free key is expired, please email trial@dynamsoft.com and include "privateTrial" in the title to get 30 days extension.
 
 ## Get full key license
 
-[Purchase DCE in online shop](). After getting a full key license, you will receive a default generated Handshake code. What you have to do to set up your license is to:
+- [Click here to view DCE purchase page]().
 
+## Set up license from License Tracking Server
 
-### Set up local license
+Since you have set up your, you can use following code to set up your license from `LTS`:
 
-If you are not tending to use dynamic license online, you can directly set up your local license with your key. 
-
+For Android users:
+ 
+Android sample
 ```Java
-```
-
-### Set up license from License Tracking Server
-
-Since you have set up your `Handshake Code` and `Session Password`, you can use following code to set up your license from `LTS`:
-```Java
-CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
+    DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+    info.organizationID = "******";
     mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
         @Override
         public void LTSLicenseVerificationCallback(boolean b, Exception e) {
@@ -45,3 +37,11 @@ CameraLTSConnectionParameters info = new CameraLTSConnectionParameters();
     });
 ```
 
+For iOS users: 
+
+Swift sample
+```Swift
+    let lts = iDMLTSConnectionParameters()
+    lts.organizationID = "200001"
+    dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+```

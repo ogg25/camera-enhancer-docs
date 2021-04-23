@@ -17,7 +17,11 @@ breadcrumbText: Documentation
 ## Programming
 
 - [Android]({{site.android}})
+    - [Android user guide]({{site.android-guide}})
+    - [Android API reference]({{site.android-api}})
 - [iOS]({{site.ios}})
+    - [iOS user guide]({{site.ios-guide}})
+    - [iOS API reference]({{site.ios-api}})
 
 ## Parameters
 
@@ -26,5 +30,4 @@ breadcrumbText: Documentation
 
 ## Trouble shooting
 
-- [License error]({{site.license-error}})
 - [Contact us]({{site.contact-us}})

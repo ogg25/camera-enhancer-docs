@@ -12,7 +12,8 @@ breadcrumbText: Android Basic Setting
 - [`getDeviceLevel`](#getDeviceLevel)
 - [`getApiVersion`](#getApiVersion)
 - [`updateCameraSetting`](#updateCameraSetting)
-- [`FastMode`](#FastMode)
+- [`enableFastMode`](#FastMode)
+- [`getEnableFastModeStatus`](#FastMode)
 - [`getCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
 - [`setCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
 - [`getCameraCurrentState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
@@ -47,18 +48,38 @@ Get current DCE API version
 
 ## updateCameraSetting
 
+Some detailed settings that can be updated from JSON string or file.
+To update from JSON string:
+```java
+    mCamera.updateCameraSetting("{"sensorvalue":3,"graydiffthreshold":30,"conversioncountthreshold":30,"sharpnessthreshold":0.2,"sharpnessthresholdlarge":0.4,"abssharpnessthreshold":200,"absgraythreshold":35,"claritythreshold":0.1}");
+```
+To update from JSON file:
+```java
+    mCamera.updateCameraSetting("Your file path here.");
+```
+JSON file template:
 ```Json
-    
+    {
+        "sensorvalue":3,
+        "graydiffthreshold":30,
+        "conversioncountthreshold":30,
+        "sharpnessthreshold":0.2,
+        "sharpnessthresholdlarge":0.4,
+        "abssharpnessthreshold":200,
+        "absgraythreshold":35,
+        "claritythreshold":0.1
+    }
+
 ```
 
 ## FastMode
     
-This API is designed for users to setup DCE fast mode. 
+This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode area to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
 ```java
-    //Set FastMode value true to turn on fast mode, set it false to turn of fast mode
-    mCamera.FastMode = true;
-    //Get the value(status) of fast mode
-    boolean x = mCamera.FastMode;
+    //To enable fast mode
+    mCamera.enableFastMode(true);
+    //To get the value(status) of fast mode
+    boolean x = mCamera.getEnableFastModeStatus();
 ```
 
 ## getCameraCurrentState, getCameraDesireState and setCameraDesireState
@@ -152,11 +173,11 @@ To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front 
     mCamera.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
 ```
 ## getResolution and setResolution
-These APIs are created for you to get or change camera resolution settings. 
+These APIs are created for you to get or change camera resolution settings.
 ```java
     mCamera.getResolution();
 ```
-For more details on camera resolution parameters, please view [parameter - resolution]()
+Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available in the device, the device will run the closest resolution to the setted resolution.
 ```java
     mCamera.setResolution(Resolution.RESOLUTION_1080P);
 ```
