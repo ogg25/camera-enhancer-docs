@@ -15,5 +15,5 @@ Dynamsoft Camera Enhancer is now available for following programming languages:
 
 Also there are Demo Apps available for you to understand more on Dynamsoft Camera Enhancer:
 
-- Barcode Reader X (DCE edition Android) [download]()
-- Barcode Reader X (DCE edition iOS) [download]()
+- Barcode Scanner X (DCE edition Android) [download]()
+- Barcode Scanner X (DCE edition iOS) [download]()
