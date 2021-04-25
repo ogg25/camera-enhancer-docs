@@ -9,15 +9,15 @@ breadcrumbText: iOS Zoom and Focus
 
 # iOS API Reference - Zoom & Focus Setting
 
-- [`setAutoFocusPosition`](#setAutoFocusPosition)
-- [`setManualFocusPosition`](#setManualFocusPosition)
-- [`setFocalLength`](#setFocalLength)
-- [`enableDCEAutoFocus`](#enableDCEAutoFocus)
-- [`enableDefaultAutoFocus`](#enableDefaultAutoFocus)
-- [`enableRegularAutoFocus`](#enableRegularAutoFocus)
-- [`enableAutoFocusOnSharpnessChange`](#enableAutoFocusOnSharpnessChange)
-- [`enableAutoZoom`](#enableAutoZoom)
-- [`setZoomFactor`](#setZoomFactor)
+- [`setAutoFocusPosition`](#setautofocusposition)
+- [`setManualFocusPosition`](#setmanualfocusposition)
+- [`setFocalLength`](#setfocallength)
+- [`enableDCEAutoFocus`](#enabledceautofocus)
+- [`enableDefaultAutoFocus`](#enabledefaultautofocus)
+- [`enableRegularAutoFocus`](#enableregularautofocus)
+- [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange)
+- [`enableAutoZoom`](#enableautozoom)
+- [`setZoomFactor`](#setzoomfactor)
 
 ## setAutoFocusPosition
     

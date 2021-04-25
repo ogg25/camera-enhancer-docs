@@ -9,11 +9,11 @@ breadcrumbText: iOS Filter Setting
 
 # iOS API Reference - Filter Setting
 
-- [`enableSensorControl`](#enableSensorControl)
-- [`setSensorControlThreshold`](#setSensorControlThreshold)
-- [`enableFrameFilter`](#enableFrameFilter)
-- [`setMaxFrameRate`](#setMaxFrameRate)
-- [`setFrameListLength`](#setFrameListLength)
+- [`enableSensorControl`](#enablesensorcontrol)
+- [`setSensorControlThreshold`](#setsensorcontrolthreshold)
+- [`enableFrameFilter`](#enableframefilter)
+- [`setMaxFrameRate`](#setmaxframerate)
+- [`setFrameListLength`](#setframelistlength)
 
 ## enableSensorControl
     

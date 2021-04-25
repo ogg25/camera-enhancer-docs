@@ -9,26 +9,26 @@ breadcrumbText: iOS Basic Setting
 
 # iOS API Reference - Basic Setting
 
-- [`updateCameraSettingFromJson`](#updateCameraSettingFromJson)
-- [`updateCameraSettingFromFile`](#updateCameraSettingFromFile)
-- [`enableFastMode`](#enableFastMode)
-- [`getCameraDesiredState`](#getCameraCurrentState-getCameraDesiredState-and-setCameraDesiredState)
-- [`setCameraDesiredState`](#getCameraCurrentState-getCameraDesiredState-and-setCameraDesiredState)
-- [`getCameraCurrentState`](#getCameraCurrentState-getCameraDesiredState-and-setCameraDesiredState)
-- [`pauseCamera`](#pauseCamera-and-resumeCamera)
-- [`resumeCamera`](#pauseCamera-and-resumeCamera)
-- [`startScanning`](#stopScanning-and-startScanning)
-- [`stopScanning`](#stopScanning-and-startScanning)
-- [`addCameraListener`](#addCameraListener-and-removeCameraListener)
-- [`removeCameraListener`](#addCameraListener-and-removeCameraListener)
-- [`setTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
-- [`getTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
-- [`getTorchCurrentState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
-- [`addTorchListener`](#addTorchListener)
-- [`getCameraPosition`](#getCameraPosition-and-switchCameraPosition)
-- [`switchCameraPosition`](#getCameraPosition-and-switchCameraPosition)
-- [`getResolution`](#getResolution-and-setResolution)
-- [`setResolution`](#getResolution-and-setResolution)
+- [`updateCameraSettingFromJson`](#updatecamerasettingfromjson)
+- [`updateCameraSettingFromFile`](#updatecamerasettingfromfile)
+- [`enableFastMode`](#enablefastmode)
+- [`getCameraDesiredState`](#camera-state)
+- [`setCameraDesiredState`](#camera-state)
+- [`getCameraCurrentState`](#camera-state)
+- [`pauseCamera`](#pausecamera-and-resumecamera)
+- [`resumeCamera`](#pausecamera-and-resumecamera)
+- [`startScanning`](#stopscanning-and-startscanning)
+- [`stopScanning`](#stopscanning-and-startscanning)
+- [`addCameraListener`](#addcameralistener)
+- [`removeCameraListener`](#addcameralistener)
+- [`setTorchDesiredState`](#torch-state)
+- [`getTorchDesiredState`](#torch-state)
+- [`getTorchCurrentState`](#torch-state)
+- [`addTorchListener`](#addtorchlistener)
+- [`getCameraPosition`](#camera-position)
+- [`switchCameraPosition`](#camera-position)
+- [`getResolution`](#resolution-settings)
+- [`setResolution`](#resolution-settings)
 
 ## updateCameraSettingFromJson
 
@@ -87,8 +87,9 @@ Swift
     dce.enableFastMode = true
 ```
 
-## getCameraCurrentState, getCameraDesiredState and setCameraDesiredState
-    
+## Camera State
+
+Use `getCameraCurrentState`, `getCameraDesiredState` and `setCameraDesiredState` to make settings on camera state.
 Get camera current status (on/off). 
 
 Objective-C
@@ -157,7 +158,7 @@ Swift
     dce.stopScanning()
 ```
 
-## addCameraListener and removeCameraListener
+## addCameraListener
 
 Add Camera Listener
 
@@ -183,8 +184,9 @@ Swift
     dce.removeCameraListener()
 ```
 
-## getTorchCurrentState, getTorchDesiredState and setTorchDesiredState
+## Torch State
 
+Use `getTorchCurrentState`, `getTorchDesiredState` and `setTorchDesiredState` to make settings on torch state
 Get current torch state (on/off)
 
 Objective-C
@@ -209,11 +211,11 @@ Swift
     dce.getTorchDesiredState()
 ```
 
-Use `<!--This content will be changed-->` to set torch on and use `<!--This content will be changed-->` to set it off.
+Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
 
 Objective-C
 ```objectivec
-    [dce setTorchDesiredState:DCETorchStateOn];
+    [dce setTorchDesiredState:TorchState.on];
 ```
 
 Swift
@@ -221,7 +223,7 @@ Swift
     dce.setTorchDesiredState(TorchState.on)
 ```
 
-## addTorchListener and removeTorchListener
+## addTorchListener
 
 Objective-C
 ```objectivec
@@ -235,7 +237,7 @@ Swift
     dce.removeCameraListener()
 ```
 
-## getCameraPosition and switchCameraPosition
+## Camera Position
 
 DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated currently.
 
@@ -261,7 +263,7 @@ Swift
     dce.switchCameraPosition()
 ```
 
-## getResolution and setResolution
+## Resolution Settings
 
 These APIs are created for you to get or change camera resolution settings. 
 
