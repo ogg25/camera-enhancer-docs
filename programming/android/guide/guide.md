@@ -11,9 +11,9 @@ breadcrumbText: Android Guide
 
 ## Quick access
 
-- [Installation](#Installation)
-- [Get start with DCE](#Get-Start)
-- [Add DCE to your project](#Add-DCE-to-your-project)
+- [Installation](#installation)
+- [Get start with DCE](#getstart)
+- [Add DCE to your project](#adddcetoyourproject)
 
 ## System Requirements
 
@@ -96,6 +96,8 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
     import com.dynamsoft.dce.CameraEnhancerException;
     import com.dynamsoft.dce.CameraState;
     import com.dynamsoft.dce.CameraView;
+    import com.dynamsoft.dce.DMLTSConnectionParameters;
+    import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
     //You can change the MainActivity to your prefer Activity 
     public class MainActivity extends AppCompatActivity {
         CameraEnhancer mCamera;
@@ -103,38 +105,37 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            //Initialize your license
-            DMLTSConnectionParameters info = new DMLTSConnectionParameters();
-            info.organizationID = "********";
-            mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
-                @Override
-                public void LTSLicenseVerificationCallback(boolean b, Exception e) {
-                    if(!b && e != null){
-                        e.printStackTrace();
-                    }
-                }
-            });
             //******************************************************
             //Remember to use your personal settings in this section
             //******************************************************            
             setContentView(R.layout.activity_main);
             cameraView = findViewById(R.id.cameraView);
             mCamera = new CameraEnhancer(MainActivity.this);
-            //******************************************************
-            //******************************************************
             mCamera.addCameraView(cameraView);
+            //******************************************************
+            //******************************************************
+            //Initialize your license
+            mCamera = new CameraEnhancer(MainActivity.this);
+            mCamera.addCameraView(cameraView);
+            com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
+            // The organization id 200001 here will grant you a public trial license good for 7 days.
+            // After that, you can send an email to trial@dynamsoft.com
+            // (make sure to include the keyword privateTrial in the email title)
+            // to obtain a 30-day free private trial license which will also come in the form of an organization id.
+            info.organizationID = "200001";
+            mCamera.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if(!isSuccess){
+                        error.printStackTrace();
+                    }
+
+                }
+            });
             //Turn on camera
-            try {
-                mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-            } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-            }
+            mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             //Start scanning
-            try {
-                mCamera.startScanning();
-            } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-            }
+            mCamera.startScanning();
         }
     }
     ```
@@ -164,33 +165,29 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             cameraView = findViewById(R.id.cameraView);
             mCamera = new CameraEnhancer(MainActivity.this);
             mCamera.addCameraView(cameraView);
-            try {
-                mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-            } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-            }
             //License Initialization
-            DMLTSConnectionParameters info = new DMLTSConnectionParameters();
-            info.organizationID = "******";
-            mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
+            com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
+            // The organization id 200001 here will grant you a public trial license good for 7 days.
+            // After that, you can send an email to trial@dynamsoft.com
+            // (make sure to include the keyword privateTrial in the email title)
+            // to obtain a 30-day free private trial license which will also come in the form of an organization id.
+            info.organizationID = "200001";
+            mCamera.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
                 @Override
-                public void LTSLicenseVerificationCallback(boolean b, Exception e) {
-                    if(!b && e != null){
-                        e.printStackTrace();
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if(!isSuccess){
+                        error.printStackTrace();
                     }
                 }
             });
+            mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             //Start camera scanning
-            try {
-                mCamera.startScanning();
-            } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-            }
+            mCamera.startScanning();
             //Filter, zoom & Focus settings
             mCamera.setErrorCode(true);        
             mCamera.enableSensorControl(true);
             mCamera.enableAutoZoom(true);
-            mCamera.enableAutoFocus(true);
+            mCamera.enableDCEAutoFocus(true);
             mCamera.enableFastMode(true);
         }
     ```
@@ -207,17 +204,8 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         cameraView = findViewById(R.id.cameraView);
         mCamera = new CameraEnhancer(MainActivity.this);
         mCamera.addCameraView(cameraView);
-        try {
-            mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-            } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-            }
-        try {
-                mCamera.startScanning();
-            } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-            }
-
+        mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
+        mCamera.startScanning();
         //***************Turn on Fast mode**********************
         mCamera.enableFastMode(true);
     }
@@ -240,13 +228,13 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         {
             ifNeedAutoFocus = false;
         }
-        mCamera.enableAutoFocus(ifNeedAutoFocus);
+        mCamera.enableDCEAutoFocus(ifNeedAutoFocus);
         mCamera.enableFrameFilter(ifNeedFilter);
     ```
 
 ## Add DCE to your project
 
-If you have a completed project and you want to add Dynamsoft Camera Enhancer into your app, the following guide might help you on quick installation. For Dynamsoft Barcode reader (DBR) developers, we provide following APIs in our 8.3+ version to easily set up DCE in your DBR project.
+If you have a completed project and you want to add Dynamsoft Camera Enhancer into your app, the following guide might help you on quick installation. For Dynamsoft Barcode reader (DBR) developers, we provide following APIs in our 8.4+ version to easily set up DCE in your DBR project.
 
 |API names|Description|
 |---------|-----------|

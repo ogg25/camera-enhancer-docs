@@ -9,9 +9,9 @@ breadcrumbText: iOS Zoom and Focus
 
 # iOS API Reference - Zoom & Focus Setting
 
-- [`setAutoFocusAt`](#setAutoFocusAt)
-- [`setManualFocusAt`](#setManualFocusAt)
-- [`setForcedFocusLength`](#setForcedFocusLength)
+- [`setAutoFocusPosition`](#setAutoFocusPosition)
+- [`setManualFocusPosition`](#setManualFocusPosition)
+- [`setFocalLength`](#setFocalLength)
 - [`enableDCEAutoFocus`](#enableDCEAutoFocus)
 - [`enableDefaultAutoFocus`](#enableDefaultAutoFocus)
 - [`enableRegularAutoFocus`](#enableRegularAutoFocus)
@@ -25,11 +25,11 @@ Set the position you want to auto focus at. This setting will replace the defaul
 
 Objective-C
 ```objectivec
-    [dce setAutoFocusAt:CGPointMake(0.5, 0.5)];
+    [dce setAutoFocusPosition:CGPointMake(0.5, 0.5)];
 ```
 Swift
 ```Swift
-    dce.setAutoFocusAt(CGPoint(x: 0.5, y: 0.5))
+    dce.setAutoFocusPosition(CGPoint(x: 0.5, y: 0.5))
 ```
 
 ## setManualFocusPosition
@@ -38,12 +38,12 @@ Set the position you want to manually focus at. This focus position effects only
 
 Objective-C
 ```objectivec
-    [dce setManualFocusAt:CGPointMake(0.5, 0.5)];
+    [dce setManualFocusPosition:CGPointMake(0.5, 0.5)];
 ```
 
 Swift
 ```Swift
-    dce.setManualFocusAt(CGPoint(x: 0.5, y: 0.5))
+    dce.setManualFocusPosition(CGPoint(x: 0.5, y: 0.5))
 ```
 
 ## setFocalLength

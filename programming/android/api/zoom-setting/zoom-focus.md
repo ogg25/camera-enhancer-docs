@@ -9,28 +9,28 @@ breadcrumbText: Android Zoom and Focus
 
 # Android API Reference - Zoom & Focus Setting
 
-- [`setAutoFocusAt`](#setAutoFocusAt)
-- [`setManualFocusAt`](#setManualFocusAt)
-- [`setForcedFocusLength`](#setForcedFocusLength)
-- [`enableDCEAutoFocus`](#enableDCEAutoFocus)
-- [`getEnableDCEAutoFocusStatus`](#enableDCEAutoFocus)
-- [`enableDefaultAutoFocus`](#enableDefaultAutoFocus)
-- [`getEnableDefaultAutoFocusStatus`](#enableDefaultAutoFocus)
-- [`enableRegularAutoFocus`](#enableRegularAutoFocus)
-- [`getEnableRegularAutoFocusStatus`](#enableRegularAutoFocus)
-- [`enableAutoFocusOnSharpnessChange`](#enableAutoFocusOnSharpnessChange)
-- [`getEnableAutoFocusOnSharpnessChangeStatus`](#enableAutoFocusOnSharpnessChange)
-- [`enableAutoZoom`](#enableAutoZoom)
-- [`getEnableAutoZoomStatus`](#enableAutoZoom)
-- [`setZoomFactor`](#setZoomFactor)
+- [`setAutoFocusPosition`](#setautofocusposition)
+- [`setManualFocusPosition`](#setautofocusposition)
+- [`setFocalLength`](#setfocallength)
+- [`enableDCEAutoFocus`](#enabledceautofocus)
+- [`getEnableDCEAutoFocusStatus`](#enabledceautofocus)
+- [`enableDefaultAutoFocus`](#enabledefaultautofocus)
+- [`getEnableDefaultAutoFocusStatus`](#enabledefaultautofocus)
+- [`enableRegularAutoFocus`](#enableregularautofocus)
+- [`getEnableRegularAutoFocusStatus`](#enableregularautofocus)
+- [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange)
+- [`getEnableAutoFocusOnSharpnessChangeStatus`](#enableautofocusonsharpnesschange)
+- [`enableAutoZoom`](#enableautozoom)
+- [`getEnableAutoZoomStatus`](#enableautozoom)
+- [`setZoomFactor`](#setzoomfactor)
 
-## setAutoFocusAt
+## setAutoFocusPosition
     
 Set the position you want to auto focus at. This setting will replace the default focus value and always focus on the setted point. 
 ```java
     mCamera.setAutoFocusPosition(0.5,0.6);
 ```
-## setManualFocusAt
+## setManualFocusPosition
 
 Set the position you want to manually focus at. This focus position effects only once each time this code is called.
 ```java

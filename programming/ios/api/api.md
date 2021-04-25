@@ -52,14 +52,15 @@ breadcrumbText: iOS API Reference
 | [`switchCameraPosition`]({{site.ios-basic-setting}}basic-setting.html#getCameraPosition-and-switchCameraPosition) | Switch camera position front/back |
 | [`setResolution`]({{site.ios-basic-setting}}basic-setting.html#getResolution-and-setResolution) | Set resolution |
 | [`getResolution`]({{site.ios-basic-setting}}basic-setting.html#getResolution-and-setResolution) | Get current resolution setting |
+| [`getResolutionList`](basic-setting/basic-setting.md#getResolution-and-setResolution) | Get all available resolutions |
 
 ## Focus Settings
 
 Focus parameters related APIs:
 | Method | Description |
 |-----------------|---------------|
-| [`setAutoFocusPoint`]({{site.ios-zoom-setting}}zoom-focus.html#setAutoFocusPoint) | Set auto focus position (Change the default auto focus position). |
-| [`setManualFocusPoint`]({{site.ios-zoom-setting}}zoom-focus.html#setManualFocusAt) | Set manual focus position (This focus position only effect once for each time the API is called). |
+| [`setAutoFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setAutoFocusPosition) | Set auto focus position (Change the default auto focus position). |
+| [`setManualFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setManualFocusPosition) | Set manual focus position (This focus position only effect once for each time the API is called). |
 | [`setFocalLength`]({{site.ios-zoom-setting}}zoom-focus.html#setFocalLength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
 
 Basic focus settings:

@@ -273,6 +273,16 @@ Objective-C
 
 Swift
 ```Swift
-    dce.getResolution();
+    dce.getResolution()
     dce.setResolution(Resolution.Quality1080P)
+```
+`getResolutionList` enable user to check all available resolutions that can be setted to the current camera.
+Objective-C
+```objectivec
+    [dce getResolutionList];
+```
+
+Swift
+```Swift
+    dce.getResolutionList()
 ```

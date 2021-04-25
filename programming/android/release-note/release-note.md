@@ -7,4 +7,13 @@ needAutoGenerateSidebar: true
 breadcrumbText: Android Release Note
 ---
 
-# Android Release Note
+# Release Note for Android - 1.x
+
+## 1.0 (04/29/2021)
+
+- Support basic camera control
+- Support auto focus mode.
+- Support sensor control mode.
+- Support frame filter mode.
+- Support auto zoom mode.
+- Support fast decode mode 
