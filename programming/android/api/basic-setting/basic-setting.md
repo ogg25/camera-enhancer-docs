@@ -9,29 +9,29 @@ breadcrumbText: Android Basic Setting
 
 # API Reference - Basic Setting
 
-- [`getDeviceLevel`](#getDeviceLevel)
-- [`getApiVersion`](#getApiVersion)
-- [`updateCameraSetting`](#updateCameraSetting)
-- [`enableFastMode`](#FastMode)
-- [`getEnableFastModeStatus`](#FastMode)
-- [`getCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
-- [`setCameraDesireState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
-- [`getCameraCurrentState`](#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState)
-- [`pauseCamera`](#pauseCamera-and-resumeCamera)
-- [`resumeCamera`](#pauseCamera-and-resumeCamera)
-- [`startScanning`](#stopScanning-and-startScanning)
-- [`stopScanning`](#stopScanning-and-startScanning)
-- [`addCameraListener`](#addCameraListener-and-removeCameraListener)
-- [`removeCameraListener`](#addCameraListener-and-removeCameraListener)
-- [`setTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
-- [`getTorchDesiredState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
-- [`getTorchCurrentState`](#getTorchCurrentState-getTorchDesiredState-and-setTorchDesiredState)
-- [`addTorchListener`](#addTorchListener)
-- [`getCameraPosition`](#getCameraPosition-and-switchCameraPosition)
-- [`switchCameraPosition`](#getCameraPosition-and-switchCameraPosition)
-- [`getResolution`](#getResolution-and-setResolution)
-- [`setResolution`](#getResolution-and-setResolution)
-- [`getResolutionList`](#getResolution-and-setResolution)
+- [`getDeviceLevel`](#getdevicelevel)
+- [`getApiVersion`](#getapiversion)
+- [`updateCameraSetting`](#updatecamerasetting)
+- [`enableFastMode`](#fastmode)
+- [`getEnableFastModeStatus`](#fastmode)
+- [`getCameraDesireState`](#camera-state)
+- [`setCameraDesireState`](#camera-state)
+- [`getCameraCurrentState`](#camera-state)
+- [`pauseCamera`](#pausecamera-and-resumecamera)
+- [`resumeCamera`](#pausecamera-and-resumecamera)
+- [`startScanning`](#stopscanning-and-startscanning)
+- [`stopScanning`](#stopscanning-and-startscanning)
+- [`addCameraListener`](#addcameralistener)
+- [`removeCameraListener`](#addcameralistener)
+- [`setTorchDesiredState`](#torch-state)
+- [`getTorchDesiredState`](#torch-state)
+- [`getTorchCurrentState`](#torch-state)
+- [`addTorchListener`](#addtorchlistener)
+- [`getCameraPosition`](#camera-position)
+- [`switchCameraPosition`](#camera-position)
+- [`getResolution`](#resolution-settings)
+- [`setResolution`](#resolution-settings)
+- [`getResolutionList`](#resolution-settings)
 
 ## getDeviceLevel
 
@@ -73,7 +73,7 @@ JSON file template:
 
 ```
 
-## FastMode
+## Fast Mode
     
 This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode area to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
 ```java
@@ -83,7 +83,7 @@ This API is designed for users to setup DCE fast mode. DCE fast mode will cut fr
     boolean x = mCamera.getEnableFastModeStatus();
 ```
 
-## getCameraCurrentState, getCameraDesireState and setCameraDesireState
+## Camera State
     
 Get camera current status (on/off). 
 ```java
@@ -113,7 +113,7 @@ Contorl the stop & start of camera module.
     mCamera.startScanning();
     mCamera.stopScanning();
 ```
-## addCameraListener and removeCameraListener
+## addCameraListener
 Add Camera Listener
 ```java
     mCamera.addCameraListener(new CameraListener() {
@@ -136,7 +136,7 @@ Remove Camera Listener
 ```java
     mCamera.removeCameraListener();
 ```
-## getTorchCurrentState, getTorchDesiredState and setTorchDesiredState
+## Torch State
 
 Get current torch state (on/off)
 ```java
@@ -163,7 +163,7 @@ Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_
     });
 ```
 
-## getCameraPosition and switchCameraPosition
+## Camera Position
 DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
 To get camera position:
 ```java
@@ -173,7 +173,7 @@ To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front 
 ```java
     mCamera.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
 ```
-## getResolution and setResolution
+## Resolution Settings
 These APIs are created for you to get or change camera resolution settings.
 ```java
     mCamera.getResolution();
