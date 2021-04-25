@@ -51,6 +51,7 @@ breadcrumbText: Android API References
 | [`switchCameraPosition`]({{site.android-basic-setting}}basic-setting.html#getCameraPosition-and-switchCameraPosition) | Switch camera position front/back. |
 | [`setResolution`]({{site.android-basic-setting}}basic-setting.html#getResolution-and-setResolution) | Set resolution. |
 | [`getResolution`]({{site.android-basic-setting}}basic-setting.html#getResolution-and-setResolution) | Get current resolution setting. |
+| [`getResolutionList`]({{site.android-basic-setting}}basic-setting.html#getResolution-and-setResolution) | Get all available resolutions |
 
 ## Focus Settings
 

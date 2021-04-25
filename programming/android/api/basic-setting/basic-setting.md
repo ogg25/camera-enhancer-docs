@@ -31,6 +31,7 @@ breadcrumbText: Android Basic Setting
 - [`switchCameraPosition`](#getCameraPosition-and-switchCameraPosition)
 - [`getResolution`](#getResolution-and-setResolution)
 - [`setResolution`](#getResolution-and-setResolution)
+- [`getResolutionList`](#getResolution-and-setResolution)
 
 ## getDeviceLevel
 
@@ -180,4 +181,8 @@ These APIs are created for you to get or change camera resolution settings.
 Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available in the device, the device will run the closest resolution to the setted resolution.
 ```java
     mCamera.setResolution(Resolution.RESOLUTION_1080P);
+```
+Get all available resolutions that can be setted to the current camera.
+```java
+    mCamera.getResolutionList();
 ```

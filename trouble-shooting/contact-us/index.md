@@ -13,12 +13,12 @@ If you are facing any issue on using DCE or have any suggestions for us, please 
 
 ## E-mail
 
-- Tech
-- Sales
+- Tech: [support@dynamsoft.com](mailto:support@dynamsoft.com)
+- Sales: [sales@dynamsoft.com](mailto:sales@dynamsoft.com)
 
 ## Phone
 
 - 1-877-605-5491 (Toll-Free)
 - 1-604-605-5491
 
-## [Leave a message]()
+## [Leave a message](https://www.dynamsoft.com/Company/Contact.aspx)
