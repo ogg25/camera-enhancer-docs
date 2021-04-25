@@ -34,7 +34,7 @@ breadcrumbText: iOS API Reference
 
 | Method | Description |
 |-----------------|---------------|
-| [`setCameraDesiredState`]({{site.ios-basic-setting}}basic-setting.html#getcameracurrentstate-getcameradesirestateandsetcameradesirestate) | Set Camera on/off |
+| [`setCameraDesiredState`]({{site.ios-basic-setting}}basic-setting.html#getcameracurrentstate-getcameradesirestate-and-setcameradesirestate) | Set Camera on/off |
 | [`getCameraDesiredState`]({{site.ios-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera desired state |
 | [`getCameraCurrentState`]({{site.ios-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera current state |
 | [`pauseCamera`]({{site.ios-basic-setting}}basic-setting.html#pauseCamera-and-resumeCamera) | Pause Camera |
