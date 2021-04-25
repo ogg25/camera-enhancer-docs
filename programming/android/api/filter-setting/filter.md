@@ -9,11 +9,11 @@ breadcrumbText: Android Filter Setting
 
 # Android API Reference - Filter Setting
 
-- [`enableFrameFilter`](#FrameFilter)
-- [`setMaxFrameRate`](#setMaxFrameRate)
-- [`setFrameListLength`](#setFrameListLength)
-- [`enableSensorControl`](#SensorControl)
-- [`setAutoModeLevelParam`](#setAutoModeLevelParam)
+- [`enableFrameFilter`](#framefilter)
+- [`setMaxFrameRate`](#setmaxframerate)
+- [`setFrameListLength`](#setframelistlength)
+- [`enableSensorControl`](#sensorcontrol)
+- [`setAutoModeLevelParam`](#setautomodelevelparam)
 
 ## enableFrameFilter
 
@@ -60,7 +60,14 @@ This API is designed for developers to apply different sensor sensitivity settin
 ```
 
 ## setAutoModeLevelParam
-Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2.
+Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are settings for device level. 
+
+| CPU & RAM | If device CPUMHz > cpuMHz2 | If device CPUMHz1 < CPUMHz < cpuMHz2 | If device CPUMHz < CPUMHz1 |
+|--|--|--|--|
+| If device ramMB > ramMB2 | Device level is high | Device CPU level is mid | Device CPU level is mid |
+| If device ramMB1 < ramMB < ramMB2 | Device CPU level is mid | Device CPU level is mid | Device CPU level is mid |
+| If device ramMB < ramMB1 | Device CPU level is mid | Device CPU level is mid | Device CPU level is low |
+
 ```java
     mCamera.setAutoModeLevelParam(int,int,int,int);
 ```
