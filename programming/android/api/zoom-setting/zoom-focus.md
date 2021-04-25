@@ -18,6 +18,7 @@ breadcrumbText: Android Zoom and Focus
 - [`getEnableDefaultAutoFocusStatus`](#enabledefaultautofocus)
 - [`enableRegularAutoFocus`](#enableregularautofocus)
 - [`getEnableRegularAutoFocusStatus`](#enableregularautofocus)
+- [`setRegularAutoFocusParam`](#setregularautofocusparam)
 - [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange)
 - [`getEnableAutoFocusOnSharpnessChangeStatus`](#enableautofocusonsharpnesschange)
 - [`enableAutoZoom`](#enableautozoom)
@@ -84,6 +85,14 @@ To get status (on/off) of regular auto focus mode:
 ```java
     boolean x = mCamera.getEnableRegularAutoFocusStatus();
 ```
+
+## setregularautofocusparam
+
+There are focus interval time and focus terminate time for users to set in regular auto focus mode. Please use `setregularautofocusparam` to make these settings.
+```java
+    // Set focus interval = 3000 and focus terminate time = 500.
+    mCamera.setRegularAutoFocusParam(3000, 500);
+``` 
 
 ## enableAutoFocusOnSharpnessChange
 
