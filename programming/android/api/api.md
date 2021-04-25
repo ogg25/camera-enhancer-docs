@@ -56,6 +56,7 @@ breadcrumbText: Android API References
 ## Focus Settings
 
 Focus parameters related APIs:
+
 | Method | Description |
 |-----------------|---------------|
 | [`setAutoFocusPosition`]({{site.android-zoom-setting}}zoom-focus.html#setAutoFocusPoint) | Set auto focus position (Change the default auto focus position). |
@@ -63,6 +64,7 @@ Focus parameters related APIs:
 | [`setFocalLength`]({{site.android-zoom-setting}}zoom-focus.html#setFocalLength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
 
 Basic focus settings: 
+
 | Method | Description |
 |-----------------|---------------|
 | [`enableDCEAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enableDCEAutoFocus) | Set true/false to turn on/off DCE auto focus. |
@@ -71,6 +73,7 @@ Basic focus settings:
 | [`getEnableDefaultAutoFocusStatus`]({{site.android-zoom-setting}}zoom-focus.html#enableDefaultAutoFocus) | Get the status (on/off) of camera default auto focus. |
 
 Advanced focus settings: 
+
 | Method | Description |
 |-----------------|---------------|
 | [`enableRegularAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enableRegularAutoFocus) | If this is true, camera will auto focus for every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |

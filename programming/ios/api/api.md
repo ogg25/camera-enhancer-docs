@@ -9,24 +9,24 @@ breadcrumbText: iOS API Reference
 
 # Objective-C & Swift (iOS) API references
 
-- [Initialization](#Initialization-License-and-other-basic-settings)
-- [Basic Camera Settings](#Basic-Camera-Settings)
-- [Focus Settings](#Focus-Settings)
-- [Zoom Settings](#Zoom-Settings)
-- [Filter Setting](#Filter-Settings)
+- [Initialization](#initializationlicenseandotherbasicsettings)
+- [Basic Camera Settings](#basiccamerasettings)
+- [Focus Settings](#focussettings)
+- [Zoom Settings](#zoomsettings)
+- [Filter Setting](#filtersettings)
 
 ## Initialization, License and other basic settings
 
 | Method | Description |
 |-----------------|---------------|
-| [`updateCameraSettingFromJson`]({{site.ios-basic-setting}}basic-setting.html#updateCameraSettingFromJson) | Update camera filter and focus settings from Json |
-| [`updateCameraSettingFromFile`]({{site.ios-basic-setting}}basic-setting.html#updateCameraSettingFromFile) | Update camera filter and focus settings from file |
+| [`updateCameraSettingFromJson`]({{site.ios-basic-setting}}basic-setting.html#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
+| [`updateCameraSettingFromFile`]({{site.ios-basic-setting}}basic-setting.html#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
 
 ## Fast mode
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableFastMode`]({{site.ios-basic-setting}}basic-setting.html#setFastmode) | Set the value true/false to turn on/off DCE fast mode |
+| [`enableFastMode`]({{site.ios-basic-setting}}basic-setting.html#setfastmode) | Set the value true/false to turn on/off DCE fast mode |
 
 ## Camera Setting
 
@@ -34,7 +34,7 @@ breadcrumbText: iOS API Reference
 
 | Method | Description |
 |-----------------|---------------|
-| [`setCameraDesiredState`]({{site.ios-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Set Camera on/off |
+| [`setCameraDesiredState`]({{site.ios-basic-setting}}basic-setting.html#getcameracurrentstate-getcameradesirestateandsetcameradesirestate) | Set Camera on/off |
 | [`getCameraDesiredState`]({{site.ios-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera desired state |
 | [`getCameraCurrentState`]({{site.ios-basic-setting}}basic-setting.html#getCameraCurrentState-getCameraDesireState-and-setCameraDesireState) | Get camera current state |
 | [`pauseCamera`]({{site.ios-basic-setting}}basic-setting.html#pauseCamera-and-resumeCamera) | Pause Camera |
@@ -56,23 +56,27 @@ breadcrumbText: iOS API Reference
 
 ## Focus Settings
 
-Focus parameters related APIs:
+- Focus parameters related APIs:
+
 | Method | Description |
 |-----------------|---------------|
 | [`setAutoFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setAutoFocusPosition) | Set auto focus position (Change the default auto focus position). |
 | [`setManualFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setManualFocusPosition) | Set manual focus position (This focus position only effect once for each time the API is called). |
 | [`setFocalLength`]({{site.ios-zoom-setting}}zoom-focus.html#setFocalLength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
 
-Basic focus settings:
+- Basic focus settings:
+
 | Method | Description |
 |-----------------|---------------|
 | [`enableDCEAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableDCEAutoFocus) | Set true/false to turn on/off DCE auto focus. |
 | [`enableDefaultAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableDefaultAutoFocus) | Set true/false to turn on/off default auto focus. |
 
-Advanced focus settings: 
+- Advanced focus settings: 
+
 | Method | Description |
 |-----------------|---------------|
 | [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableRegularAutoFocus) | If this is true, camera will auto focus for every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
+| [`setRegularAutoFocusParam`] | Set parameters for regular auto focus mode. Focus interval and terminate time are available for setting in this API |
 | [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableAutoFocusOnSharpnessChange) | If this is enabled, camera will auto focus when clarity change is detected. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
 
 ## Zoom Settings
