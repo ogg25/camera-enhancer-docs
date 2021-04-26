@@ -9,6 +9,7 @@ breadcrumbText: Parameter Reference
 # Parameter Reference
 
 ## Camera state
+
 | Member (Java/Android) | Value | Description |
 |-----------------------|-------|-------------|
 | `CameraState.CAMERA_STATE_OFF` | 0 | Set camera off. |

@@ -11,10 +11,9 @@ breadcrumbText: iOS Guide
 
 ## Quick access
 
-- [Installation](#Installation)
-- [Get start with DCE](#Get-Start)
-    - [Quick Setup](#Quick-Settings-for-DCE)
-- [Add DCE to your project](#Add-DCE-to-your-project)
+- [Installation](#installation)
+- [License Initialization](#license-initialization)
+- [Get start with DCE](#get-start)
 
 ## System Requirements
 
@@ -28,10 +27,12 @@ breadcrumbText: iOS Guide
 
 1. [Download Dynamsoft Camera Enhancer]() from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework. 
 
-2. Add DynamsoftCameraEnhancer.framework in your xcode project. 
+2. Create a new Objective-C or Swift project.
+
+3. Add DynamsoftCameraEnhancer.framework in your xcode project. 
 (How to add framework on xcode)
 
-3. Import Dynamsoft Camera Enhancer
+4. Import Dynamsoft Camera Enhancer
 
 Objective-C:
 ```objectivec
@@ -67,7 +68,7 @@ Swift:
 If you don't have a full key license:
 
 - 7 days trial license is available for new devices that have never setup Dynamsoft Camera Enhancer.
-- To extend your trial license, please send "Private trial" to trial@dynamsoft.com to get 30 days private trial key.
+- To extend your trial license, please send "privateTrial" to trial@dynamsoft.com to get 30 days private trial key.
 
 Or you can
 
@@ -294,16 +295,20 @@ class ViewController: UIViewController {
 }
 ```
 
-Specially, for auto focus there are APIs `setAutoFocusPoint` and `manualFocusOnce` designed for changing the default focus point. The value of this property is a CGPoint that determines the receiver's focus point of interest, if it has one. A value of (0,0) indicates that the camera should focus on the top left corner of the image, while a value of (1,1) indicates that it should focus on the bottom right. The default value is (0.5,0.5).
+Specially, for auto focus there are APIs `setAutoFocusPosition` and `setManualFocusPosition` designed for changing the default focus point. The value of this property is a CGPoint that determines the receiver's focus point of interest, if it has one. A value of (0,0) indicates that the camera should focus on the top left corner of the image, while a value of (1,1) indicates that it should focus on the bottom right. The default value is (0.5,0.5).
 
 Objective-C
 ```objectivec
-    [dce setAutoFocusPoint:CGPointMake(0.5, 0.5)];
-    [dce manualFocusOnce:CGPointMake(0.5, 0.5)];
+    [dce setAutoFocusPosition:CGPointMake(0.5, 0.5)];
+    [dce setManualFocusPosition:CGPointMake(0.5, 0.5)];
 ```
 
 Swift:
 ```Swift
-    dce.setAutoFocus(CGPoint(x: 0.5, y: 0.5))
-    dce.manualFocusOnce(CGPoint(x: 0.5, y: 0.5))
+    dce.setAutoFocusPosition(CGPoint(x: 0.5, y: 0.5))
+    dce.setManualFocusPosition(CGPoint(x: 0.5, y: 0.5))
 ```
+
+## Add DCE to your Dynamsoft Barcode Reader (DBR) project
+
+For developers who are using Dynamsoft Barcode reader, there are new APIs in DBR 8.2.1 mobile edition to quick deploy camera enhancer in barcode reader project. For more information please read more in [DBR documentation - camera enhancer deployment]({{site.barcode-deploy-ios}}) section.

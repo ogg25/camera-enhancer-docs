@@ -12,8 +12,8 @@ breadcrumbText: Android Guide
 ## Quick access
 
 - [Installation](#installation)
-- [Get start with DCE](#getstart)
-- [Add DCE to your project](#adddcetoyourproject)
+- [License Initialization](#license-initialization)
+- [Get start with DCE](#get-start)
 
 ## System Requirements
 
@@ -183,8 +183,7 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
             //Start camera scanning
             mCamera.startScanning();
-            //Filter, zoom & Focus settings
-            mCamera.setErrorCode(true);        
+            //Filter, zoom & Focus settings     
             mCamera.enableSensorControl(true);
             mCamera.enableAutoZoom(true);
             mCamera.enableDCEAutoFocus(true);
@@ -232,13 +231,6 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         mCamera.enableFrameFilter(ifNeedFilter);
     ```
 
-## Add DCE to your project
+## Add DCE to your Dynamsoft Barcode Reader (DBR) project
 
-If you have a completed project and you want to add Dynamsoft Camera Enhancer into your app, the following guide might help you on quick installation. For Dynamsoft Barcode reader (DBR) developers, we provide following APIs in our 8.4+ version to easily set up DCE in your DBR project.
-
-|API names|Description|
-|---------|-----------|
-| `setDCE` |  |
-| `startDCE` |  |
-| `endDCE` |  |
-| `setDCEresultCallback` |  |
+For developers who are using Dynamsoft Barcode reader, there are new APIs in DBR 8.2.1 mobile edition to quick deploy camera enhancer in barcode reader project. For more information please read more in [DBR documentation - camera enhancer deployment]({{site.barcode-deploy-android}}) section.

@@ -40,6 +40,9 @@ gallery: /camera-enhancer/docs/resources/code-gallery/
 all-release-note: /camera-enhancer/docs/resources/release-notes/
 resource: /camera-enhancer/docs/resources/
 
+barcode-deploy-ios: /barcode-reader/programming/ios/api-reference/camera-enhancer/
+barcode-deploy-android: /barcode-reader/programming/android/api-reference/camera-enhancer/
+
 assets: /camera-enhancer/docs/assets/
 edit_icon: /barcode-reader/assets/img-icon/edit-icon.png
 smile_icon: /barcode-reader/assets/img-icon/icon-smile.png
