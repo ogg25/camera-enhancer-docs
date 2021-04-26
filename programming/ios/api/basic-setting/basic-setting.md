@@ -34,7 +34,7 @@ breadcrumbText: iOS Basic Setting
 
 ## updateCameraSettingFromJson
 
-Some detailed settings that can be updated from JSON string or file.
+Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)
 To update from JSON string:
 Objective-C
 ```objectivec
@@ -60,16 +60,25 @@ Swift
     dce.updateCameraSettingFromFile(fromFile: "Your file path")
 ```
 
-JSON file template:
+This is the template for `updateCameraSettingFromJson` and `updateCameraSettingFromFile`
+
 ```Json
     {
-        "sensorvalue":3,
-        "graydiffthreshold":30,
-        "conversioncountthreshold":30,
-        "sharpnessthreshold":0.2,
-        "sharpnessthresholdlarge":0.4,
+        //Absolute sharpness value, A threshold value for controlling filter
         "abssharpnessthreshold":200,
+        //Sensor value, A threshold value for controlling filter
+        "sensorvalue":3,        
+        //A threshold value for gray scale analysis
+        "graydiffthreshold":30,
+        //A threshold for judging whether the device is shaking
+        "sharpnessthreshold":0.2,
+        //A threshold for judging whether the device is shaking violently
+        "sharpnessthresholdlarge":0.4,
+        //A threshold value for calculating sharpness
         "absgraythreshold":35,
+        //A threshold value for controlling auto zoom
+        "conversioncountthreshold":30,
+        //A threshold value that controlling auto focus
         "claritythreshold":0.1
     }
 ```
