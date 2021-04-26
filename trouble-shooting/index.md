@@ -9,5 +9,4 @@ breadcrumbText: Trouble Shooting
 
 # Trouble Shooting
 
-- [License issue]({{site.license-error}})
 - [Contact us]({{site.contact-us}})
