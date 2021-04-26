@@ -23,13 +23,14 @@ breadcrumbText: Android API References
 |[`getDeviceLevel`]({{site.android-basic-setting}}basic-setting.html#getdevicelevel)| Make a evaluation on the current device and define its level for further use. |
 | [`setAutoModeLevelParam`]({{site.android-filter-setting}}filter.html#setautomodelevelparam) | Set auto mode level parameter. |
 | [`updateCameraSetting`]({{site.android-basic-setting}}basic-setting.html#updatecamerasetting) | Update camera filter and focus settings from Json. |
+| [`getVersion`]({{site.android-basic-setting}}basic-setting.html#get-version) | Check current DCE version |
 
 ## Fast mode
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableFastMode`]({{site.android-basic-setting}}basic-setting.html#fastmode) | Set true/false to turn on/off DCE fast mode. |
-| [`getEnableFastModeStatus`]({{site.android-basic-setting}}basic-setting.html#fastmode) | Get the current status of fast mode (on/off). |
+| [`enableFastMode`]({{site.android-basic-setting}}basic-setting.html#fast-mode) | Set true/false to turn on/off DCE fast mode. |
+| [`getEnableFastModeStatus`]({{site.android-basic-setting}}basic-setting.html#fast-mode) | Get the current status of fast mode (on/off). |
 
 ## Basic Camera Settings
 
@@ -43,7 +44,7 @@ breadcrumbText: Android API References
 | [`startScanning`]({{site.android-basic-setting}}basic-setting.html#stopscanning-and-startscanning) | Start scanning. |
 | [`stopScanning`]({{site.android-basic-setting}}basic-setting.html#stopscanning-and-startscanning) | Stop scanning. |
 | [`addCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
-| [`removeCameraListener`]({{site.android-basic-setting}}basic-setting.html#cameralistener) | Remove camera listener. |
+| [`removeCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Remove camera listener. |
 | [`setTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Set torch state. |
 | [`getTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch desired state. |
 | [`getTorchCurrentState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch current state. |

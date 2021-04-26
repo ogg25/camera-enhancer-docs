@@ -11,6 +11,7 @@ breadcrumbText: iOS Basic Setting
 
 - [`updateCameraSettingFromJson`](#updatecamerasettingfromjson)
 - [`updateCameraSettingFromFile`](#updatecamerasettingfromfile)
+- [`getVersion`](#getversion)
 - [`enableFastMode`](#enablefastmode)
 - [`getCameraDesiredState`](#camera-state)
 - [`setCameraDesiredState`](#camera-state)
@@ -71,6 +72,19 @@ JSON file template:
         "absgraythreshold":35,
         "claritythreshold":0.1
     }
+```
+
+## getVersion
+
+This API can help you make a evaluation on your mobile device. It will be helpful on automatically turn off DCE on high level mobile devices. 
+Objective-C
+```objectivec
+    [dce getVersion];
+```
+
+Swift
+```Swift
+    dce.getVersion()
 ```
 
 ## enableFastMode

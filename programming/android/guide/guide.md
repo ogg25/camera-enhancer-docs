@@ -72,7 +72,7 @@ Or you can
 
 - [Contact us to purchase for full key license]({{site.contact-us}}).
 
-## Get Start
+## Get Started
 
 ### Create a Camera module
 

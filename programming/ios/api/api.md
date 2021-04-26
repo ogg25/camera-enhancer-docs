@@ -21,6 +21,7 @@ breadcrumbText: iOS API Reference
 |-----------------|---------------|
 | [`updateCameraSettingFromJson`]({{site.ios-basic-setting}}basic-setting.html#updatecamerasettingfromjson) | Update camera filter and focus settings from Json |
 | [`updateCameraSettingFromFile`]({{site.ios-basic-setting}}basic-setting.html#updatecamerasettingfromfile) | Update camera filter and focus settings from file |
+| [`getVersion`]({{site.ios-basic-setting}}basic-setting.html#get-version) | Check current DCE version |
 
 ## Fast mode
 
