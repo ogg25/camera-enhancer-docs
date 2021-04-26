@@ -10,7 +10,6 @@ breadcrumbText: Android Basic Setting
 # API Reference - Basic Setting
 
 - [`getDeviceLevel`](#getdevicelevel)
-- [`getApiVersion`](#getapiversion)
 - [`updateCameraSetting`](#updatecamerasetting)
 - [`enableFastMode`](#fastmode)
 - [`getEnableFastModeStatus`](#fastmode)
@@ -38,13 +37,6 @@ breadcrumbText: Android Basic Setting
 This API can help you make a evaluation on your mobile device. It will be helpful on automatically turn off DCE on high level mobile devices. 
 ```java
     mCamera.getDeviceLevel();
-```
-
-## getApiVersion
-
-Get current DCE API version
-```java
-    mCamera.getApiVersion();
 ```
 
 ## updateCameraSetting

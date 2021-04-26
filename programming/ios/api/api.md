@@ -9,13 +9,13 @@ breadcrumbText: iOS API Reference
 
 # Objective-C & Swift (iOS) API references
 
-- [Initialization](#initializationlicenseandotherbasicsettings)
-- [Basic Camera Settings](#basiccamerasettings)
-- [Focus Settings](#focussettings)
-- [Zoom Settings](#zoomsettings)
-- [Filter Setting](#filtersettings)
+- [Initialization](#initialization)
+- [Basic Camera Settings](#basic-camera-settings)
+- [Focus Settings](#focus-settings)
+- [Zoom Settings](#zoom-settings)
+- [Filter Setting](#filter-settings)
 
-## Initialization, License and other basic settings
+## Initialization
 
 | Method | Description |
 |-----------------|---------------|
@@ -80,6 +80,7 @@ breadcrumbText: iOS API Reference
 | [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will auto focus when clarity change is detected. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
 
 ## Zoom Settings
+
 | Method | Description |
 |-----------------|---------------|
 | [`enableAutoZoom`]({{site.ios-zoom-setting}}zoom-focus.html#enableautozoom) | Set enableAutoZoom value true to enable auto zoom mode. |

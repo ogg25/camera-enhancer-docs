@@ -22,7 +22,6 @@ breadcrumbText: Android API References
 |-----------------|---------------|
 |[`getDeviceLevel`]({{site.android-basic-setting}}basic-setting.html#getdevicelevel)| Make a evaluation on the current device and define its level for further use. |
 | [`setAutoModeLevelParam`]({{site.android-filter-setting}}filter.html#setautomodelevelparam) | Set auto mode level parameter. |
-|[`getApiVersion`]({{site.android-basic-setting}}basic-setting.html#getapiversion-and-setapiversion)| Get current API version. |
 | [`updateCameraSetting`]({{site.android-basic-setting}}basic-setting.html#updatecamerasetting) | Update camera filter and focus settings from Json. |
 
 ## Fast mode
