@@ -25,7 +25,7 @@ breadcrumbText: iOS Guide
 
 ## Installation
 
-1. [Download Dynamsoft Camera Enhancer]() from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework. 
+1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework. 
 
 2. Create a new Objective-C or Swift project.
 
@@ -55,7 +55,7 @@ Objective-C:
     dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:lts verificationDelegate:self];
     - (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
     {
-            //TODO add your code for license verification
+        //TODO add your code for license verification
     }
 ```
 Swift:
@@ -72,7 +72,7 @@ If you don't have a full key license:
 
 Or you can
 
-- [Learn more about full key license]()
+- [Please contact us to purchase for full key license]({{site.contact-us}}).
 
 ## Get Start
 

@@ -19,7 +19,7 @@ breadcrumbText: Start on Android
 
 ## Android Demo:
 
-- [Barcode scanner x (Android)]()
+- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.2.0.apk" target="_blank">Barcode Scanner X Demo App (Android)</a>
 
 ## Android Release Note:
 

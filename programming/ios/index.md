@@ -19,7 +19,7 @@ breadcrumbText: Start on iOS
 
 ## iOS Demo:
 
-- [Barcode scanner x (IOS)]()
+- <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Barcode Scanner X Demo App (iOS)</a>
 
 ## Objective-C & Swift Release Note:
 
