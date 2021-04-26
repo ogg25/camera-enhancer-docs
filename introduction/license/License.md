@@ -15,7 +15,7 @@ breadcrumbText: License Initialization
 
 ## Get full key license
 
-- [Click here to view DCE purchase page]().
+- [Please contact us to purchase for full key license]({{site.contact-us}}).
 
 ## Set up license from License Tracking Server
 

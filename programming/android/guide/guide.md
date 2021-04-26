@@ -23,7 +23,7 @@ breadcrumbText: Android Guide
 
 ## Installation
 
-1. [Download Dynamsoft Camera Enhancer]() from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`. 
+1. <a href="https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`. 
 
 2. Create a new Android project in Android Studio.
 
@@ -70,7 +70,7 @@ If you don't have a full key license:
 
 Or you can
 
-- [Learn more about full key license]()
+- [Contact us to purchase for full key license]({{site.contact-us}}).
 
 ## Get Start
 
