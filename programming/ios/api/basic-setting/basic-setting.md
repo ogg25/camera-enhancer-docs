@@ -29,6 +29,7 @@ breadcrumbText: iOS Basic Setting
 - [`switchCameraPosition`](#camera-position)
 - [`getResolution`](#resolution-settings)
 - [`setResolution`](#resolution-settings)
+- [`getResolutionList`](#resolution-settings)
 
 ## updateCameraSettingFromJson
 

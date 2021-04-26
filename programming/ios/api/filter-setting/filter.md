@@ -13,7 +13,6 @@ breadcrumbText: iOS Filter Setting
 - [`setSensorControlThreshold`](#setsensorcontrolthreshold)
 - [`enableFrameFilter`](#enableframefilter)
 - [`setMaxFrameRate`](#setmaxframerate)
-- [`setFrameListLength`](#setframelistlength)
 
 ## enableSensorControl
     
@@ -76,18 +75,4 @@ Objective-C
 Swift
 ```Swift
     dce.setMaxFrameRate(24)
-```
-
-## setFrameListLength
-
-Filtered frame will be stored in a list for decoding process. Decoder will always get the newest frame for decoding. The default length of frame list will be 10 if you don't make any setting on it.
-
-Objective-C
-```objectivec
-    [dce setFrameListLength:8];
-```
-
-Swift
-```Swift
-    dce.setFrameListLength(8)
 ```
