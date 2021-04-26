@@ -11,8 +11,8 @@ breadcrumbText: Android Filter Setting
 
 - [`enableFrameFilter`](#framefilter)
 - [`setMaxFrameRate`](#setmaxframerate)
-- [`setFrameListLength`](#setframelistlength)
 - [`enableSensorControl`](#sensorcontrol)
+- [`setSensorControlThreshold`](#setsensorcontrolthreshold)
 - [`setAutoModeLevelParam`](#setautomodelevelparam)
 
 ## enableFrameFilter
@@ -31,14 +31,6 @@ To check the status of frame filter mode, please use `getEnableFrameFilterStatus
 Set max frame rate.
 ```java
     mCamera.setMaxFrameRate(24);
-```
-
-## setFrameListLength
-
-Filtered frame will be stored in a list for decoding process. Decoder will always get the newest frame for decoding.
-```java
-    //The default length of frame list will be 10 if you don't make any setting on it.
-    mCamera.setFrameListLength(8);
 ```
 
 ## enableSensorControl

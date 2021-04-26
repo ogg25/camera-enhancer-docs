@@ -147,10 +147,10 @@ Objective-C:
     DynamsoftCameraEnhancer* dce = [[DynamsoftCameraEnhancer alloc] initWithView:view];
     [dce setCameraDesiredState:DCEnhancerStateOn];
     [dce startScanning];
-    [dce setFastMode:true];
-    [dce setUseFrameFilter:true];
+    [dce enableFastMode:true];
+    [dce enableFrameFilter:true];
     [dce enableAutoZoom];
-    [dce setForceAutoFocus:true];
+    [dce enableDCEAutoFocus:true];
 
     dce.isEnable = true;
 }
@@ -185,9 +185,9 @@ class ViewController: UIViewController {
         //DCE recommended settings 
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.startScanning()
-        dce.setFastMode(true)
-        dce.setUseFrameFilter(true)
-        dce.setForceAutoFocus(true)
+        dce.enableFastMode(true)
+        dce.enableFrameFilter(true)
+        dce.enableDCEAutoFocus(true)
         dce.enableAutoZoom = true
     }
 }
@@ -207,7 +207,7 @@ Objective-C
     [dce setCameraDesiredState:DCEnhancerStateOn];
     [dce startScanning];
     //**********Start Fast mode*************
-    [dce setFastMode:true];
+    [dce enableFastMode:true];
 }
 ```
 
@@ -235,7 +235,7 @@ class ViewController: UIViewController {
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.startScanning()
         //Turn on fast mode
-        dce.setFastMode(true)
+        dce.enableFastMode(true)
     }
 }
 ```
@@ -254,11 +254,11 @@ Objective-C
     DynamsoftCameraEnhancer* dce = [[DynamsoftCameraEnhancer alloc] initWithView:view];
     //**********Filter, Focus and Zoom settings*************
     //Turn on/off filter
-    [dce setUseFrameFilter:true];
+    [dce enableFrameFilter:true];
     //Turn on/off auto zoom
     [dce enableAutoZoom];
     //Turn on/off auto focus
-    [dce setForceAutoFocus:true];
+    [dce enableDCEAutoFocus:true];
 }
 ```
 
@@ -286,9 +286,9 @@ class ViewController: UIViewController {
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.startScanning()
         //Turn on/off auto focus
-        dce.setForceAutoFocus(true)
+        dce.enableDCEAutoFocus(true)
         //Turn on/off filter
-        dce.setUseFrameFilter(true)
+        dce.enableFrameFilter(true)
         //Turn on/off auto zoom
         dce.enableAutoZoom = true
     }
