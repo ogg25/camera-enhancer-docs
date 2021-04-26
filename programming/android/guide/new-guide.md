@@ -4,7 +4,7 @@ title: Dynamsoft Camera Enhancer - Guide on Java(Android)
 description: This is the documentation - Guide on Java(Android) page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Java(Android)
 needAutoGenerateSidebar: true
-breadcrumbText: Android Guide
+breadcrumbText: Android Guide draft
 ---
 
 # Guide on Java(Android)
@@ -39,33 +39,6 @@ breadcrumbText: Android Guide
 
 5. Sync the project with gradle and after that `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
 
-## License initialization
-
-If you have already got a full key license from `License Tracking Server`, you can use the following code to set it up in your project:
-
-```Java
-    //This code should be put in oncreate. There is an example below. 
-    DMLTSConnectionParameters info = new DMLTSConnectionParameters();
-    info.organizationID = "********";
-    mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
-        @Override
-        public void LTSLicenseVerificationCallback(boolean b, Exception e) {
-            if(!b && e != null){
-                e.printStackTrace();
-            }
-        }
-    });
-```
-
-If you don't have a full key license:
-
-- 7 days trial license is available for new devices that have never setup Dynamsoft Camera Enhancer.
-- To extend your trial license, please send "Private trial" to trial@dynamsoft.com to get 30 days private trial key.
-
-Or you can
-
-- [Contact us to purchase for full key license]({{site.contact-us}}).
-
 ## Get Started
 
 ### Create a Camera module
@@ -99,15 +72,11 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            //******************************************************
-            //Remember to use your personal settings in this section
-            //******************************************************            
+            //Remember to use your personal settings in this section     
             setContentView(R.layout.activity_main);
             cameraView = findViewById(R.id.cameraView);
             mCamera = new CameraEnhancer(MainActivity.this);
             mCamera.addCameraView(cameraView);
-            //******************************************************
-            //******************************************************
             //Initialize your license
             mCamera = new CameraEnhancer(MainActivity.this);
             mCamera.addCameraView(cameraView);
@@ -123,7 +92,6 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
                     if(!isSuccess){
                         error.printStackTrace();
                     }
-
                 }
             });
             //Turn on camera
@@ -222,7 +190,6 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             }
             @Override
             public void onPreviewFastFrame(Frame frame) {
-                
             }
         });
         }
