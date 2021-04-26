@@ -39,6 +39,13 @@ Android sample
 
 For iOS users: 
 
+Objective-C sample:
+```objectivec
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
+```
+
 Swift sample
 ```Swift
     let lts = iDMLTSConnectionParameters()

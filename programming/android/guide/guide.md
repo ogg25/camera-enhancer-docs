@@ -160,7 +160,6 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
         CameraView cameraView;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            requestWindowFeature(Window.FEATURE_ACTION_BAR);
             setContentView(R.layout.activity_main);
             cameraView = findViewById(R.id.cameraView);
             mCamera = new CameraEnhancer(MainActivity.this);
@@ -188,6 +187,50 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             mCamera.enableAutoZoom(true);
             mCamera.enableDCEAutoFocus(true);
             mCamera.enableFastMode(true);
+            mCamera.addCameraListener(new CameraListener() {
+            @Override
+            public void onPreviewOriginalFrame(Frame frame) {
+            }
+            @Override
+            public void onPreviewFilterFrame(Frame frame) {
+                byte[] bufferBytes;
+                bufferBytes = frame.getData();
+                int iWidth = frame.getWidth();
+                int iHeight = frame.getHeight();
+                int[] iStride = frame.getStrides();
+                int format = frame.getFormat();
+                Log.i("saveByte", "saveByte:"+bufferBytes);
+                try {
+                BarcodeReader dbr = new BarcodeReader();
+                PublicRuntimeSettings runtimeSettings = dbr.getRuntimeSettings();
+                runtimeSettings.barcodeFormatIds = nBarcodeFormat;
+                runtimeSettings.barcodeFormatIds_2 = nBarcodeFormat_2;
+                dbr.updateRuntimeSettings(runtimeSettings);
+                TextResult[] result = dbr.decodeBuffer(bufferBytes, iWidth,  iHeight, iStride, format, "");
+                if(result.length>0){
+                    String scan_result = "Found "+result.length+" barcode:";
+                    for(int i=0; i<result.length;i++){
+                        String new_result ="";
+                        new_result = result[i].barcodeText.split(" ")[1];
+                        scan_result+=new_result+"\n";
+                    }
+                    Log.i("DBR", "Filtered Result is: "+scan_result);
+                    text_result.setText(scan_result);
+                }
+                else {
+                    Log.i("DBR", "Filtered No Result");
+                    text_result.setText("No Barcode Found");
+                }
+                dbr.destroy();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            }
+            @Override
+            public void onPreviewFastFrame(Frame frame) {
+                
+            }
+        });
         }
     ```
 

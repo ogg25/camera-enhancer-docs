@@ -49,14 +49,9 @@ To setup DCE license by License Tracking Server
 
 Objective-C:
 ```objectivec
-    DynamsoftCameraEnhancer *dce;
-    iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
-    lts.organizationID = @"Your organizationID";
-    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:lts verificationDelegate:self];
-    - (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-    {
-        //TODO add your code for license verification
-    }
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
 ```
 Swift:
 ```Swift
@@ -92,10 +87,11 @@ Objective-C
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    DCECaptureView* view = [[DCECaptureView alloc] initWithView:self.view.bounds];
-    [view addTorch];
-    DynamsoftCameraEnhancer* dce = [[DynamsoftCameraEnhancer alloc] initWithView:view];
+    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    //Initialize license from LTS
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
     [dce setCameraDesiredState:DCEnhancerStateOn];
 }
 ```
@@ -119,8 +115,7 @@ class ViewController: UIViewController {
         self.view.insertSubview(dceView, belowSubview: displayView)
         //Setup license
         let lts = iCameraLTSConnectionParameters()
-        lts.handshakeCode = "100014901-8002module-test"
-        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        lts.organizationID = "Your organizationID"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
     }
@@ -141,18 +136,19 @@ Objective-C:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    DCECaptureView* view = [[DCECaptureView alloc] initWithView:self.view.bounds];
-    [view addTorch];
-    DynamsoftCameraEnhancer* dce = [[DynamsoftCameraEnhancer alloc] initWithView:view];
-    [dce setCameraDesiredState:DCEnhancerStateOn];
+    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    // License initialization
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
+    //Camera & scan settings
+    [dce setCameraDesiredState:CAMERA_STATE_ON];
     [dce startScanning];
-    [dce enableFastMode:true];
-    [dce enableFrameFilter:true];
-    [dce enableAutoZoom];
-    [dce enableDCEAutoFocus:true];
-
-    dce.isEnable = true;
+    [dce setEnableFastMode:true];
+    [dce setEnableFrameFilter:true];
+    [dce setEnableAutoZoom:true];
+    [dce setEnableDCEAutoFocus:true];
+    [dce setIsEnable = false];
 }
 ```
 
@@ -178,8 +174,7 @@ class ViewController: UIViewController {
         
         //Setup license
         let lts = iCameraLTSConnectionParameters()
-        lts.handshakeCode = "100014901-8002module-test"
-        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        lts.organizationID = "Your organizationID"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
         
         //DCE recommended settings 
@@ -201,9 +196,10 @@ Objective-C
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Initialize DCE and turn on the camera
-    DCECaptureView* view = [[DCECaptureView alloc] initWithView:self.view.bounds];
-    [view addTorch];
-    DynamsoftCameraEnhancer* dce = [[DynamsoftCameraEnhancer alloc] initWithView:view];
+    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
     [dce setCameraDesiredState:DCEnhancerStateOn];
     [dce startScanning];
     //**********Start Fast mode*************
@@ -229,8 +225,7 @@ class ViewController: UIViewController {
         dceView.addOverlay(color, fill: color)
         self.view.insertSubview(dceView, belowSubview: displayView)
         let lts = iCameraLTSConnectionParameters()
-        lts.handshakeCode = "100014901-8002module-test"
-        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        lts.organizationID = "Your organizationID"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.startScanning()
@@ -249,9 +244,10 @@ Objective-C
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Initialize DCE
-    DCECaptureView* view = [[DCECaptureView alloc] initWithView:self.view.bounds];
-    [view addTorch];
-    DynamsoftCameraEnhancer* dce = [[DynamsoftCameraEnhancer alloc] initWithView:view];
+    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
     //**********Filter, Focus and Zoom settings*************
     //Turn on/off filter
     [dce enableFrameFilter:true];
@@ -280,8 +276,7 @@ class ViewController: UIViewController {
         dceView.addOverlay(color, fill: color)
         self.view.insertSubview(dceView, belowSubview: displayView)
         let lts = iCameraLTSConnectionParameters()
-        lts.handshakeCode = "100014901-8002module-test"
-        lts.mainServerURL = "https://mtplres.dynamsoft.com"
+        lts.organizationID = "Your organizationID"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.startScanning()
