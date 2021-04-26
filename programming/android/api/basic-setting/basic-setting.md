@@ -10,9 +10,11 @@ breadcrumbText: Android Basic Setting
 # API Reference - Basic Setting
 
 - [`getDeviceLevel`](#getdevicelevel)
+- [`setAutoModeLevelParam`](#setautomodelevelparam)
 - [`updateCameraSetting`](#updatecamerasetting)
-- [`enableFastMode`](#fastmode)
-- [`getEnableFastModeStatus`](#fastmode)
+- [`getVersion`](#getversion)
+- [`enableFastMode`](#fast-mode)
+- [`getEnableFastModeStatus`](#fast-mode)
 - [`getCameraDesireState`](#camera-state)
 - [`setCameraDesireState`](#camera-state)
 - [`getCameraCurrentState`](#camera-state)
@@ -39,6 +41,20 @@ This API can help you make a evaluation on your mobile device. It will be helpfu
     mCamera.getDeviceLevel();
 ```
 
+## setAutoModeLevelParam
+
+Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are settings for device level. 
+
+| CPU & RAM | If device CPUMHz > cpuMHz2 | If device CPUMHz1 < CPUMHz < cpuMHz2 | If device CPUMHz < CPUMHz1 |
+|--|--|--|--|
+| If device ramMB > ramMB2 | Device level is high | Device CPU level is mid | Device CPU level is mid |
+| If device ramMB1 < ramMB < ramMB2 | Device CPU level is mid | Device CPU level is mid | Device CPU level is mid |
+| If device ramMB < ramMB1 | Device CPU level is mid | Device CPU level is mid | Device CPU level is low |
+
+```java
+    mCamera.setAutoModeLevelParam(int,int,int,int);
+```
+
 ## updateCameraSetting
 
 Some detailed settings that can be updated from JSON string or file.
@@ -63,6 +79,13 @@ JSON file template:
         "claritythreshold":0.1
     }
 
+```
+
+## getVersion
+
+User can check the current DCE version by using this API.
+```java
+    mCamera.getVersion();
 ```
 
 ## Fast Mode

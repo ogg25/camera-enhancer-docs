@@ -13,7 +13,6 @@ breadcrumbText: Android Filter Setting
 - [`setMaxFrameRate`](#setmaxframerate)
 - [`enableSensorControl`](#sensorcontrol)
 - [`setSensorControlThreshold`](#setsensorcontrolthreshold)
-- [`setAutoModeLevelParam`](#setautomodelevelparam)
 
 ## enableFrameFilter
 
@@ -49,17 +48,4 @@ To check the status of sensor control mode, please use `getEnableSensorControlSt
 This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50 if user don't make any change.
 ```java
     mCamera.setSensorControlThreshold(55);
-```
-
-## setAutoModeLevelParam
-Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are settings for device level. 
-
-| CPU & RAM | If device CPUMHz > cpuMHz2 | If device CPUMHz1 < CPUMHz < cpuMHz2 | If device CPUMHz < CPUMHz1 |
-|--|--|--|--|
-| If device ramMB > ramMB2 | Device level is high | Device CPU level is mid | Device CPU level is mid |
-| If device ramMB1 < ramMB < ramMB2 | Device CPU level is mid | Device CPU level is mid | Device CPU level is mid |
-| If device ramMB < ramMB1 | Device CPU level is mid | Device CPU level is mid | Device CPU level is low |
-
-```java
-    mCamera.setAutoModeLevelParam(int,int,int,int);
 ```
