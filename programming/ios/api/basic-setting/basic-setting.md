@@ -36,6 +36,7 @@ breadcrumbText: iOS Basic Setting
 
 Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)
 To update from JSON string:
+
 Objective-C
 ```objectivec
     [dce updateCameraSettingFromJson:@"json string"];
@@ -50,6 +51,7 @@ Swift
 
 Some detailed settings that can be updated from JSON string or file.
 To update from JSON file:
+
 Objective-C
 ```objectivec
     [dce updateCameraSettingFromFile:@"your json file path"];
@@ -85,7 +87,8 @@ This is the template for `updateCameraSettingFromJson` and `updateCameraSettingF
 
 ## getVersion
 
-This API can help you make a evaluation on your mobile device. It will be helpful on automatically turn off DCE on high level mobile devices. 
+User can check the current DCE version by using this API.
+
 Objective-C
 ```objectivec
     [dce getVersion];
@@ -99,6 +102,7 @@ Swift
 ## enableFastMode
 
 This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode area to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
+
 Objective-C
 ```objectivec
     [dce enableFastMode:true];
@@ -138,16 +142,17 @@ Swift
     dce.getCameraDesiredState()
 ```
     
-Use `This content will be changed` to set camera on and use `This content will be changed` to set it off.
+Use `CAMERA_STATE_ON` to set camera on and use `CAMERA_STATE_OFF` to set it off.
 
 Objective-C
 ```objectivec
-    [dce setCameraDesiredState:DCEnhancerStateOn];
+    [dce setCameraDesiredState:CAMERA_STATE_ON];
 ```
-Use `This content will be changed` to set camera on and use `This content will be changed` to set it off.
+Use `CAMERA_STATE_ON` to set camera on and use `CAMERA_STATE_OFF` to set it off.
+
 Swift
 ```Swift
-    dce.setCameraDesiredState(CameraState.off)
+    dce.setCameraDesiredState(CAMERA_STATE_ON)
 ```
     
 ## pauseCamera and resumeCamera
@@ -302,7 +307,9 @@ Swift
     dce.getResolution()
     dce.setResolution(Resolution.Quality1080P)
 ```
+
 `getResolutionList` enable user to check all available resolutions that can be setted to the current camera.
+
 Objective-C
 ```objectivec
     [dce getResolutionList];

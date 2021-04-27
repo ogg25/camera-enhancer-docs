@@ -10,6 +10,7 @@ breadcrumbText: iOS API Reference
 # Objective-C & Swift (iOS) API references
 
 - [Initialization](#initialization)
+- [Fast Mode](#fast-mode)
 - [Basic Camera Settings](#basic-camera-settings)
 - [Focus Settings](#focus-settings)
 - [Zoom Settings](#zoom-settings)
@@ -77,7 +78,6 @@ breadcrumbText: iOS API Reference
 | Method | Description |
 |-----------------|---------------|
 | [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus for every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
-| [`setRegularAutoFocusParam`]({{site.ios-zoom-setting}}zoom-focus.html#setregularautofocusparam) | Set parameters for regular auto focus mode. Focus interval and terminate time are available for setting in this API |
 | [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will auto focus when clarity change is detected. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
 
 ## Zoom Settings
@@ -91,7 +91,7 @@ breadcrumbText: iOS API Reference
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableSensorControl`]({{site.ios-filter-setting}}filter.html#setsensorcontrol) | Set true/false to turn on/off DCE sensor control. |
+| [`enableSensorControl`]({{site.ios-filter-setting}}filter.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
+|[`setSensorControlThreshold`]({{site.ios-filter-setting}}filter.html#setsensorcontrolthreshold)| Make settings on sensor control threshold |
 | [`enableFrameFilter`]({{site.ios-filter-setting}}filter.html#setuseframefilter) | Set true/false to turn on/off DCE frame filter. |
 | [`setMaxFrameRate`]({{site.ios-filter-setting}}filter.html#setmaxframerate) | Set max frame rate |
-| [`setFrameListLength`]({{site.ios-filter-setting}}filter.html#setframelistlength) | Set how many frames will be stored in list. |

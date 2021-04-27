@@ -81,16 +81,17 @@ Swift
 ## enableDefaultAutoFocus
 
 This API is designed for controlling the system default auto focus. To turn off default auto focus mode:
+
 Objective-C
 ```objectivec
-    [dce enableDefaultAutoFocus:true];
+    [dce enableDefaultAutoFocus:false];
     //To check the status of system default auto focus.
     bool res = [dce enableDefaultAutoFocus];
 ```
 
 Swift
 ```Swift
-    dce.enableDefaultAutoFocus = true
+    dce.enableDefaultAutoFocus = false
     //To check the status of system default auto focus.
     let res = dce.enableDefaultAutoFocus
 ```
@@ -101,14 +102,14 @@ Regular auto focus is an advanced setting that enable camera to auto focus for e
 
 Objective-C
 ```objectivec
-    [dce enableRegularAutoFocus:true];
+    [dce enableRegularAutoFocus:false];
     //To check the status of DCE auto focus.
     bool res = [dce enableRegularAutoFocus];
 ```
 
 Swift
 ```Swift
-    dce.enableRegularAutoFocus = true
+    dce.enableRegularAutoFocus = false
     //To check the status of DCE regular auto focus.
     let res = dce.enableRegularAutoFocus
 ```
@@ -119,14 +120,14 @@ This API is another advanced setting that enable camera to auto focus when sharp
 
 Objective-C
 ```objectivec
-    [dce enableAutoFocusOnSharpnessChange:true];
+    [dce enableAutoFocusOnSharpnessChange:false];
     //To check the status of DCE sharpness focus.
     bool res = [dce enableAutoFocusOnSharpnessChange];
 ```
 
 Swift
 ```Swift
-    dce.enableAutoFocusOnSharpnessChange = true
+    dce.enableAutoFocusOnSharpnessChange = false
     //To check the status of DCE sharpness focus.
     let res = dce.enableAutoFocusOnSharpnessChange
 ```
