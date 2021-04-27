@@ -21,7 +21,7 @@ breadcrumbText: iOS Zoom and Focus
 
 ## setAutoFocusPosition
     
-Set the position you want to auto focus at. This setting will replace the default focus value and always focus on the setted point. 
+Set the position you want to auto focus at. This setting will replace the default focus value and always focus on the set point. 
 
 Objective-C:
 ```objectivec
@@ -34,7 +34,7 @@ Swift:
 
 ## setManualFocusPosition
 
-Set the position you want to manually focus at. This focus position effects only once each time this code is called.
+Set the position you want to manually focus at. This focus position only takes effect once each time this code is called.
 
 Objective-C:
 ```objectivec
@@ -48,7 +48,7 @@ Swift:
 
 ## setFocalLength
 
-Set focal length (float). The range of focal length is from 0 to 1. The value doesn't means a distance but a precentage. If user set `setFocalLength(0.5);` it means the focal length will be 50% of the maxium focal length of the camera. Please note, If this API is called to set a focal length, the focal length will be fixed and all other auto focus mode will be disabled. To quit this fixed focal length mode, please set the focal length into -1.
+Set focal length (float). The range of focal length is from 0 to 1. The value is a precentage. If user sets `setFocalLength(0.5);` it means the focal length will be 50% of the maxium focal length of the camera. Please note, If this API is called to set a focal length, the focal length will be fixed and all other auto focus mode will be disabled. To quit this fixed focal length mode, please set the focal length into -1.
 
 Objective-C:
 ```objectivec
@@ -62,7 +62,7 @@ Swift:
 
 ## enableDCEAutoFocus
 
-This API is designed to turn on DCE auto focus mode which is specially designed and different from the system default auto focus mode. DCE auto focus and the default auto focus can work together at the same time without any conflict. The above focus settings are also available for controlling system default auto focus. To turn on DCE auto focus mode:
+This API is designed to turn on DCE auto focus mode which is specially designed and is separate from the systems default auto focus mode. DCE auto focus and the default auto focus can work together at the same time without any conflict. The above focus settings are also available for controlling system default auto focus. To turn on DCE auto focus mode:
 
 Objective-C:
 ```objectivec
@@ -98,7 +98,7 @@ Swift:
 
 ## enableRegularAutoFocus
 
-Regular auto focus is an advanced setting that enable camera to auto focus for every 3 seconds. It is contained in DCE auto focus. When DCE auto focus is enabled, regular auto focus is enable as well. To turn off regular auto focus mode:
+Regular auto focus is an advanced setting that enables the camera to auto focus for every 3 seconds. It is contained in DCE auto focus. When DCE auto focus is enabled, regular auto focus is enabled as well. To turn off regular auto focus mode:
 
 Objective-C:
 ```objectivec
@@ -116,7 +116,7 @@ Swift:
 
 ## enableAutoFocusOnSharpnessChange
 
-This API is another advanced setting that enable camera to auto focus when sharpness change is detected between contiguous frames. The same with regular auto focus, this focus mode is also enabled by default when DCE auto focus is enabled. To turn off camera auto focus when sharpness changes:
+This API is another advanced setting that enables the camera to auto focus whena change in sharpness is detected between contiguous frames. The same happens with regular auto focus, this focus mode is also enabled by default when DCE auto focus is enabled. To turn off camera auto focus when sharpness changes:
 
 Objective-C:
 ```objectivec
@@ -134,7 +134,7 @@ Swift:
 
 ## enableAutoZoom
 
-DCE auto zoom mode can be enabled if user is using DCE to enhance decode performance. The auto zoom mode is base on decode region predicted algorithm. In DCE auto zoom mode, If the lastest decoded frame is predicted to contain a barcode but fail on decoding, DCE will control the camera to zoom in to approach the barcode region. To enable auto zoom mode:
+DCE auto zoom mode can be enabled if user is using DCE to enhance decode performance. The auto zoom mode is based on decode region predicted algorithm. In DCE auto zoom mode, If the lastest decoded frame is predicted to contain a barcode but failing to decode, DCE will control the camera to zoom in to approach the barcode region. To enable auto zoom mode:
 
 Objective-C:
 ```objectivec
