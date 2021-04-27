@@ -93,5 +93,5 @@ breadcrumbText: iOS API Reference
 |-----------------|---------------|
 | [`enableSensorControl`]({{site.ios-filter-setting}}filter.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
 |[`setSensorControlThreshold`]({{site.ios-filter-setting}}filter.html#setsensorcontrolthreshold)| Make settings on sensor control threshold |
-| [`enableFrameFilter`]({{site.ios-filter-setting}}filter.html#setuseframefilter) | Set true/false to turn on/off DCE frame filter. |
+| [`enableFrameFilter`]({{site.ios-filter-setting}}filter.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
 | [`setMaxFrameRate`]({{site.ios-filter-setting}}filter.html#setmaxframerate) | Set max frame rate |

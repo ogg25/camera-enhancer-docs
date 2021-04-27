@@ -98,7 +98,7 @@ There are focus interval time and focus terminate time for users to set in regul
 
 This API is another advanced setting that enable camera to auto focus when sharpness change is detected between contiguous frames. The same with regular auto focus, this focus mode is also enabled by default when DCE auto focus is enabled. To turn off camera auto focus when sharpness changes:
 ```java
-    mCameraEnhancer.enableAutoFocusOnSharpnessChange(true);
+    mCameraEnhancer.enableAutoFocusOnSharpnessChange(false);
 ```
 To get the status (on/off) of this auto focus mode:
 ```java

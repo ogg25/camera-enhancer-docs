@@ -37,12 +37,12 @@ breadcrumbText: iOS Basic Setting
 Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)
 To update from JSON string:
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce updateCameraSettingFromJson:@"json string"];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.updateCameraSetting(fromJson: "Your json string")
 ```
@@ -52,17 +52,17 @@ Swift
 Some detailed settings that can be updated from JSON string or file.
 To update from JSON file:
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce updateCameraSettingFromFile:@"your json file path"];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.updateCameraSettingFromFile(fromFile: "Your file path")
 ```
 
-This is the template for `updateCameraSettingFromJson` and `updateCameraSettingFromFile`
+This is the template for `updateCameraSettingFromJson` and `updateCameraSettingFromFile`:
 
 ```Json
     {
@@ -89,12 +89,12 @@ This is the template for `updateCameraSettingFromJson` and `updateCameraSettingF
 
 User can check the current DCE version by using this API.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getVersion];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getVersion()
 ```
@@ -103,14 +103,14 @@ Swift
 
 This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode area to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce enableFastMode:true];
     //To check the status of DCE fast mode
     [dce getEnableFastMode];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.enableFastMode = true
 ```
@@ -120,37 +120,36 @@ Swift
 Use `getCameraCurrentState`, `getCameraDesiredState` and `setCameraDesiredState` to make settings on camera state.
 Get camera current status (on/off). 
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getCameraCurrentState];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getCameraCurrentState()
 ```
     
 Get camera desired status (on/off).
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getCameraDesiredState];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getCameraDesiredState()
 ```
     
 Use `CAMERA_STATE_ON` to set camera on and use `CAMERA_STATE_OFF` to set it off.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce setCameraDesiredState:CAMERA_STATE_ON];
 ```
-Use `CAMERA_STATE_ON` to set camera on and use `CAMERA_STATE_OFF` to set it off.
 
-Swift
+Swift:
 ```Swift
     dce.setCameraDesiredState(CAMERA_STATE_ON)
 ```
@@ -159,13 +158,13 @@ Swift
 
 Note: these APIs are created for pause & resume camera but camera module is still working when being paused. if you want to shut down camera module please use `stopScanning`.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce pauseCamera];
     [dce resumeCamera];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.pauseCamera()
     dce.resumeCamera()
@@ -175,13 +174,13 @@ Swift
 
 Contorl the stop & start of camera module.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce startScanning];
     [dce stopScanning];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.startScanning()
     dce.stopScanning()
@@ -191,24 +190,24 @@ Swift
 
 Add Camera Listener
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce addCameraListener:self];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.addCameraListener(self)
 ```
 
 Remove Camera Listener
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce removeCameraListener];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.removeCameraListener()
 ```
@@ -218,49 +217,49 @@ Swift
 Use `getTorchCurrentState`, `getTorchDesiredState` and `setTorchDesiredState` to make settings on torch state
 Get current torch state (on/off)
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getTorchCurrentState];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getTorchCurrentState()
 ```
 
 Get desired torch state (on/off)
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getTorchDesiredState];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getTorchDesiredState()
 ```
 
 Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce setTorchDesiredState:TorchState.on];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.setTorchDesiredState(TorchState.on)
 ```
 
 ## addTorchListener
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce addTorchListener:self];
     [dce removeTorchListener];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.addTorchListener(self)
     dce.removeCameraListener()
@@ -270,24 +269,24 @@ Swift
 
 DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated currently.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getCameraPosition];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getCameraPosition()
 ```
 
 To change to another camera:
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce switchCameraPosition];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.switchCameraPosition()
 ```
@@ -296,13 +295,13 @@ Swift
 
 These APIs are created for you to get or change camera resolution settings. 
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getResolution];
     [dce setResolution:Resolution1080P];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getResolution()
     dce.setResolution(Resolution.Quality1080P)
@@ -310,12 +309,12 @@ Swift
 
 `getResolutionList` enable user to check all available resolutions that can be setted to the current camera.
 
-Objective-C
+Objective-C:
 ```objectivec
     [dce getResolutionList];
 ```
 
-Swift
+Swift:
 ```Swift
     dce.getResolutionList()
 ```
