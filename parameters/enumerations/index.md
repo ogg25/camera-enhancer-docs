@@ -21,7 +21,7 @@ breadcrumbText: Enumerations
 
 | Member (Android) | Member (iOS) | Value | Description |
 |------------------|--------------|-------|-------------|
-| `DM_CW_AUTO` | `EnumDMChargeWayAuto` | 0 | The charge way automatically determined by the license server. |
+| `DM_CW_AUTO` | `EnumDMChargeWayAuto` | 0 | The charge way is automatically determined by the license server. |
 | `DM_CW_DEVICE_COUNT` | `EnumDMChargeWayDeviceCount` | 1 | Charges by the count of devices. |
 | `DM_CW_CONCURRENT_DEVICE_COUNT` | `EnumDMChargeWayConcurrentDeviceCount` | 3 | Charges by the count of concurrent devices. |
 | `DM_CW_APP_DOMAIN_COUNT` | `EnumDMChargeWayAppDomainCount` | 6 | Charges by the count of app domains. |
@@ -71,7 +71,7 @@ DCE error common to all programming languages.
 
 | Error Code (Android) | Error Code (iOS) | Value | Description |
 |----------------------|------------------|-------|-------------|
-| `DCE_NOT_EXIST_CAMERA_MODULE` | `EnumCameraErrorCode_NOT_EXIST_CAMERA_MODULE` | -10003 | Camera module does not exists. |
+| `DCE_NOT_EXIST_CAMERA_MODULE` | `EnumCameraErrorCode_NOT_EXIST_CAMERA_MODULE` | -10003 | Camera module does not exist. |
 
 ### Error code -10004
 
