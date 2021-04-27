@@ -19,13 +19,13 @@ breadcrumbText: Enumerations
 
 ### Members
 
-| Member (Java/Android) | Value | Description |
-|-----------------------|-------|-------------|
-| `DM_CW_AUTO` | 0 | The charge way automatically determined by the license server. |
-| `DM_CW_DEVICE_COUNT` | 1 | Charges by the count of devices. |
-| `DM_CW_CONCURRENT_DEVICE_COUNT` | 3 | Charges by the count of concurrent devices. |
-| `DM_CW_APP_DOMAIN_COUNT` | 6 | Charges by the count of app domains. |
-| `DM_CW_ACTIVE_DEVICE_COUNT` | 8 | Charges by the count of active devices. |
+| Member (Android) | Member (iOS) | Value | Description |
+|------------------|--------------|-------|-------------|
+| `DM_CW_AUTO` | `EnumDMChargeWayAuto` | 0 | The charge way automatically determined by the license server. |
+| `DM_CW_DEVICE_COUNT` | `EnumDMChargeWayDeviceCount` | 1 | Charges by the count of devices. |
+| `DM_CW_CONCURRENT_DEVICE_COUNT` | `EnumDMChargeWayConcurrentDeviceCount` | 3 | Charges by the count of concurrent devices. |
+| `DM_CW_APP_DOMAIN_COUNT` | `EnumDMChargeWayAppDomainCount` | 6 | Charges by the count of app domains. |
+| `DM_CW_ACTIVE_DEVICE_COUNT` | `EnumDMChargeWayActiveDeviceCount` | 8 | Charges by the count of active devices. |
 
 ## Camera DMUUID Generation Method
 
@@ -38,10 +38,10 @@ breadcrumbText: Enumerations
 
 ### Members
 
-| Member (Java/Android) | Value | Description |
-|-----------------------|-------|-------------|
-| `DM_UUIDGM_RANDOM` | 1 | Generates UUID with random values. |
-| `DM_UUIDGM_HARDWARE` | 2 | Generates UUID based on hardware info. |
+| Member (Android) | Member (iOS) | Value | Description |
+|------------------|--------------|-------|-------------|
+| `DM_UUIDGM_RANDOM` | `EnumDMUUIDGenerationMethodRandom` | 1 | Generates UUID with random values. |
+| `DM_UUIDGM_HARDWARE` | `EnumDMUUIDGenerationMethodHardware` | 2 | Generates UUID based on hardware info. |
 
 ## DCE Error Code
 
