@@ -48,6 +48,7 @@ The following chart illustrates DCE working process.
 ## Programming language 
 
 Dynamsoft Camera Enhancer is now available for following programming languages:
+
 - Java (Android)
 - Objective-C & Swift (iOS)
 

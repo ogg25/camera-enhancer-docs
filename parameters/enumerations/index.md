@@ -27,6 +27,8 @@ breadcrumbText: Enumerations
 | `DM_CW_APP_DOMAIN_COUNT` | `EnumDMChargeWayAppDomainCount` | 6 | Charges by the count of app domains. |
 | `DM_CW_ACTIVE_DEVICE_COUNT` | `EnumDMChargeWayActiveDeviceCount` | 8 | Charges by the count of active devices. |
 
+&nbsp;
+
 ## Camera DMUUID Generation Method
 
 ### Declarations

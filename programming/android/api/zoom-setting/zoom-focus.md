@@ -26,21 +26,24 @@ breadcrumbText: Android Zoom and Focus
 - [`setZoomFactor`](#setzoomfactor)
 
 ## setAutoFocusPosition
-    
-Set the position you want to auto focus at. This setting will replace the default focus value and always focus on the setted point. 
-```java
+
+Set the position that you want to autp focus at. This setting will replace the default focus value and always focus on the setted point.
+
+```Java
     mCamera.setAutoFocusPosition(0.5,0.6);
 ```
+
 ## setManualFocusPosition
 
-Set the position you want to manually focus at. This focus position effects only once each time this code is called.
-```java
+Set the manual focus position. This position only effect once when this API is called.
+
+```Java
     mCamera.setManualFocusPosition(0.5,0.6);
 ```
 
 ## setFocalLength
 
-Set focal length (float). The range of focal length is from 0 to 10. The value doesn't means a distance but a precentage. If user set `setFocalLength(5);` it means the focal length will be 50% of the maxium focal length of the camera. Please note, If this API is called to set a focal length, the focal length will be fixed and all other auto focus mode will be disabled. To quit this fixed focal length mode, please set the focal length into -1.
+Set the focal length (float). The range of focal length is from 0 to 10. The value doesn't means a distance but a precentage. If user set `setFocalLength(5);` it means the focal length will be 50% of the maxium focal length of the camera. Please note, If this API is called to set a focal length, the focal length will be fixed and all other auto focus mode will be disabled. To quit this fixed focal length mode, please set the focal length into -1.
 
 To enter the fixed focal length mode:
 ```java
