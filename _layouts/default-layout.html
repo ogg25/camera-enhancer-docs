@@ -105,12 +105,12 @@
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-android-1.0.zip');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest');
                     $('.dceThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/objectivec-swift/') > -1) {
                     $('.editionName').html('iOS');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-ios-1.0.zip');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest');
                     $('.dceThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 }
@@ -118,7 +118,7 @@
 
             $('#txtSearch').keydown(function(e) { 
                 if (e.keyCode == 13) {
-                    window.location.href = '/camera-enhancer/search.html?q=' + $('#txtSearch').val();
+                    window.location.href = '/camera-enhancer/docs/search.html?q=' + $('#txtSearch').val();
                 }
             })
         })
