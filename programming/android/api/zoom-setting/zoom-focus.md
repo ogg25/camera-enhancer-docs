@@ -13,16 +13,16 @@ breadcrumbText: Android Zoom and Focus
 - [`setManualFocusPosition`](#setautofocusposition)
 - [`setFocalLength`](#setfocallength)
 - [`enableDCEAutoFocus`](#enabledceautofocus)
-- [`getEnableDCEAutoFocusStatus`](#enabledceautofocus)
+- [`getEnabledDCEAutoFocusStatus`](#enabledceautofocus)
 - [`enableDefaultAutoFocus`](#enabledefaultautofocus)
-- [`getEnableDefaultAutoFocusStatus`](#enabledefaultautofocus)
+- [`getEnabledDefaultAutoFocusStatus`](#enabledefaultautofocus)
 - [`enableRegularAutoFocus`](#enableregularautofocus)
-- [`getEnableRegularAutoFocusStatus`](#enableregularautofocus)
+- [`getEnabledRegularAutoFocusStatus`](#enableregularautofocus)
 - [`setRegularAutoFocusParam`](#setregularautofocusparam)
 - [`enableAutoFocusOnSharpnessChange`](#enableautofocusonsharpnesschange)
-- [`getEnableAutoFocusOnSharpnessChangeStatus`](#enableautofocusonsharpnesschange)
+- [`getEnabledAutoFocusOnSharpnessChangeStatus`](#enableautofocusonsharpnesschange)
 - [`enableAutoZoom`](#enableautozoom)
-- [`getEnableAutoZoomStatus`](#enableautozoom)
+- [`getEnabledAutoZoomStatus`](#enableautozoom)
 - [`setZoomFactor`](#setzoomfactor)
 
 ## setAutoFocusPosition
@@ -61,7 +61,7 @@ To turn on DCE auto focus mode:
 ```
 To get status (on/off) of DCE auto focus mode:
 ```java
-    boolean x = mCamera.getEnableDCEAutoFocusStatus();
+    boolean x = mCamera.getEnabledDCEAutoFocusStatus();
 ```
 
 ## enableDefaultAutoFocus
@@ -72,7 +72,7 @@ This API is designed for controlling the system default auto focus. To turn off 
 ```
 To get status (on/off) of Default auto focus mode:
 ```java
-    boolean x = mCamera.getEnableDefaultAutoFocusStatus();
+    boolean x = mCamera.getEnabledDefaultAutoFocusStatus();
 ```
 
 ## enableRegularAutoFocus
@@ -83,7 +83,7 @@ Regular auto focus is an advanced setting that enable camera to auto focus for e
 ```
 To get status (on/off) of regular auto focus mode:
 ```java
-    boolean x = mCamera.getEnableRegularAutoFocusStatus();
+    boolean x = mCamera.getEnabledRegularAutoFocusStatus();
 ```
 
 ## setregularautofocusparam
@@ -102,7 +102,7 @@ This API is another advanced setting that enable camera to auto focus when sharp
 ```
 To get the status (on/off) of this auto focus mode:
 ```java
-    boolean x = mCamera.getEnableAutoFocusOnSharpnessChangeStatus();
+    boolean x = mCamera.getEnabledAutoFocusOnSharpnessChangeStatus();
 ```
 
 ## enableAutoZoom
@@ -114,7 +114,7 @@ To enable auto zoom mode:
 ```
 To check the status (on/off) of auto zoom mode:
 ```java
-    boolean x = mCamera.getEnableAutoZoomStatus();
+    boolean x = mCamera.getEnabledAutoZoomStatus();
 ```
 
 ## setZoomFactor

@@ -9,9 +9,11 @@ breadcrumbText: Android Filter Setting
 
 # Android API Reference - Filter Setting
 
-- [`enableFrameFilter`](#framefilter)
+- [`enableFrameFilter`](#enableframefilter)
+- [`getEnabledFrameFilterStatus`](#enableframefilter)
 - [`setMaxFrameRate`](#setmaxframerate)
-- [`enableSensorControl`](#sensorcontrol)
+- [`enableSensorControl`](#enablesensorcontrol)
+- [`getEnabledSensorControlStatus`](#enablesensorcontrol)
 - [`setSensorControlThreshold`](#setsensorcontrolthreshold)
 
 ## enableFrameFilter
@@ -20,9 +22,9 @@ Use `enableFrameFilter` to turn on/off frame filter.
 ```java
     mCamera.enableFrameFilter(true);
 ```
-To check the status of frame filter mode, please use `getEnableFrameFilterStatus`
+To check the status of frame filter mode, please use `getEnabledFrameFilterStatus`
 ```java
-    boolean x = mCamera.getEnableFrameFilterStatus();
+    boolean x = mCamera.getEnabledFrameFilterStatus();
 ```
 
 ## setMaxFrameRate
@@ -38,9 +40,9 @@ Use `enableSensorControl` to turn on/off sensor control mode.
 ```java
     mCamera.enableSensorControl(true);
 ```
-To check the status of sensor control mode, please use `getEnableSensorControlStatus`
+To check the status of sensor control mode, please use `getEnabledSensorControlStatus`
 ```java
-    boolean x = mCamera.getEnableSensorControlStatus();
+    boolean x = mCamera.getEnabledSensorControlStatus();
 ```
 
 ## setSensorControlThreshold
