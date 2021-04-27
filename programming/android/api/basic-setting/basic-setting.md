@@ -14,7 +14,7 @@ breadcrumbText: Android Basic Setting
 - [`updateCameraSetting`](#updatecamerasetting)
 - [`getVersion`](#getversion)
 - [`enableFastMode`](#fast-mode)
-- [`getEnableFastModeStatus`](#fast-mode)
+- [`getEnabledFastModeStatus`](#fast-mode)
 - [`getCameraDesireState`](#camera-state)
 - [`setCameraDesireState`](#camera-state)
 - [`getCameraCurrentState`](#camera-state)
@@ -103,7 +103,7 @@ This API is designed for users to setup DCE fast mode. DCE fast mode will cut fr
     //To enable fast mode
     mCamera.enableFastMode(true);
     //To get the value(status) of fast mode
-    boolean x = mCamera.getEnableFastModeStatus();
+    boolean x = mCamera.getEnabledFastModeStatus();
 ```
 
 ## Camera State
