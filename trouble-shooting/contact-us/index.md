@@ -9,7 +9,7 @@ breadcrumbText: Contact Us
 
 # Get Support From Us
 
-If you are facing any issue on using DCE or have any suggestions for us, please feel free to contact us throw the following methods. 
+If you are facing any issues using DCE or have any suggestions for us, please feel free to contact us using the following methods. 
 
 ## E-mail
 
