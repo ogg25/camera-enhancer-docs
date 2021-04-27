@@ -9,12 +9,6 @@ breadcrumbText: iOS Guide
 
 # Guide on Objective-C & Swift
 
-## Quick access
-
-- [Installation](#installation)
-- [License Initialization](#license-initialization)
-- [Get start with DCE](#get-start)
-
 ## System Requirements
 
 - Operating systems:
@@ -30,7 +24,6 @@ breadcrumbText: iOS Guide
 2. Create a new Objective-C or Swift project.
 
 3. Add DynamsoftCameraEnhancer.framework in your xcode project. 
-(How to add framework on xcode)
 
 4. Import Dynamsoft Camera Enhancer
 
@@ -124,7 +117,7 @@ class ViewController: UIViewController {
 
 ### Quick Settings for DCE
 
-1. DCE Setting templete
+#### DCE Setting templete
 
 The following templates are strongly recommended to be applicated in your first attempt on DCE. These templates will be friendly to the majority of IOS devices. By using and optimizing on this template, you will quickly be familiar with DCE.
 
@@ -187,7 +180,7 @@ class ViewController: UIViewController {
     }
 }
 ```
-2. Fast mode setting
+#### Fast mode setting
 
 DCE fast mode is specially designed for accelerating on single barcode decoding. This mode will reduce the time consumption on single barcode decoding by 50%. Fast mode is strongly recommended to be enabled on single barcode decoding. To turn on Fast mode, you can use `setFastMode` to make the setting:
 
@@ -235,7 +228,7 @@ class ViewController: UIViewController {
 }
 ```
 
-3. Filter, Focus and Zoom setting
+#### Filter, Focus and Zoom setting
 
 The following code is guidline on how to setup frame filter, auto zoom and auto focus in DCE.
 

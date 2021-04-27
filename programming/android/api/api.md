@@ -98,7 +98,6 @@ Advanced focus settings:
 | [`enableFrameFilter`]({{site.android-filter-setting}}filter.html#framefilter) | Set true/false to turn on/off DCE frame filter. |
 | [`getEnableFrameFilterStatus`]({{site.android-filter-setting}}filter.html#framefilter) | Get the status (on/off) of DCE frame filter mode. |
 | [`setMaxFrameRate`]({{site.android-filter-setting}}filter.html#setmaxframerate) | Set max frame rate. |
-| [`setFrameListLength`]({{site.android-filter-setting}}filter.html#setframelistlength) | Set how many frames will be stored in list. |
 | [`enableSensorControl`]({{site.android-filter-setting}}filter.html#sensorcontrol) | Set true/false to turn on/off DCE sensor control. |
 | [`getEnableSensorControlStatus`]({{site.android-filter-setting}}filter.html#sensorcontrol) | Get the status (on/off) of DCE sensor control mode. |
 | [`setSensorControlThreshold`]({{site.android-filter-setting}}filter.html#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |
