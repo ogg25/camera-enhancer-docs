@@ -1,108 +1,99 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on Java(Android)
-description: This is the documentation - Guide on Java(Android) page of Dynamsoft Camera Enhancer.
-keywords:  Camera Enhancer, Guide on Java(Android)
+title: Dynamsoft Camera Enhancer - Guide on Objective-C & Swift
+description: This is the documentation - Guide on Objective-C & Swift page of Dynamsoft Camera Enhancer.
+keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true
-breadcrumbText: Android Guide draft
+breadcrumbText: iOS Guide
 ---
 
-# Guide on Java(Android)
+# Guide on Objective-C & Swift
 
 ## System Requirements
 
-- Operating system:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended)
-  - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6
+- Operating systems:
+  - macOS 10.11 and above.
+  - iOS 9.0 and above.
+- Environment: Xcode 7.1 - 11.5 and above.
+- Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
 ## Installation
 
-1. <a href="https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`. 
+1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework. 
 
-2. Create a new Android project in Android Studio.
+2. Create a new Objective-C or Swift project.
 
-3. Put the `.aar` file under the dictionary `/app/libs` in your project. 
+3. Add DynamsoftCameraEnhancer.framework in your Xcode project.
 
-4. Add the following code into `build.gradle(Module: app)`.
+4. Import Dynamsoft Camera Enhancer
 
-    ```Java
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
-    ```
+Objective-C:
 
-5. Also in `build.gradle(Module: app)` add the reference in dependencies:
+```objectivec
+#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+```
 
-    ```Java
-        implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
-    ```
+Swift:
 
-6. Sync the project with gradle and after that `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
+```Swift
+import DynamsoftCameraEnhancer
+```
 
 ## Get Started
 
 ### Create a Camera Module
 
-This section is a guide on using Dynamsoft Camera Enhancer to create a simple camera app.
+In this section, you will be guided on using Dynamsoft Camera Enhancer to create a simple camera app with video frames filter function.
 
-1. Create a new Android project.
+If you have completed the installation of DCE, you can add the following code to your viewController to set up your camera module.
 
-2. In the new project, create a CameraView section in activity_main.xml.
+Objective-C
 
-    ```XML
-        <com.dynamsoft.dce.CameraView
-            android:id="@+id/cameraView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="0dp" />
-    ```
+```objectivec
+#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 
-3. Set up for your camera in the `cameraView` section. Please add the following code in your activity for the camera. The following code is an example of setting camera view in `MainActivity`
+@interface ViewController ()
+@end
+@implementation ViewController
 
-    ```java
-    import com.dynamsoft.dce.CameraEnhancer;
-    import com.dynamsoft.dce.CameraEnhancerException;
-    import com.dynamsoft.dce.CameraState;
-    import com.dynamsoft.dce.CameraView;
-    import com.dynamsoft.dce.DMLTSConnectionParameters;
-    import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
-    public class MainActivity extends AppCompatActivity {
-        CameraEnhancer mCamera;
-        CameraView cameraView;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);    
-            setContentView(R.layout.activity_main);
-            cameraView = findViewById(R.id.cameraView);
-            mCamera = new CameraEnhancer(MainActivity.this);
-            mCamera.addCameraView(cameraView);
-            //Initialize your license
-            com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
-            // The organization id 200001 here will grant you a public trial license good for 7 days.
-            // After that, you can send an email to trial@dynamsoft.com
-            // (make sure to include the keyword privateTrial in the email title)
-            // to obtain a 30-day free private trial license which will also come in the form of an organization id.
-            info.organizationID = "200001";
-            mCamera.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
-                @Override
-                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
-                    if(!isSuccess){
-                        error.printStackTrace();
-                    }
-                }
-            });
-            //Turn on the camera
-            mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-            //Start scanning
-            mCamera.startScanning();
-        }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    //Initialize license from LTS
+    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
+    dcePara.organizationID = @"Your organizationID";
+    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
+    [dce setCameraDesiredState:DCEnhancerStateOn];
+}
+```
+
+Swift:
+
+```Swift
+import DynamsoftCameraEnhancer
+
+class ViewController: UIViewController {
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECaptureView! = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+        dce.isEnable = true
     }
-    ```
-
-4. Run the project. Now your camera module is running. If you have any questions about the program, you can view `samples` we provided in the package you download to get better understandings. Also, you can get help from our online customer service.
+    func configurationDCE() {
+        dceDate = NSDate()
+        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView.addOverlay(color, fill: color)
+        self.view.insertSubview(dceView, belowSubview: displayView)
+        //Setup license
+        let lts = iCameraLTSConnectionParameters()
+        lts.organizationID = "Your organizationID"
+        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        dce.setCameraDesiredState(.CAMERA_STATE_ON)
+    }
+}
+```
 
 ### Extend the camera module with DCE functions
 
