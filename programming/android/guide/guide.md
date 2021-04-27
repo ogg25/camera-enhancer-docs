@@ -17,7 +17,7 @@ breadcrumbText: Android Guide draft
 
 ## Installation
 
-1. <a href="https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`. 
+1. <a href="https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`. 
 
 2. Create a new Android project in Android Studio.
 
@@ -102,7 +102,7 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
     }
     ```
 
-4. Run the project. Now your camera module is running. If you have any questions about the program, you can view `samples` we provided in the package you download to get better understandings. Also, you can get help from our online customer service.
+4. Run the project. Now your camera module is running. If you have any questions about the program, you can view the `samples` we provided in the package you download to get a better understanding of how it works. Also, you can get help from our online customer service.
 
 ### Extend the camera module with DCE functions
 
@@ -164,7 +164,7 @@ Run the project, now some DCE functions have been added to the camera module.
 
 ### Add decoder to the camera module
 
-This section is the guide for users to add a video stream decoder in the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works.
+This section is the guide for users to add a video stream decoder in the camera module. In this section, Dynamsoft Barcode Reader (DBR) will handle the decoding.
 
 1. Add a new text view for the camera module. In the text view, there will be decode results if the project is running successfully.
 
