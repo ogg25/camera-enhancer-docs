@@ -87,17 +87,17 @@ Advanced focus settings:
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableAutoZoom`]({{site.android-zoom-setting}}zoom-focus.html#autozoom) | Set enableAutoZoom value true to enable auto zoom mode. |
-| [`getEnabledAutoZoomStatus`]({{site.android-zoom-setting}}zoom-focus.html#autozoom) | Get the status (on/off) of auto zoom mode. |
+| [`enableAutoZoom`]({{site.android-zoom-setting}}zoom-focus.html#enableautozoom) | Set enableAutoZoom value true to enable auto zoom mode. |
+| [`getEnabledAutoZoomStatus`]({{site.android-zoom-setting}}zoom-focus.html#enableautozoom) | Get the status (on/off) of auto zoom mode. |
 | [`setZoomFactor`]({{site.android-zoom-setting}}zoom-focus.html#setzoomfactor) | Set zoom factor. |
 
 ## Filter Settings
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableFrameFilter`]({{site.android-filter-setting}}filter.html#framefilter) | Set true/false to turn on/off DCE frame filter. |
-| [`getEnabledFrameFilterStatus`]({{site.android-filter-setting}}filter.html#framefilter) | Get the status (on/off) of DCE frame filter mode. |
+| [`enableFrameFilter`]({{site.android-filter-setting}}filter.html#enableframefilter) | Set true/false to turn on/off DCE frame filter. |
+| [`getEnabledFrameFilterStatus`]({{site.android-filter-setting}}filter.html#enableframefilter) | Get the status (on/off) of DCE frame filter mode. |
 | [`setMaxFrameRate`]({{site.android-filter-setting}}filter.html#setmaxframerate) | Set max frame rate. |
-| [`enableSensorControl`]({{site.android-filter-setting}}filter.html#sensorcontrol) | Set true/false to turn on/off DCE sensor control. |
-| [`getEnabledSensorControlStatus`]({{site.android-filter-setting}}filter.html#sensorcontrol) | Get the status (on/off) of DCE sensor control mode. |
+| [`enableSensorControl`]({{site.android-filter-setting}}filter.html#enablesensorcontrol) | Set true/false to turn on/off DCE sensor control. |
+| [`getEnabledSensorControlStatus`]({{site.android-filter-setting}}filter.html#enablesensorcontrol) | Get the status (on/off) of DCE sensor control mode. |
 | [`setSensorControlThreshold`]({{site.android-filter-setting}}filter.html#setsensorcontrolthreshold) | Enable user to change sensor sensitivity (default value is 50). |

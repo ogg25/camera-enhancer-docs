@@ -78,8 +78,6 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
             mCamera = new CameraEnhancer(MainActivity.this);
             mCamera.addCameraView(cameraView);
             //Initialize your license
-            mCamera = new CameraEnhancer(MainActivity.this);
-            mCamera.addCameraView(cameraView);
             com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
             // The organization id 200001 here will grant you a public trial license good for 7 days.
             // After that, you can send an email to trial@dynamsoft.com
@@ -102,16 +100,9 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
     }
     ```
 
-3. Remember to add use permission to your project.
+3. Run the project and now your camera module is running. If you have any question on the program, you can view `samples` we provided in the package you download to have better understandings. Also, you can get help from our online customer service.
 
-    ```XML
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.CAMERA" />
-    ```
-
-4. Run the project and now your camera module is running. If you have any question on the program, you can view `samples` we provided in the package you download to have better understandings. Also, you can get help from our online customer service.
-
-### Quick settings for DCE
+### Create a decoder with enhanced camera
 
 In this section, you can find some useful APIs that helps you on initialize DCE efficiently.
 
@@ -155,38 +146,6 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
             }
             @Override
             public void onPreviewFilterFrame(Frame frame) {
-                byte[] bufferBytes;
-                bufferBytes = frame.getData();
-                int iWidth = frame.getWidth();
-                int iHeight = frame.getHeight();
-                int[] iStride = frame.getStrides();
-                int format = frame.getFormat();
-                Log.i("saveByte", "saveByte:"+bufferBytes);
-                try {
-                BarcodeReader dbr = new BarcodeReader();
-                PublicRuntimeSettings runtimeSettings = dbr.getRuntimeSettings();
-                runtimeSettings.barcodeFormatIds = nBarcodeFormat;
-                runtimeSettings.barcodeFormatIds_2 = nBarcodeFormat_2;
-                dbr.updateRuntimeSettings(runtimeSettings);
-                TextResult[] result = dbr.decodeBuffer(bufferBytes, iWidth,  iHeight, iStride, format, "");
-                if(result.length>0){
-                    String scan_result = "Found "+result.length+" barcode:";
-                    for(int i=0; i<result.length;i++){
-                        String new_result ="";
-                        new_result = result[i].barcodeText.split(" ")[1];
-                        scan_result+=new_result+"\n";
-                    }
-                    Log.i("DBR", "Filtered Result is: "+scan_result);
-                    text_result.setText(scan_result);
-                }
-                else {
-                    Log.i("DBR", "Filtered No Result");
-                    text_result.setText("No Barcode Found");
-                }
-                dbr.destroy();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
             }
             @Override
             public void onPreviewFastFrame(Frame frame) {
