@@ -41,7 +41,7 @@ breadcrumbText: Android Guide draft
 
 ## Get Started
 
-### Create a Camera module
+### Create a Camera Module
 
 In this section you will be guide on using Dynamsoft Camera Enhancer to create a simple camera app with video frame filter function.
 
@@ -56,7 +56,7 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
             tools:layout_editor_absoluteY="0dp" />
     ```
 
-2. Set up for your camera in the `cameraView` section. Please add following code in your activity for camera. The following code is an example of setting camera view in `MainActivity`
+2. Set up for your camera in the `cameraView` section. Please add following code in your activity for camera. The following code is an example of setting camera view in `MainActivity`.
 
     ```java
     import com.dynamsoft.dce.CameraEnhancer;
@@ -102,22 +102,33 @@ In this section you will be guide on using Dynamsoft Camera Enhancer to create a
 
 3. Run the project and now your camera module is running. If you have any question on the program, you can view `samples` we provided in the package you download to have better understandings. Also, you can get help from our online customer service.
 
-### Create a decoder with enhanced camera
+### Create a Simple Video Stream Decoder
 
-In this section, you can find some useful APIs that helps you on initialize DCE efficiently.
+This section is the guide for users to create a video stream decoder with the help of DCE. In this section, Dynamsoft Barcode Reader will support on decode works.
 
-1. Setting Template
-    The following template is strongly recommended to be applicated in your first attempt on DCE. This template will be friendly to the majority of mobile devices. By using and optimizing on this template, you will quickly be familiar with DCE. 
-    ```java
+1. Create a camera module
+
+2. Add DCE filter settings and camera listener
+    ```Java
+    import com.dynamsoft.dce.CameraEnhancer;
+    import com.dynamsoft.dce.CameraEnhancerException;
+    import com.dynamsoft.dce.CameraState;
+    import com.dynamsoft.dce.CameraView;
+    import com.dynamsoft.dce.DMLTSConnectionParameters;
+    import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
+    //You can change the MainActivity to your prefer Activity 
+    public class MainActivity extends AppCompatActivity {
         CameraEnhancer mCamera;
         CameraView cameraView;
+        @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            //Remember to use your personal settings in this section     
             setContentView(R.layout.activity_main);
             cameraView = findViewById(R.id.cameraView);
             mCamera = new CameraEnhancer(MainActivity.this);
             mCamera.addCameraView(cameraView);
-            //License Initialization
+            //Initialize your license
             com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
             // The organization id 200001 here will grant you a public trial license good for 7 days.
             // After that, you can send an email to trial@dynamsoft.com
@@ -132,68 +143,33 @@ In this section, you can find some useful APIs that helps you on initialize DCE 
                     }
                 }
             });
+            //Turn on camera
             mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-            //Start camera scanning
+            //Start scanning
             mCamera.startScanning();
-            //Filter, zoom & Focus settings     
-            mCamera.enableSensorControl(true);
-            mCamera.enableAutoZoom(true);
-            mCamera.enableDCEAutoFocus(true);
-            mCamera.enableFastMode(true);
+            //From Camera listener, users can fetch frames for decoding 
             mCamera.addCameraListener(new CameraListener() {
             @Override
             public void onPreviewOriginalFrame(Frame frame) {
+                //Get original frames here
             }
             @Override
             public void onPreviewFilterFrame(Frame frame) {
+                //Get filtered frames here
             }
             @Override
             public void onPreviewFastFrame(Frame frame) {
+                //Get fast mode frames here
             }
         });
         }
-    ```
-
-2. Fast mode setting
-
-    DCE fast mode is specially designed for accelerating on single barcode decoding. This mode will reduce the time consumption on single barcode decoding by 50%. Fast mode is strongly recommended to be enabled on single barcode decoding. To turn on Fast mode, you can use `enableFastMode` to make the setting:
-    
-    ```Java
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_ACTION_BAR);
-        setContentView(R.layout.activity_main);
-        cameraView = findViewById(R.id.cameraView);
-        mCamera = new CameraEnhancer(MainActivity.this);
-        mCamera.addCameraView(cameraView);
-        mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-        mCamera.startScanning();
-        //***************Turn on Fast mode**********************
-        mCamera.enableFastMode(true);
     }
     ```
 
 3. Auto filter & focus setting
-
-    Since some mobile devices have enough powerful camera, we don't need to force DCE to run on these devices. `getDeviceLevel` is designed for making more flexible settings to applicate proper algorithm on devices with different level. The follow code is a sample on how we can turn off frame filter and auto focus on high level devices. For parameters on device level, please view parameters for [`HardwareUtil`]().
-
     ```Java
-        boolean ifNeedFilter = true;
-        boolean ifNeedAutoFocus = true;
-        int deviceLevel = mCamera.getDeviceLevel();
-        if (deviceLevel == HardwareUtil.DEVICE_LEVEL_HIGH)
-        {
-            ifNeedFilter = false;
-            ifNeedAutoFocus = false;
-        }
-        if(deviceLevel == HardwareUtil.DEVICE_LEVEL_MID)
-        {
-            ifNeedAutoFocus = false;
-        }
-        mCamera.enableDCEAutoFocus(ifNeedAutoFocus);
-        mCamera.enableFrameFilter(ifNeedFilter);
     ```
 
 ## Add DCE to your Dynamsoft Barcode Reader (DBR) project
 
-For developers who are using Dynamsoft Barcode reader, there are new APIs in DBR 8.2.1 mobile edition to quick deploy camera enhancer in barcode reader project. For more information please read more in [DBR documentation - camera enhancer deployment]({{site.barcode-deploy-android}}) section.
+For developers who are using Dynamsoft Barcode reader, there are new APIs in DBR 8.2.1 mobile edition to quick deploy camera enhancer in barcode reader project. For more information please read more in [DBR documentation - camera enhancer deployment]({{site.barcode-deploy-android}}) section. 
