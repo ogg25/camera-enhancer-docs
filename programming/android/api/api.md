@@ -65,7 +65,7 @@ Focus parameters related APIs:
 | [`setManualFocusPosition`]({{site.android-zoom-setting}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position only effect once for each time the API is called). |
 | [`setFocalLength`]({{site.android-zoom-setting}}zoom-focus.html#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
 
-Basic focus settings: 
+Basic focus settings:
 
 | Method | Description |
 |-----------------|---------------|
@@ -74,7 +74,7 @@ Basic focus settings:
 | [`enableDefaultAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enabledefaultautofocus) | Set true/false to turn on/off default auto focus. |
 | [`getEnabledDefaultAutoFocusStatus`]({{site.android-zoom-setting}}zoom-focus.html#enabledefaultautofocus) | Get the status (on/off) of camera default auto focus. |
 
-Advanced focus settings: 
+Advanced focus settings:
 
 | Method | Description |
 |-----------------|---------------|
