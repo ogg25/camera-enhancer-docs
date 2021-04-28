@@ -11,13 +11,13 @@ breadcrumbText: Introduction
 
 ## Overview of Dynamsoft Camera Enhancer
 
-Dynamsoft Camera Enhancer (DCE) is an SDK specifically designed for improving video frame decoding. Before video frames are transferred for decoding, DCE will do a series of preprocessing including camera control and frame filter. This step can largely reduce the rate of misreading. You can start your decode program development with DCE and also you can import DCE algorithm in your developed app to improve its performance. 
+Dynamsoft Camera Enhancer (DCE) is an SDK specifically designed for improving video frame decoding. Before video frames are transferred for decoding, DCE will do a series of preprocessing including camera control and frame filter. This step can largely reduce the rate of misreading. You can start your decode program development with DCE and also you can import DCE algorithm in your developed app to improve its performance.
 
 ## Main features
 
 1. Auto focus
 
-    If the device's default auto focus is not sensitive enough, DCE can provide a specially design auto focus mode that can largely improve camera focus efficiency. Diversiform APIs also enable user to make personalized focus settings to reach various requirements.
+    If the device's default auto focus is not sensitive enough, DCE can provide a specially design auto focus mode that can largely improve camera focus efficiency. Further, it also enable user to make personalized focus settings to reach various requirements.
 
 2. Sensor control
 
@@ -38,7 +38,7 @@ Dynamsoft Camera Enhancer (DCE) is an SDK specifically designed for improving vi
 
 ## DCE working process
 
-The following chart illustrates DCE working process.
+The following chart illustrates DCE working process. For Android developers, DCE provides mobile device level evaluation which 
 
 <div align="center">
     <p><img src="overview/assets/DCE-process.png" width="50%" alt="How DCE works"></p>
@@ -54,7 +54,7 @@ Dynamsoft Camera Enhancer is now available for following programming languages:
 
 ## About this documentation
 
-This documentation aims at helping you on learning, understanding and using Dynamsoft Camera Enhancer. In this documentation you can find useful information that guide you step by step from installation to further development. 
+This documentation aims at helping you on learning, understanding and using Dynamsoft Camera Enhancer. In this documentation you can find useful information that guide you step by step from installation to further development.
 
 ## Quick links
 
