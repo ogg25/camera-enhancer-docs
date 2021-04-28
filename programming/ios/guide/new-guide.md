@@ -4,7 +4,7 @@ title: Dynamsoft Camera Enhancer - Guide on Objective-C & Swift
 description: This is the documentation - Guide on Objective-C & Swift page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true
-breadcrumbText: iOS Guide
+breadcrumbText: iOS Guide (new)
 ---
 
 # Guide on Objective-C & Swift
@@ -17,9 +17,11 @@ breadcrumbText: iOS Guide
 - Environment: Xcode 7.1 - 11.5 and above.
 - Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
-## Installation
+## Get Started
 
-1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework. 
+### Installation
+
+1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
 
 2. Create a new Objective-C or Swift project.
 
@@ -38,8 +40,6 @@ Swift:
 ```Swift
 import DynamsoftCameraEnhancer
 ```
-
-## Get Started
 
 ### Create a Camera Module
 
