@@ -10,16 +10,16 @@ breadcrumbText: License Initialization
 
 ## Get a trial key
 
-- 7 days public trial key is available for every new device that have never activated Dynamsoft Camera Enhancer.
+- 7 days public trial key is available for every new device that has never activated Dynamsoft Camera Enhancer.
 - If your free key is expired, please email trial@dynamsoft.com and include "privateTrial" in the title to get 30 days extension.
 
-## Get full key license
+## Get a full key license
 
 - [Please contact us to purchase for full key license]({{site.contact-us}}).
 
-## Set up license from License Tracking Server
+## Set up the license from License Tracking Server
 
-Since you have set up your, you can use following code to set up your license from `LTS`:
+Since you have set up your, you can use the following code to set up your license from `LTS`:
 
 For Android users:
 
