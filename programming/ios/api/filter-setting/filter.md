@@ -16,13 +16,13 @@ breadcrumbText: iOS Filter Setting
 
 ## enableSensorControl
 
-Turn on(off) sensor control
+Turn on (off) sensor control
 
 Objective-C:
 
 ```objectivec
     [dce enableSensorControl:true];
-    //To check the status of DCE sensor control
+    //To check the status of the DCE sensor control
     BOOL res= [dce enableSensorControl];
 ```
 
@@ -30,13 +30,13 @@ Swift:
 
 ```swift
     dce.enableSensorControl(true)
-    //To check the status of DCE sensor control
+    //To check the status of the DCE sensor control
     let res = dce.enableSensorControl
 ```
 
 ## setSensorControlThreshold
 
-This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50 if user don't make any change.
+This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50 if users don't make any change.
 
 Objective-C:
 
@@ -58,7 +58,7 @@ Objective-C:
 
 ```objectivec
     [dce enableFrameFilter:true];
-    //To check the status of DCE frame filter
+    //To check the status of the DCE frame filter
     BOOL res= [dce enableFrameFilter];
 ```
 
@@ -66,7 +66,7 @@ Swift:
 
 ```swift
     dce.enableFrameFilter(true)
-    //To check the status of DCE frame filter
+    //To check the status of the DCE frame filter
     let res = dce.enableFrameFilter
 ```
 

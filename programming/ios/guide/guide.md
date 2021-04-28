@@ -81,7 +81,7 @@ Objective-C code sample:
     _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
     
     view:_dceView verificationDelegate:self];
-    //Make camera settings, turn on camera
+    //Make camera settings, turn on the camera
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
 }
@@ -118,7 +118,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-        //Turn on camera
+        //Turn on the camera
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.isEnable = true
     }
@@ -133,7 +133,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
 
 This section is displaying how to add DCE functions to the camera module we built just now.
 
-For Objective-C users, please add following code:
+For Objective-C users, please add the following code:
 
 ```objectivec
 #import "ViewController.h"
@@ -169,7 +169,7 @@ For Objective-C users, please add following code:
     _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
     
     view:_dceView verificationDelegate:self];
-    //Make camera settings, turn on camera
+    //Make camera settings, turn on the camera
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
     
@@ -187,7 +187,7 @@ For Objective-C users, please add following code:
 }
 ```
 
-For Swift users, please add following code:
+For Swift users, please add the following code:
 
 ```swift
 import UIKit
@@ -214,7 +214,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-        //Turn on camera
+        //Turn on the camera
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.isEnable = true
         //*********************Newly added**********************
@@ -236,14 +236,14 @@ Run the project, now DCE functions have been added to the camera module.
 
 ### Add decoder to the camera module
 
-This section is the guide for users to add a video stream decoder in the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works. After this step, a new simple video streaming decoding app is built successfully.
+This section is the guide for users to add a video stream decoder to the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works. After this step, a new simple video streaming decoding app is built successfully.
 
-Add this code snippet to Objective-C project.
+Add this code snippet to the Objective-C project.
 
 ```objectivec
 #import "ViewController.h"
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
-//import dynamsoft barcode reader for decoding
+//import Dynamsoft Barcode Reader for decoding
 #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
 
 @interface ViewController ()
@@ -277,7 +277,7 @@ Add this code snippet to Objective-C project.
     _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
     
     view:_dceView verificationDelegate:self];
-    //Make camera settings, turn on camera
+    //Make camera settings, turn on the camera
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
     
@@ -334,7 +334,7 @@ Add this code snippet to Objective-C project.
 }
 ```
 
-For Swift users, please add following code to Swift project.
+For Swift users, please add the following code to the Swift project.
 
 ```swift
 import UIKit
@@ -381,7 +381,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         let lts = iDMLTSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-        //Turn on camera
+        //Turn on the camera
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.isEnable = true
         //*********************Newly added**********************
@@ -426,4 +426,4 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
 }
 ```
 
-Run the project, now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.
+Run the project. Now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.

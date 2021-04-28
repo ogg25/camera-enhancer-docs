@@ -41,15 +41,15 @@ breadcrumbText: Android Guide
         implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
     ```
 
-6. Sync the project with gradle and after that `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
+6. Sync the project with Gradle, then, `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
 
 ### Create a Camera Module
 
 This section is a guide on using Dynamsoft Camera Enhancer to create a simple camera app after installation.
 
-1. Keep working on the project that you have installed DCE, in the project, create a CameraView section in activity_main.xml.
+1. Keep working on the project that you have installed DCE. In the project, create a CameraView section in activity_main.xml.
 
-    ```XML
+    ```xml
         <com.dynamsoft.dce.CameraView
             android:id="@+id/cameraView"
             android:layout_width="match_parent"
@@ -100,7 +100,7 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
     }
     ```
 
-3. Run the project. Now your camera module is running. If you have any questions about the program, you can view `samples` we provided in the package you download to get better understandings. Also, you can get help from our online customer service.
+3. Run the project. Now your camera module is running. If you have any questions about the program, you can view the samples we provided in the package you download to get better understandings. Also, you can get help from our online customer service.
 
 ### Extend the camera module with DCE functions
 
@@ -136,17 +136,17 @@ public class MainActivity extends AppCompatActivity {
         mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
         mCamera.startScanning();
         //**************The Following parts are newly added*******************
-        //Make device level evaluation on current device
+        //Make device level evaluation on the current device
         //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
         int level = mCameraEnhancer.getDeviceLevel();
         boolean frame_filter = true;
         boolean auto_focus = true;
         if (level == 2) {
-            //Disable both auto focus and frame filter on high level device
+            //Disable both autofocus and frame filter on high-level device
             frame_filter = false;
             auto_focus = false;
         }else if (level == 1) {
-            //Disable auto focus on mid level devices
+            //Disable autofocus on mid-level devices
             auto_focus = false;
         }
         mCameraEnhancer.enableDCEAutoFocus(auto_focus);
@@ -158,11 +158,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-Run the project, now some DCE functions have been added to the camera module.
+Run the project. Now some DCE functions have been added to the camera module.
 
 ### Add decoder to the camera module
 
-This section is the guide for users to add a video stream decoder in the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works.
+This section is the guide for users to add a video stream decoder to the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works.
 
 1. Add a new text view for the camera module. In the text view, there will be decode results if the project is running successfully.
 
@@ -232,17 +232,17 @@ This section is the guide for users to add a video stream decoder in the camera 
             mCamera.startScanning();
 
             //**************The Following parts are newly added*******************
-            //Make device level evaluation on current device
+            //Make device level evaluation on the current device
             //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
             int level = mCameraEnhancer.getDeviceLevel();
             boolean frame_filter = true;
             boolean auto_focus = true;
             if (level == 2) {
-                //Disable both auto focus and frame filter on high level device
+                //Disable both autofocus and frame filter on high-level device
                 frame_filter = false;
                 auto_focus = false;
             }else if (level == 1) {
-                //Disable auto focus on mid level devices
+                //Disable autofocus on mid-level devices
                 auto_focus = false;
             }
             mCameraEnhancer.enableDCEAutoFocus(auto_focus);

@@ -34,7 +34,7 @@ breadcrumbText: iOS Basic Setting
 
 ## updateCameraSettingFromJson
 
-Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)
+There are Some detailed settings that can be updated from JSON string or file. [View JSON data template and explanation](#updatecamerasettingfromfile)
 To update from JSON string:
 
 Objective-C:
@@ -51,7 +51,7 @@ Swift:
 
 ## updateCameraSettingFromFile
 
-Some detailed settings that can be updated from JSON string or file.
+There are some detailed settings that can be updated from JSON string or file.
 To update from JSON file:
 
 Objective-C:
@@ -91,7 +91,7 @@ This is the template for `updateCameraSettingFromJson` and `updateCameraSettingF
 
 ## getVersion
 
-User can check the current DCE version by using this API.
+Users can check the current DCE version by using this API.
 
 Objective-C:
 
@@ -107,7 +107,7 @@ Swift:
 
 ## enableFastMode
 
-This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode area to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
+This API is designed for users to set up DCE fast mode. DCE fast mode will cut frames into small images that contain barcode areas to improve decode efficiency. It is recommended to be enabled when decoding a single barcode.
 
 Objective-C:
 
@@ -126,7 +126,7 @@ Swift:
 ## Camera State
 
 Use `getCameraCurrentState`, `getCameraDesiredState` and `setCameraDesiredState` to make settings on camera state.
-Get camera current status (on/off). 
+Get the current status (on/off) of the camera.
 
 Objective-C:
 
@@ -140,7 +140,7 @@ Swift:
     dce.getCameraCurrentState()
 ```
 
-Get camera desired status (on/off).
+Get the desired status (on/off)of the camera.
 
 Objective-C:
 
@@ -154,7 +154,7 @@ Swift:
     dce.getCameraDesiredState()
 ```
 
-Use `CAMERA_STATE_ON` to set camera on and use `CAMERA_STATE_OFF` to set it off.
+Use `CAMERA_STATE_ON` to set the camera on and use `CAMERA_STATE_OFF` to set it off.
 
 Objective-C:
 
@@ -170,7 +170,7 @@ Swift:
 
 ## pauseCamera and resumeCamera
 
-Note: these APIs are created for pause & resume camera but camera module is still working when being paused. if you want to shut down camera module please use `stopScanning`.
+Note: these APIs are created to pause & resume the camera. The camera module is still working when being paused. if you want to shut down the camera module please use `stopScanning`.
 
 Objective-C:
 
@@ -188,7 +188,7 @@ Swift:
 
 ## stopScanning and startScanning
 
-Contorl the stop & start of camera module.
+To control the stop & start of the camera module.
 
 Objective-C:
 
@@ -265,7 +265,7 @@ Swift:
     dce.getTorchDesiredState()
 ```
 
-Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
+Use `TorchState.TORCH_STATE_ON` to set the torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
 
 Objective-C:
 
@@ -297,7 +297,7 @@ Swift:
 
 ## Camera Position
 
-DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated currently.
+DCE will use the back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated currently.
 
 Objective-C:
 
@@ -343,7 +343,7 @@ Swift:
     dce.setResolution(Resolution.Quality1080P)
 ```
 
-`getResolutionList` enable user to check all available resolutions that can be setted to the current camera.
+`getResolutionList` enables users to check all available resolutions that can be set to the current camera.
 
 Objective-C:
 
