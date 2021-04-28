@@ -109,55 +109,55 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
 This is a template for users to add DCE camera settings into the newly built camera module.
 
 ```Java
-    import com.dynamsoft.dce.CameraEnhancer;
-    import com.dynamsoft.dce.CameraEnhancerException;
-    import com.dynamsoft.dce.CameraState;
-    import com.dynamsoft.dce.CameraView;
-    import com.dynamsoft.dce.DMLTSConnectionParameters;
-    import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
-    public class MainActivity extends AppCompatActivity {
-        CameraEnhancer mCamera;
-        CameraView cameraView;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);    
-            setContentView(R.layout.activity_main);
-            cameraView = findViewById(R.id.cameraView);
-            mCamera = new CameraEnhancer(MainActivity.this);
-            mCamera.addCameraView(cameraView);
-            com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
-            info.organizationID = "200001";
-            mCamera.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
-                @Override
-                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
-                    if(!isSuccess){
-                        error.printStackTrace();
-                    }
+import com.dynamsoft.dce.CameraEnhancer;
+import com.dynamsoft.dce.CameraEnhancerException;
+import com.dynamsoft.dce.CameraState;
+import com.dynamsoft.dce.CameraView;
+import com.dynamsoft.dce.DMLTSConnectionParameters;
+import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
+public class MainActivity extends AppCompatActivity {
+    CameraEnhancer mCamera;
+    CameraView cameraView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);    
+        setContentView(R.layout.activity_main);
+        cameraView = findViewById(R.id.cameraView);
+        mCamera = new CameraEnhancer(MainActivity.this);
+        mCamera.addCameraView(cameraView);
+        com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
+        info.organizationID = "200001";
+        mCamera.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
+            @Override
+            public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                if(!isSuccess){
+                    error.printStackTrace();
                 }
-            });
-            mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-            mCamera.startScanning();
-            //**************The Following parts are newly added*******************
-            //Make device level evaluation on current device
-            //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
-            int level = mCameraEnhancer.getDeviceLevel();
-            boolean frame_filter = true;
-            boolean auto_focus = true;
-            if (level == 2) {
-                //Disable both auto focus and frame filter on high level device
-                frame_filter = false;
-                auto_focus = false;
-            }else if (level == 1) {
-                //Disable auto focus on mid level devices
-                auto_focus = false;
             }
-            mCameraEnhancer.enableDCEAutoFocus(auto_focus);
-            mCameraEnhancer.enableFrameFilter(frame_filter);
-            //Enable sensor control & fast mode
-            mCameraEnhancer.enableSensorControl(true);        
-            mCameraEnhancer.enableFastMode(true);
+        });
+        mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
+        mCamera.startScanning();
+        //**************The Following parts are newly added*******************
+        //Make device level evaluation on current device
+        //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
+        int level = mCameraEnhancer.getDeviceLevel();
+        boolean frame_filter = true;
+        boolean auto_focus = true;
+        if (level == 2) {
+            //Disable both auto focus and frame filter on high level device
+            frame_filter = false;
+            auto_focus = false;
+        }else if (level == 1) {
+            //Disable auto focus on mid level devices
+            auto_focus = false;
         }
+        mCameraEnhancer.enableDCEAutoFocus(auto_focus);
+        mCameraEnhancer.enableFrameFilter(frame_filter);
+        //Enable sensor control & fast mode
+        mCameraEnhancer.enableSensorControl(true);        
+        mCameraEnhancer.enableFastMode(true);
     }
+}
 ```
 
 Run the project, now some DCE functions have been added to the camera module.
@@ -192,118 +192,118 @@ This section is the guide for users to add a video stream decoder in the camera 
 2. Add the following code to the project in the main activity:
 
     ```Java
-        import com.dynamsoft.dbr.BarcodeReader;
-        import com.dynamsoft.dbr.BarcodeReaderException;
-        import com.dynamsoft.dbr.DBRLTSLicenseVerificationListener;
-        import com.dynamsoft.dbr.DCESettingParameters;
-        import com.dynamsoft.dbr.TextResultCallback;
-        import com.dynamsoft.dbr.TextResult;
-        import com.dynamsoft.dce.CameraEnhancer;
-        import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
-        import com.dynamsoft.dce.CameraView;
+    import com.dynamsoft.dbr.BarcodeReader;
+    import com.dynamsoft.dbr.BarcodeReaderException;
+    import com.dynamsoft.dbr.DBRLTSLicenseVerificationListener;
+    import com.dynamsoft.dbr.DCESettingParameters;
+    import com.dynamsoft.dbr.TextResultCallback;
+    import com.dynamsoft.dbr.TextResult;
+    import com.dynamsoft.dce.CameraEnhancer;
+    import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
+    import com.dynamsoft.dce.CameraView;
 
-        public class MainActivity extends AppCompatActivity {
-            CameraView cameraView;            
-            CameraEnhancer mCameraEnhancer;
-            //************Newly added code***************
-            TextResultCallback mTextResultCallback;
-            BarcodeReader reader;
-            TextView tvRes;
-            //*******************************************
-            @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_main);
-                cameraView = findViewById(R.id.cameraView);
+    public class MainActivity extends AppCompatActivity {
+        CameraView cameraView;            
+        CameraEnhancer mCameraEnhancer;
+        //************Newly added code***************
+        TextResultCallback mTextResultCallback;
+        BarcodeReader reader;
+        TextView tvRes;
+        //*******************************************
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            cameraView = findViewById(R.id.cameraView);
                 
-                //**This line is newly added**
-                tvRes = findViewById(R.id.tv_res);
-                //****************************
-                mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-                mCameraEnhancer.addCameraView(cameraView);
-                //Initialize DCE from License Tracking Server
-                com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
-                info.organizationID = "200001";
-                mCameraEnhancer.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
+            //**This line is newly added**
+            tvRes = findViewById(R.id.tv_res);
+            //****************************
+            mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+            mCameraEnhancer.addCameraView(cameraView);
+            //Initialize DCE from License Tracking Server
+            com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
+            info.organizationID = "200001";
+            mCameraEnhancer.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if(!isSuccess){ error.printStackTrace(); }
+                }
+            });
+            mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
+            mCamera.startScanning();
+
+            //**************The Following parts are newly added*******************
+            //Make device level evaluation on current device
+            //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
+            int level = mCameraEnhancer.getDeviceLevel();
+            boolean frame_filter = true;
+            boolean auto_focus = true;
+            if (level == 2) {
+                //Disable both auto focus and frame filter on high level device
+                frame_filter = false;
+                auto_focus = false;
+            }else if (level == 1) {
+                //Disable auto focus on mid level devices
+                auto_focus = false;
+            }
+            mCameraEnhancer.enableDCEAutoFocus(auto_focus);
+            mCameraEnhancer.enableFrameFilter(frame_filter);
+            //Enable sensor control & fast mode
+            mCameraEnhancer.enableSensorControl(true);        
+            mCameraEnhancer.enableFastMode(true);
+
+            //******************The following parts are newly added******************************
+            //Initialize Dynamsoft Barcode Reader from License Tracking Server
+            try {
+                reader = new BarcodeReader();
+                com.dynamsoft.dbr.DMLTSConnectionParameters parameters = new com.dynamsoft.dbr.DMLTSConnectionParameters();
+                parameters.organizationID = "200001";
+                reader.initLicenseFromLTS(parameters, new DBRLTSLicenseVerificationListener() {
                     @Override
-                    public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
-                        if(!isSuccess){ error.printStackTrace(); }
+                    public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+                        if (!b) { e.printStackTrace(); }
                     }
                 });
-                mCamera.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-                mCamera.startScanning();
-
-                //**************The Following parts are newly added*******************
-                //Make device level evaluation on current device
-                //User can set parameters for device level evaluation via API `setAutoModeLevelParam`         
-                int level = mCameraEnhancer.getDeviceLevel();
-                boolean frame_filter = true;
-                boolean auto_focus = true;
-                if (level == 2) {
-                    //Disable both auto focus and frame filter on high level device
-                    frame_filter = false;
-                    auto_focus = false;
-                }else if (level == 1) {
-                    //Disable auto focus on mid level devices
-                    auto_focus = false;
-                }
-                mCameraEnhancer.enableDCEAutoFocus(auto_focus);
-                mCameraEnhancer.enableFrameFilter(frame_filter);
-                //Enable sensor control & fast mode
-                mCameraEnhancer.enableSensorControl(true);        
-                mCameraEnhancer.enableFastMode(true);
-
-                //******************The following parts are newly added******************************
-                //Initialize Dynamsoft Barcode Reader from License Tracking Server
-                try {
-                    reader = new BarcodeReader();
-                    com.dynamsoft.dbr.DMLTSConnectionParameters parameters = new com.dynamsoft.dbr.DMLTSConnectionParameters();
-                    parameters.organizationID = "200001";
-                    reader.initLicenseFromLTS(parameters, new DBRLTSLicenseVerificationListener() {
-                        @Override
-                        public void LTSLicenseVerificationCallback(boolean b, Exception e) {
-                            if (!b) { e.printStackTrace(); }
-                        }
-                    });
-                } catch (BarcodeReaderException e) {
-                    e.printStackTrace();
-                }
-                //Get the text result from Dynamsoft Barcode Reader
-                mTextResultCallback = new TextResultCallback() {
-                    @Override
-                    public void textResultCallback(int i, TextResult[] textResults, Object o) {
-                        showResult(textResults);
-                    }
-                };                
-                //Set DCE setting parameters in Dynamsoft Barcode Reader
-                DCESettingParameters dceSettingParameters = new DCESettingParameters();
-                dceSettingParameters._cameraInstance = mCameraEnhancer;
-                dceSettingParameters._textResultCallback = mTextResultCallback;
-                //Instantiate DCE, send result and immediate result call back to Dynamsoft Barcode Reader
-                reader.SetCameraEnhancerParam(dceSettingParameters);
+            } catch (BarcodeReaderException e) {
+                e.printStackTrace();
             }
-            //Start DCE on resume
-            @Override
-            public void onResume() {
-                reader.StartCameraEnhancer();
-                super.onResume();
-            }
-            //Stop DCE on pause
-            @Override
-            public void onPause() {
-                reader.StopCameraEnhancer();
-                super.onPause();
-            }
-            //This is the function for displaying decode result on the screen
-            private void showResult(TextResult[] results) {
-                if (results != null && results.length > 0) {
-                    String strRes = "";
-                    for (int i = 0; i < results.length; i++)
-                        strRes += results[i].barcodeText + "\n\n";
-                    tvRes.setText(strRes);
+            //Get the text result from Dynamsoft Barcode Reader
+            mTextResultCallback = new TextResultCallback() {
+                @Override
+                public void textResultCallback(int i, TextResult[] textResults, Object o) {
+                    showResult(textResults);
                 }
+            };                
+            //Set DCE setting parameters in Dynamsoft Barcode Reader
+            DCESettingParameters dceSettingParameters = new DCESettingParameters();
+            dceSettingParameters._cameraInstance = mCameraEnhancer;
+            dceSettingParameters._textResultCallback = mTextResultCallback;
+            //Instantiate DCE, send result and immediate result call back to Dynamsoft Barcode Reader
+            reader.SetCameraEnhancerParam(dceSettingParameters);
+        }
+        //Start DCE on resume
+        @Override
+        public void onResume() {
+            reader.StartCameraEnhancer();
+            super.onResume();
+        }
+        //Stop DCE on pause
+        @Override
+        public void onPause() {
+            reader.StopCameraEnhancer();
+            super.onPause();
+        }
+        //This is the function for displaying decode result on the screen
+        private void showResult(TextResult[] results) {
+            if (results != null && results.length > 0) {
+                String strRes = "";
+                for (int i = 0; i < results.length; i++)
+                    strRes += results[i].barcodeText + "\n\n";
+                tvRes.setText(strRes);
             }
         }
+    }
     ```
 
 3. Run the project, now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.
