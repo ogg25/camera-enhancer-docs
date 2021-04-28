@@ -155,28 +155,37 @@ Add Camera Listener
         }
     });
 ```
+
 Remove Camera Listener
+
 ```java
     mCamera.removeCameraListener();
 ```
+
 ## Torch State
 
 Get current torch state (on/off)
+
 ```java
+
     mCamera.getTorchCurrentState();
 ```
 
 Get desired torch state (on/off)
+
 ```java
     mCamera.getTorchDesiredState();
 ```
 
 Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
+
 ```java
     mCamera.setTorchDesiredState(TorchState.TORCH_STATE_ON);
     mCamera.setTorchDesiredState(TorchState.TORCH_STATE_OFF);
 ```
+
 ## addTorchListener
+
 ```java
     mCamera.addTorchListener(new TorchListener() {
         @Override
@@ -187,25 +196,36 @@ Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_
 ```
 
 ## Camera Position
+
 DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
 To get camera position:
+
 ```java
     mCamera.getCameraPosition();
 ```
+
 To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front camera and use `CameraPosition.CAMERA_POSITION_WORLD` to activate back camera
+
 ```java
     mCamera.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
 ```
+
 ## Resolution Settings
+
 These APIs are created for you to get or change camera resolution settings.
+
 ```java
     mCamera.getResolution();
 ```
+
 Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available in the device, the device will run the closest resolution to the setted resolution.
+
 ```java
     mCamera.setResolution(Resolution.RESOLUTION_1080P);
 ```
+
 Get all available resolutions that can be setted to the current camera.
+
 ```java
     mCamera.getResolutionList();
 ```

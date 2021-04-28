@@ -38,14 +38,14 @@ Dynamsoft Camera Enhancer (DCE) is an SDK specifically designed for improving vi
 
 ## DCE working process
 
-The following chart illustrates DCE working process. For Android developers, DCE provides mobile device level evaluation which 
+The following chart illustrates DCE working process. For Android developers, DCE provides mobile device level evaluation which classify Android devices into 3 different levels. User can apply different settings on different devices.
 
 <div align="center">
     <p><img src="overview/assets/DCE-process.png" width="50%" alt="How DCE works"></p>
     <p>DCE working process</p>
 </div>
 
-## Programming language 
+## Programming language
 
 Dynamsoft Camera Enhancer is now available for following programming languages:
 

@@ -4,7 +4,7 @@ title: Dynamsoft Camera Enhancer - Guide on Java(Android)
 description: This is the documentation - Guide on Java(Android) page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Java(Android)
 needAutoGenerateSidebar: true
-breadcrumbText: Android Guide
+breadcrumbText: Android Guide old
 ---
 
 # Guide on Java(Android)

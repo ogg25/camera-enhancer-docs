@@ -4,7 +4,7 @@ title: Dynamsoft Camera Enhancer - Guide on Java(Android)
 description: This is the documentation - Guide on Java(Android) page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Java(Android)
 needAutoGenerateSidebar: true
-breadcrumbText: Android Guide draft
+breadcrumbText: Android Guide
 ---
 
 # Guide on Java(Android)
@@ -15,9 +15,11 @@ breadcrumbText: Android Guide draft
   - Supported OS: Android 5 or higher (Android 7 or higher recommended)
   - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6
 
-## Installation
+## Get Started
 
-1. <a href="https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`. 
+### Installation
+
+1. <a href="https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`.
 
 2. Create a new Android project in Android Studio.
 
@@ -25,7 +27,7 @@ breadcrumbText: Android Guide draft
 
 4. Add the following code into `build.gradle(Module: app)`.
 
-    ```Java
+    ```java
     repositories {
         flatDir {
             dirs 'libs'
@@ -35,21 +37,17 @@ breadcrumbText: Android Guide draft
 
 5. Also in `build.gradle(Module: app)` add the reference in dependencies:
 
-    ```Java
+    ```java
         implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
     ```
 
 6. Sync the project with gradle and after that `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
 
-## Get Started
-
 ### Create a Camera Module
 
-This section is a guide on using Dynamsoft Camera Enhancer to create a simple camera app.
+This section is a guide on using Dynamsoft Camera Enhancer to create a simple camera app after installation.
 
-1. Create a new Android project.
-
-2. In the new project, create a CameraView section in activity_main.xml.
+1. Keep working on the project that you have installed DCE, in the project, create a CameraView section in activity_main.xml.
 
     ```XML
         <com.dynamsoft.dce.CameraView
@@ -60,7 +58,7 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
             tools:layout_editor_absoluteY="0dp" />
     ```
 
-3. Set up for your camera in the `cameraView` section. Please add the following code in your activity for the camera. The following code is an example of setting camera view in `MainActivity`
+2. Set up for your camera in the `cameraView` section. Please add the following code in your activity for the camera. The following code is an example of setting camera view in `MainActivity`
 
     ```java
     import com.dynamsoft.dce.CameraEnhancer;
@@ -102,13 +100,13 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
     }
     ```
 
-4. Run the project. Now your camera module is running. If you have any questions about the program, you can view `samples` we provided in the package you download to get better understandings. Also, you can get help from our online customer service.
+3. Run the project. Now your camera module is running. If you have any questions about the program, you can view `samples` we provided in the package you download to get better understandings. Also, you can get help from our online customer service.
 
 ### Extend the camera module with DCE functions
 
 This is a template for users to add DCE camera settings into the newly built camera module.
 
-```Java
+```java
 import com.dynamsoft.dce.CameraEnhancer;
 import com.dynamsoft.dce.CameraEnhancerException;
 import com.dynamsoft.dce.CameraState;
@@ -191,7 +189,7 @@ This section is the guide for users to add a video stream decoder in the camera 
 
 2. Add the following code to the project in the main activity:
 
-    ```Java
+    ```java
     import com.dynamsoft.dbr.BarcodeReader;
     import com.dynamsoft.dbr.BarcodeReaderException;
     import com.dynamsoft.dbr.DBRLTSLicenseVerificationListener;
