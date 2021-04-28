@@ -12,291 +12,418 @@ breadcrumbText: iOS Guide
 ## System Requirements
 
 - Operating systems:
-    - macOS 10.11 and above.
-    - iOS 9.0 and above.
+  - macOS 10.11 and above.
+  - iOS 9.0 and above.
 - Environment: Xcode 7.1 - 11.5 and above.
 - Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
-## Installation
+## Get Started
 
-1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework. 
+### Installation
+
+1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
 
 2. Create a new Objective-C or Swift project.
 
-3. Add DynamsoftCameraEnhancer.framework in your xcode project. 
+3. Add DynamsoftCameraEnhancer.framework in your Xcode project.
 
 4. Import Dynamsoft Camera Enhancer
 
 Objective-C:
+
 ```objectivec
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
+
 Swift:
+
 ```Swift
 import DynamsoftCameraEnhancer
 ```
-
-## License Initialization
-
-To setup DCE license by License Tracking Server
-
-Objective-C:
-```objectivec
-    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Your organizationID";
-    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
-```
-Swift:
-```Swift
-    let lts = iDMLTSConnectionParameters()
-    lts.organizationID = "Your organizationID"
-    dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-```
-
-If you don't have a full key license:
-
-- 7 days trial license is available for new devices that have never setup Dynamsoft Camera Enhancer.
-- To extend your trial license, please send "privateTrial" to trial@dynamsoft.com to get 30 days private trial key.
-
-Or you can
-
-- [Please contact us to purchase for full key license]({{site.contact-us}}).
-
-## Get Started
 
 ### Create a Camera Module
 
-In this section you will be guide on using Dynamsoft Camera Enhancer to create a simple camera app with video frame filter function.
+This section is the guide for users to create a camera module in Objective-C or Swift project. After the installation of DCE, please add the following code to the new project.
 
-If you have completed the installation of DCE, you can add following code to your viewController to set up your camera module.
+Objective-C code sample:
 
-Objective-C
 ```objectivec
+#import "ViewController.h"
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 
 @interface ViewController ()
+
+@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
+@property(nonatomic, strong) DCECaptureView *dceView;
+
 @end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
-    //Initialize license from LTS
+    [self initDBR];
+    [self configurationDCE];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)configurationDCE{
+    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    [_dceView addOverlay];
+    [self.view addSubview:_dceView];
+    
+    //Initialize License
     iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Your organizationID";
-    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
-    [dce setCameraDesiredState:DCEnhancerStateOn];
+    dcePara.organizationID = @"Put your organizationID here";
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
+    
+    view:_dceView verificationDelegate:self];
+    //Make camera settings, turn on camera
+    [_dce setCameraDesiredState:CAMERA_STATE_ON];
+    _dce.isEnable = YES;
+}
+
+- (void)CameraLTSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    NSLog(@"Verification: %@",error.userInfo);
 }
 ```
-Swift:
+
+Swift code sample:
+
 ```Swift
+import UIKit
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DBRTextResultDelegate {
+    
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECaptureView! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-        dce.isEnable = true
+        configurationDCE()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func configurationDCE() {
-        dceDate = NSDate()
         dceView = DCECaptureView.init(view: self.view.bounds)
-        dceView.addOverlay(color, fill: color)
-        self.view.insertSubview(dceView, belowSubview: displayView)
-        //Setup license
-        let lts = iCameraLTSConnectionParameters()
-        lts.organizationID = "Your organizationID"
+        dceView.addOverlay()
+        self.view.addSubview(dceView)
+        //Init DCE license
+        let lts = iDMLTSConnectionParameters()
+        lts.organizationID = "Put your organizationID here"
         dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-    }
-}
-```
-
-### Quick Settings for DCE
-
-#### DCE Setting templete
-
-The following templates are strongly recommended to be applicated in your first attempt on DCE. These templates will be friendly to the majority of IOS devices. By using and optimizing on this template, you will quickly be familiar with DCE.
-
-Objective-C:
-```objectivec
-@interface ViewController ()
-@end
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
-    // License initialization
-    iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Your organizationID";
-    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
-    //Camera & scan settings
-    [dce setCameraDesiredState:CAMERA_STATE_ON];
-    [dce startScanning];
-    [dce setEnableFastMode:true];
-    [dce setEnableFrameFilter:true];
-    [dce setEnableAutoZoom:true];
-    [dce setEnableDCEAutoFocus:true];
-    [dce setIsEnable = false];
-}
-```
-
-Swift:
-```Swift
-import DynamsoftCameraEnhancer
-
-class ViewController: UIViewController {
-    var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECaptureView! = nil
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         //Turn on camera
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.isEnable = true
     }
-    func configurationDCE() {
-        dceDate = NSDate()
-        dceView = DCECaptureView.init(view: self.view.bounds)
-        dceView.addOverlay(color, fill: color)
-        self.view.insertSubview(dceView, belowSubview: displayView)
-        
-        //Setup license
-        let lts = iCameraLTSConnectionParameters()
-        lts.organizationID = "Your organizationID"
-        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-        
-        //DCE recommended settings 
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-        dce.startScanning()
-        dce.enableFastMode(true)
-        dce.enableFrameFilter(true)
-        dce.enableDCEAutoFocus(true)
-        dce.enableAutoZoom = true
-    }
+
+    func cameraLTSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+        print("Verification: \(String(describing: error))")
+    }    
 }
 ```
-#### Fast mode setting
 
-DCE fast mode is specially designed for accelerating on single barcode decoding. This mode will reduce the time consumption on single barcode decoding by 50%. Fast mode is strongly recommended to be enabled on single barcode decoding. To turn on Fast mode, you can use `setFastMode` to make the setting:
+### Extend the camera module with DCE functions
 
-Objective-C
+This section is displaying how to add DCE functions to the camera module we built just now.
+
+For Objective-C users, please add following code:
+
 ```objectivec
+#import "ViewController.h"
+#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+
+@interface ViewController ()
+
+@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
+@property(nonatomic, strong) DCECaptureView *dceView;
+
+@end
+
+@implementation ViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //Initialize DCE and turn on the camera
-    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    [self initDBR];
+    [self configurationDCE];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)configurationDCE{
+    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    [_dceView addOverlay];
+    [self.view addSubview:_dceView];
+    
+    //Initialize License
     iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Your organizationID";
-    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
-    [dce setCameraDesiredState:DCEnhancerStateOn];
-    [dce startScanning];
-    //**********Start Fast mode*************
-    [dce enableFastMode:true];
+    dcePara.organizationID = @"Put your organizationID here";
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
+    
+    view:_dceView verificationDelegate:self];
+    //Make camera settings, turn on camera
+    [_dce setCameraDesiredState:CAMERA_STATE_ON];
+    _dce.isEnable = YES;
+    
+    //*********Newly added****************
+    //*******Camera Settings**************
+    [dce setEnableDefaultAutoFocus:true];
+    [dce setEnableAutoZoom:true];
+    [dce setEnableFastMode:true];
+    [dce setEnableSensorControl:true];
+    [dce setEnableFrameFilter:true];
+}
+
+- (void)CameraLTSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    NSLog(@"Verification: %@",error.userInfo);
 }
 ```
 
-Swift:
-```Swift
+For Swift users, please add following code:
+
+```swift
+import UIKit
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DBRTextResultDelegate {
+    
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECaptureView! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurationDCE()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    func configurationDCE() {
+        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView.addOverlay()
+        self.view.addSubview(dceView)
+        //Init DCE license
+        let lts = iDMLTSConnectionParameters()
+        lts.organizationID = "Put your organizationID here"
+        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        //Turn on camera
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.isEnable = true
+        //*********************Newly added**********************
+        //************Add Camera Enhancer functions*************
+        dce.enableFastMode = true
+        dce.enableFrameFilter = true
+        dce.enableDefaultAutoFocus = true
+        dce.enableAutoZoom = true
+        dce.enableSensorControl = true
     }
-    func configurationDCE() {
-        dceDate = NSDate()
-        dceView = DCECaptureView.init(view: self.view.bounds)
-        dceView.addOverlay(color, fill: color)
-        self.view.insertSubview(dceView, belowSubview: displayView)
-        let lts = iCameraLTSConnectionParameters()
-        lts.organizationID = "Your organizationID"
-        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-        dce.startScanning()
-        //Turn on fast mode
-        dce.enableFastMode(true)
-    }
+
+    func cameraLTSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+        print("Verification: \(String(describing: error))")
+    }    
 }
 ```
 
-#### Filter, Focus and Zoom setting
+Run the project, now DCE functions have been added to the camera module.
 
-The following code is guidline on how to setup frame filter, auto zoom and auto focus in DCE.
+### Add decoder to the camera module
 
-Objective-C
+This section is the guide for users to add a video stream decoder in the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works. After this step, a new simple video streaming decoding app is built successfully.
+
+Add this code snippet to Objective-C project.
+
 ```objectivec
+#import "ViewController.h"
+#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+//import dynamsoft barcode reader for decoding
+#import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
+
+@interface ViewController ()
+//Barcode Reader initialize
+@property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
+@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
+@property(nonatomic, strong) DCECaptureView *dceView;
+
+@end
+
+@implementation ViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //Initialize DCE
-    dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    [self initDBR];
+    [self configurationDCE];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)configurationDCE{
+    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
+    [_dceView addOverlay];
+    [self.view addSubview:_dceView];
+    
+    //Initialize License
     iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
-    dcePara.organizationID = @"Your organizationID";
-    dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara view:dceview verificationDelegate:self];
-    //**********Filter, Focus and Zoom settings*************
-    //Turn on/off filter
-    [dce enableFrameFilter:true];
-    //Turn on/off auto zoom
-    [dce enableAutoZoom];
-    //Turn on/off auto focus
-    [dce enableDCEAutoFocus:true];
+    dcePara.organizationID = @"Put your organizationID here";
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara 
+    
+    view:_dceView verificationDelegate:self];
+    //Make camera settings, turn on camera
+    [_dce setCameraDesiredState:CAMERA_STATE_ON];
+    _dce.isEnable = YES;
+    
+    //*********Newly added****************
+    //*******Camera Settings**************
+    [dce setEnableDefaultAutoFocus:true];
+    [dce setEnableAutoZoom:true];
+    [dce setEnableFastMode:true];
+    [dce setEnableSensorControl:true];
+    [dce setEnableFrameFilter:true];
+}
+
+//*************Newly added Barcode Reader Settings***************
+//Dynamsoft Barcode Reader (DBR) initialization
+- (void)initDBR{
+    iDMLTSConnectionParameters* dbrPara = [[iDMLTSConnectionParameters alloc] init];
+    //Initialize DBR License
+    dbrPara.organizationID = @"Put your organizationID here";
+    _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:dbrPara verificationDelegate:self];
+    [_barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:@"0" error:nil];
+    [_barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"BlockSizeX" argumentValue:@"81" error:nil];
+    [_barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"BlockSizeY" argumentValue:@"81" error:nil];
+}
+//****************************************************************
+
+- (void)CameraLTSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    NSLog(@"Verification: %@",error.userInfo);
+}
+
+//***********************Newly added********************************
+//******************Display text decode result**********************
+- (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
+    if (results.count > 0) {
+        _dce.isEnable = NO;
+        __weak ViewController *weakSelf = self;
+        [self showResult:results.firstObject.barcodeText
+              completion:^{
+                  weakSelf.dce.isEnable = YES;
+              }];
+    }else{
+        return;
+    }
+}
+
+- (void)showResult:(NSString *)result completion:(void (^)(void))completion {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:result message:nil preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * action) {
+                                                    completion();
+                                                }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    });
 }
 ```
 
-Swift:
-```Swift
+For Swift users, please add following code to Swift project.
+
+```swift
+import UIKit
+//Import Dynamsoft Barcode Reader
+import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DBRTextResultDelegate {
+    
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECaptureView! = nil
+    //*********************Newly added**********************
+    //************init Dynamsoft Barcode Reader*************
+    var barcodeReader:DynamsoftBarcodeReader! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //*********************Newly added**********************
+        //************init Dynamsoft Barcode Reader*************
+        initDBR()
+        configurationDCE()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    //********************Newly added***********************
+    //**********Initialize Dynamsoft Barcode Reader*********
+    func initDBR() {
+        let lts = iDMLTSConnectionParameters()
+        lts.organizationID = "Put your organizationID here"
+        barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+        barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "0", error: nil)
+        barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "BlockSizeX", argumentValue: "81", error: nil)
+        barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "BlockSizeY", argumentValue: "81", error: nil)
+    }
+    
+    func configurationDCE() {
+        dceView = DCECaptureView.init(view: self.view.bounds)
+        dceView.addOverlay()
+        self.view.addSubview(dceView)
+        //Init DCE license
+        let lts = iDMLTSConnectionParameters()
+        lts.organizationID = "Put your organizationID here"
+        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        //Turn on camera
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         dce.isEnable = true
-    }
-    func configurationDCE() {
-        dceDate = NSDate()
-        dceView = DCECaptureView.init(view: self.view.bounds)
-        dceView.addOverlay(color, fill: color)
-        self.view.insertSubview(dceView, belowSubview: displayView)
-        let lts = iCameraLTSConnectionParameters()
-        lts.organizationID = "Your organizationID"
-        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
-        dce.setCameraDesiredState(.CAMERA_STATE_ON)
-        dce.startScanning()
-        //Turn on/off auto focus
-        dce.enableDCEAutoFocus(true)
-        //Turn on/off filter
-        dce.enableFrameFilter(true)
-        //Turn on/off auto zoom
+        //*********************Newly added**********************
+        //************Add Camera Enhancer functions*************
+        dce.enableFastMode = true
+        dce.enableFrameFilter = true
+        dce.enableDefaultAutoFocus = true
         dce.enableAutoZoom = true
+        dce.enableSensorControl = true
+        //*********************Newly added**********************
+        //Instantiate DCE, send result and immediate result call back to Dynamsoft Barcode Reader
+        let para = DCESettingParameters.init()
+        para.cameraInstance = dce
+        para.textResultDelegate = self
+        barcodeReader.setCameraEnhancerPara(para)
+    }
+
+    func cameraLTSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+        print("Verification: \(String(describing: error))")
+    }
+    
+    //*********************Newly added**********************
+    //******Get and display barcode decoding text result****
+    func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
+        if results!.count > 0 {
+            dce.isEnable = false
+            showResult(results!.first!.barcodeText!) { [weak self] in
+                self?.dce.isEnable = true
+            }
+        }else{
+            return
+        }
+    }
+    
+    private func showResult(_ result: String, completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: result, message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in completion() }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 ```
 
-Specially, for auto focus there are APIs `setAutoFocusPosition` and `setManualFocusPosition` designed for changing the default focus point. The value of this property is a CGPoint that determines the receiver's focus point of interest, if it has one. A value of (0,0) indicates that the camera should focus on the top left corner of the image, while a value of (1,1) indicates that it should focus on the bottom right. The default value is (0.5,0.5).
-
-Objective-C
-```objectivec
-    [dce setAutoFocusPosition:CGPointMake(0.5, 0.5)];
-    [dce setManualFocusPosition:CGPointMake(0.5, 0.5)];
-```
-
-Swift:
-```Swift
-    dce.setAutoFocusPosition(CGPoint(x: 0.5, y: 0.5))
-    dce.setManualFocusPosition(CGPoint(x: 0.5, y: 0.5))
-```
-
-## Add DCE to your Dynamsoft Barcode Reader (DBR) project
-
-For developers who are using Dynamsoft Barcode reader, there are new APIs in DBR 8.2.1 mobile edition to quick deploy camera enhancer in barcode reader project. For more information please read more in [DBR documentation - camera enhancer deployment]({{site.barcode-deploy-ios}}) section.
+Run the project, now a simple decode app has been built via Dynamsoft Camera Enhancer and Dynamsoft Barcode Reader.

@@ -22,9 +22,10 @@ breadcrumbText: License Initialization
 Since you have set up your, you can use following code to set up your license from `LTS`:
 
 For Android users:
- 
+
 Android sample
-```Java
+
+```java
     DMLTSConnectionParameters info = new DMLTSConnectionParameters();
     info.organizationID = "******";
     mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
@@ -37,9 +38,10 @@ Android sample
     });
 ```
 
-For iOS users: 
+For iOS users:
 
 Objective-C sample:
+
 ```objectivec
     iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Your organizationID";
@@ -47,7 +49,8 @@ Objective-C sample:
 ```
 
 Swift sample
-```Swift
+
+```swift
     let lts = iDMLTSConnectionParameters()
     lts.organizationID = "200001"
     dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)

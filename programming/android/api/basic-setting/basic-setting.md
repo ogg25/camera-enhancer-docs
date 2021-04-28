@@ -92,13 +92,15 @@ JSON file template:
 ## getVersion
 
 User can check the current DCE version by using this API.
+
 ```java
     mCamera.getVersion();
 ```
 
 ## Fast Mode
-    
+
 This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode area to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
+
 ```java
     //To enable fast mode
     mCamera.enableFastMode(true);
@@ -107,37 +109,48 @@ This API is designed for users to setup DCE fast mode. DCE fast mode will cut fr
 ```
 
 ## Camera State
-    
-Get camera current status (on/off). 
+
+Get camera current status (on/off).
+
 ```java
     mCamera.getCameraCurrentState();
 ```
-    
+
 Get camera desired status (on/off).
+
 ```java
     mCamera.getCameraDesireState();
 ```
-    
+
 Use `CameraState.CAMERA_STATE_ON` to set camera on and use `CameraState.CAMERA_STATE_OFF` to set it off.
+
 ```java
     mCamera.setCameraDesireState(CameraState.CAMERA_STATE_OFF);
     mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
 ```
-    
+
 ## pauseCamera and resumeCamera
+
 Note: these APIs are created for pause & resume camera but camera module is still working when being paused. if you want to shut down camera module please use `stopScanning`.
+
 ```java
     mCamera.pauseCamera();
     mCamera.resumeCamera();
 ```
+
 ## stopScanning and startScanning
+
 Contorl the stop & start of camera module.
+
 ```java
     mCamera.startScanning();
     mCamera.stopScanning();
 ```
+
 ## addCameraListener
+
 Add Camera Listener
+
 ```java
     mCamera.addCameraListener(new CameraListener() {
         @Override
