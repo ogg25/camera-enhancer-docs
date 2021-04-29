@@ -11,4 +11,4 @@ breadcrumbText: Start Programming
 Dynamsoft Camera Enhancer is now available for following programming languages:
 
 - [Java (Android)]({{site.android}})
-- [Objective-C & Swift (IOS)]({{site.ios}})
+- [Objective-C & Swift (iOS)]({{site.ios}})
