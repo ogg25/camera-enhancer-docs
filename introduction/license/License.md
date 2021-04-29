@@ -15,11 +15,11 @@ breadcrumbText: License Initialization
 
 ## Get a full key license
 
-- [Please contact us to purchase for full key license]({{site.contact-us}}).
+- [Please contact us to purchase for full key license]({{site.contact-us}})
 
 ## Set up the license from License Tracking Server
 
-Since you have set up your, you can use the following code to set up your license from `LTS`:
+If you have got a trial key or full key, you can use the following code to set up your license from License Tracking Server:
 
 For Android users:
 
@@ -27,7 +27,7 @@ Android sample
 
 ```java
     DMLTSConnectionParameters info = new DMLTSConnectionParameters();
-    info.organizationID = "******";
+    info.organizationID = "Your organizationID";
     mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
         @Override
         public void LTSLicenseVerificationCallback(boolean b, Exception e) {
@@ -52,6 +52,6 @@ Swift sample
 
 ```swift
     let lts = iDMLTSConnectionParameters()
-    lts.organizationID = "200001"
+    lts.organizationID = "Your organizationID"
     dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
 ```
