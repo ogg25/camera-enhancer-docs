@@ -45,7 +45,7 @@ breadcrumbText: iOS API Reference
 | [`stopScanning`]({{site.ios-basic-setting}}basic-setting.html#stopscanning-and-startscanning) | Stop scanning |
 | [`addCameraListener`]({{site.ios-basic-setting}}basic-setting.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
 | [`removeCameraListener`]({{site.ios-basic-setting}}basic-setting.html#addcameralistener) | Remove camera listener |
-| [`acquireListFrame`]{{site.ios-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
+| [`acquireListFrame`]({{site.ios-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
 | [`setTorchDesiredState`]({{site.ios-basic-setting}}basic-setting.html#torch-state) | Set torch state |
 | [`getTorchDesiredState`]({{site.ios-basic-setting}}basic-setting.html#torch-state) | Get torch desired state |
 | [`getTorchCurrentState`]({{site.ios-basic-setting}}basic-setting.html#torch-state) | Get torch current state |
