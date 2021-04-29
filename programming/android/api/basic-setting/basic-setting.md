@@ -177,18 +177,18 @@ Add Camera Listener
     });
 ```
 
+Remove Camera Listener
+
+```java
+    mCamera.removeCameraListener();
+```
+
 ## AcquireListFrame
 
 This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame list.
 
 ```java
     mCameraEnhancer.AcquireListFrame(true);
-```
-
-Remove Camera Listener
-
-```java
-    mCamera.removeCameraListener();
 ```
 
 ## Torch State
