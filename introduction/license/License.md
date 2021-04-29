@@ -40,7 +40,7 @@ Android sample
 
 For iOS users:
 
-Objective-C sample:
+Objective-C sample
 
 ```objectivec
     iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
