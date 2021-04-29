@@ -24,6 +24,7 @@ breadcrumbText: Android Basic Setting
 - [`stopScanning`](#stopscanning-and-startscanning)
 - [`addCameraListener`](#addcameralistener)
 - [`removeCameraListener`](#addcameralistener)
+- [`acquireListFrame`](#acquirelistframe)
 - [`setTorchDesiredState`](#torch-state)
 - [`getTorchDesiredState`](#torch-state)
 - [`getTorchCurrentState`](#torch-state)
@@ -138,7 +139,7 @@ Use `CameraState.CAMERA_STATE_ON` to set the camera on and use `CameraState.CAME
 
 ## pauseCamera and resumeCamera
 
-Note: these APIs are created to pause & resume the camera. The camera module is still working when being paused. If you want to shut down the camera module please use `stopScanning`.
+Note: these APIs are created to pause & resume the camera. The camera module is still working when being paused. If you want to shut down the camera module, please use `stopScanning`.
 
 ```java
     mCamera.pauseCamera();
@@ -174,6 +175,14 @@ Add Camera Listener
 
         }
     });
+```
+
+## acquireListFrame
+
+This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame list.
+
+```java
+    mCameraEnhancer.AcquireListFrame(true);
 ```
 
 Remove Camera Listener
