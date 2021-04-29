@@ -44,12 +44,15 @@ barcode-deploy-ios: /barcode-reader/programming/ios/api-reference/camera-enhance
 barcode-deploy-android: /barcode-reader/programming/android/api-reference/camera-enhancer/
 
 assets: /camera-enhancer/docs/assets/
-edit_icon: /barcode-reader/assets/img-icon/edit-icon.png
-smile_icon: /barcode-reader/assets/img-icon/icon-smile.png
-sad_icon: /barcode-reader/assets/img-icon/icon-sad.png
-dbr_icon: /barcode-reader/assets/img-icon/icon-dbr.svg
-dwt_icon: /barcode-reader/assets/img-icon/icon-dwt.svg
-dnt_icon: /barcode-reader/assets/img-icon/icon-dnt.svg
+edit_icon: /camera-enhancer/assets/img-icon/edit-icon.png
+smile_icon: /camera-enhancer/assets/img-icon/icon-smile.png
+sad_icon: /camera-enhancer/assets/img-icon/icon-sad.png
+dbr_icon: /camera-enhancer/assets/img-icon/icon-dbr.svg
+dwt_icon: /camera-enhancer/assets/img-icon/icon-dwt.svg
+dnt_icon: /camera-enhancer/assets/img-icon/icon-dnt.svg
+
+overview: /camera-enhancer/overview/
+download: /camera-enhancer/downloads/1000021-confirmation/
 
 baseurl: "/camera-enhancer/docs/"
 plugins:
