@@ -21,7 +21,7 @@ breadcrumbText: Android API References
 | Method | Description |
 |-----------------|---------------|
 |[`getDeviceLevel`]({{site.android-basic-setting}}basic-setting.html#getdevicelevel)| Make a evaluation on the current device and define its level for further use. |
-| [`setAutoModeLevelParam`]({{site.android-filter-setting}}filter.html#setautomodelevelparam) | Set auto mode level parameter. |
+| [`setAutoModeLevelParam`]({{site.android-basic-setting}}filter.html#setautomodelevelparam) | Set auto mode level parameter. |
 | [`updateCameraSetting`]({{site.android-basic-setting}}basic-setting.html#updatecamerasetting) | Update camera filter and focus settings from Json. |
 | [`getVersion`]({{site.android-basic-setting}}basic-setting.html#getversion) | Check current DCE version |
 
