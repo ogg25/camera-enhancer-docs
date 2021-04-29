@@ -11,6 +11,6 @@ breadcrumbText: Release Note
 
 # Dynamsoft Camera Enhancer - Release Notes
 
-- [Release Notes for Android]({{site.android-release-note}})
+- [Release Notes for Android]({{site.android-release-note}}release-note.html)
 
-- [Release Notes for iOS]({{site.ios-release-note}})
+- [Release Notes for iOS]({{site.ios-release-note}}release-note.html)
