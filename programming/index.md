@@ -6,7 +6,7 @@ keywords:  Camera Enhancer, Get start on programming
 needAutoGenerateSidebar: true
 breadcrumbText: Start Programming
 ---
-# Get start on Programming
+# Get started on Programming
 
 Dynamsoft Camera Enhancer is now available for following programming languages:
 
