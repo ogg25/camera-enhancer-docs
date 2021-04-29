@@ -22,6 +22,7 @@ breadcrumbText: iOS Basic Setting
 - [`stopScanning`](#stopscanning-and-startscanning)
 - [`addCameraListener`](#addcameralistener)
 - [`removeCameraListener`](#addcameralistener)
+- [`acquireListFrame`](#acquirelistframe)
 - [`setTorchDesiredState`](#torch-state)
 - [`getTorchDesiredState`](#torch-state)
 - [`getTorchCurrentState`](#torch-state)
@@ -232,6 +233,22 @@ Swift:
 
 ```swift
     dce.removeCameraListener()
+```
+
+## acquireListFrame
+
+This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame list.
+
+Objective-C:
+
+```objectivec
+    FramePackage *fg = [self.camera AcquireListFrame];
+```
+
+Swift:
+
+```swift
+    let fg = self.dce.acquireListFrame() 
 ```
 
 ## Torch State
