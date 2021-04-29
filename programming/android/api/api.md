@@ -45,7 +45,7 @@ breadcrumbText: Android API References
 | [`stopScanning`]({{site.android-basic-setting}}basic-setting.html#stopscanning-and-startscanning) | Stop scanning. |
 | [`addCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
 | [`removeCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Remove camera listener. |
-| [`acquireListFrame`]({{site.android-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
+| [`AcquireListFrame`]({{site.android-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
 | [`setTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Set torch state. |
 | [`getTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch desired state. |
 | [`getTorchCurrentState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch current state. |

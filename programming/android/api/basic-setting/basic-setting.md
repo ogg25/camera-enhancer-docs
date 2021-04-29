@@ -24,7 +24,7 @@ breadcrumbText: Android Basic Setting
 - [`stopScanning`](#stopscanning-and-startscanning)
 - [`addCameraListener`](#addcameralistener)
 - [`removeCameraListener`](#addcameralistener)
-- [`acquireListFrame`](#acquirelistframe)
+- [`AcquireListFrame`](#acquirelistframe)
 - [`setTorchDesiredState`](#torch-state)
 - [`getTorchDesiredState`](#torch-state)
 - [`getTorchCurrentState`](#torch-state)
@@ -177,7 +177,7 @@ Add Camera Listener
     });
 ```
 
-## acquireListFrame
+## AcquireListFrame
 
 This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame list.
 
