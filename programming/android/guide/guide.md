@@ -80,11 +80,7 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
             mCamera.addCameraView(cameraView);
             //Initialize your license
             com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
-            // The organization id 200001 here will grant you a public trial license good for 7 days.
-            // After that, you can send an email to trial@dynamsoft.com
-            // (make sure to include the keyword privateTrial in the email title)
-            // to obtain a 30-day free private trial license which will also come in the form of an organization id.
-            info.organizationID = "200001";
+            info.organizationID = "Your license here";
             mCamera.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
                 @Override
                 public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
