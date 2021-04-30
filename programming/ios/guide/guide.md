@@ -4,12 +4,13 @@ title: Dynamsoft Camera Enhancer - Guide on Objective-C & Swift
 description: This is the documentation - Guide on Objective-C & Swift page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Objective-C & Swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 breadcrumbText: iOS Guide
 ---
 
 # Guide on Objective-C & Swift
 
-## System Requirements
+System Requirements
 
 - Operating systems:
   - macOS 10.11 and above.
