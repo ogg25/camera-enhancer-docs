@@ -4,12 +4,13 @@ title: Dynamsoft Camera Enhancer - Guide on Java(Android)
 description: This is the documentation - Guide on Java(Android) page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on Java(Android)
 needAutoGenerateSidebar: true
+needGenerateH3Content: false
 breadcrumbText: Android Guide
 ---
 
 # Guide on Java(Android)
 
-## System Requirements
+System Requirements
 
 - Operating system:
   - Supported OS: Android 5 or higher (Android 7 or higher recommended)
@@ -23,7 +24,7 @@ breadcrumbText: Android Guide
 
 2. Create a new Android project in Android Studio.
 
-3. Put the `.aar` file under the dictionary `/app/libs` in your project. 
+3. Put the `.aar` file under the dictionary `/app/libs` in your project.
 
 4. Add the following code into `build.gradle(Module: app)`.
 
