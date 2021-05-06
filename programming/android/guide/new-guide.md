@@ -5,7 +5,7 @@ description: This is the documentation - Guide on Java(Android) page of Dynamsof
 keywords:  Camera Enhancer, Guide on Java(Android)
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: Android Guide
+breadcrumbText: Android Guide test
 ---
 
 # Guide on Java(Android)
