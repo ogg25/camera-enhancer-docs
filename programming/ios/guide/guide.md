@@ -8,7 +8,7 @@ noTitleIndex: true
 breadcrumbText: iOS Guide
 ---
 
-# Guide on Objective-C & Swift
+# Get Started on Objective-C & Swift
 
 System Requirements
 
@@ -18,9 +18,7 @@ System Requirements
 - Environment: Xcode 7.1 - 11.5 and above.
 - Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
-## Get Started
-
-### Installation
+## Installation
 
 1. <a href="https://download.dynamsoft.com/dce/dce-ios-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-ios-{version-number}.zip`. Unzip the package and find DynamsoftCameraEnhancer.framework.
 
@@ -42,7 +40,7 @@ Swift:
 import DynamsoftCameraEnhancer
 ```
 
-### Create a Camera Module
+## Create a Camera Module
 
 This section is the guide for users to create a camera module in Objective-C or Swift project. After the installation of DCE, please add the following code to the new project.
 
@@ -130,7 +128,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
 }
 ```
 
-### Extend the camera module with DCE functions
+## Extend the camera module with DCE functions
 
 This section is displaying how to add DCE functions to the camera module we built just now.
 
@@ -235,7 +233,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
 
 Run the project, now DCE functions have been added to the camera module.
 
-### Add decoder to the camera module
+## Add decoder to the camera module
 
 This section is the guide for users to add a video stream decoder to the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works. After this step, a new simple video streaming decoding app is built successfully.
 

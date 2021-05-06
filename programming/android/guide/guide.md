@@ -8,7 +8,7 @@ noTitleIndex: true
 breadcrumbText: Android Guide
 ---
 
-# Guide on Java(Android)
+# Get Started on Java(Android)
 
 System Requirements
 
@@ -16,9 +16,7 @@ System Requirements
   - Supported OS: Android 5 or higher (Android 7 or higher recommended)
   - Supported ABI: arm64-v8a/armeabi-v7a/x86/x86_6
 
-## Get Started
-
-### Installation
+## Installation
 
 1. <a href="https://download.dynamsoft.com/dce/dce-android-1.0.zip?ver=latest" target="_blank">Download Dynamsoft Camera Enhancer</a> from Dynamsoft website to get `dce-android-{version-number}.zip`. Unzip the package to find `DynamsoftCameraEnhancerAndroid.aar`.
 
@@ -44,7 +42,7 @@ System Requirements
 
 6. Sync the project with Gradle, then, `DynamsoftCameraEnhancerAndroid.aar` is added to your project.
 
-### Create a Camera Module
+## Create a Camera Module
 
 This section is a guide on using Dynamsoft Camera Enhancer to create a simple camera app after installation.
 
@@ -99,7 +97,7 @@ This section is a guide on using Dynamsoft Camera Enhancer to create a simple ca
 
 3. Run the project. Now your camera module is running. If you have any questions about the program, you can view the samples we provided in the package you download to get better understandings. Also, you can get help from our online customer service.
 
-### Extend the camera module with DCE functions
+## Extend the camera module with DCE functions
 
 This is a template for users to add DCE camera settings into the newly built camera module.
 
@@ -157,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
 Run the project. Now some DCE functions have been added to the camera module.
 
-### Add decoder to the camera module
+## Add decoder to the camera module
 
 This section is the guide for users to add a video stream decoder to the camera module. In this section, Dynamsoft Barcode Reader (DBR) will support decoding works.
 
