@@ -45,6 +45,7 @@ breadcrumbText: iOS API Reference
 | [`stopScanning`]({{site.ios-basic-setting}}basic-setting.html#stopscanning-and-startscanning) | Stop scanning |
 | [`addCameraListener`]({{site.ios-basic-setting}}basic-setting.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames) |
 | [`removeCameraListener`]({{site.ios-basic-setting}}basic-setting.html#addcameralistener) | Remove camera listener |
+| [`acquireListFrame`]({{site.ios-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
 | [`setTorchDesiredState`]({{site.ios-basic-setting}}basic-setting.html#torch-state) | Set torch state |
 | [`getTorchDesiredState`]({{site.ios-basic-setting}}basic-setting.html#torch-state) | Get torch desired state |
 | [`getTorchCurrentState`]({{site.ios-basic-setting}}basic-setting.html#torch-state) | Get torch current state |
@@ -63,22 +64,21 @@ breadcrumbText: iOS API Reference
 | Method | Description |
 |-----------------|---------------|
 | [`setAutoFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setautofocusposition) | Set auto focus position (Change the default auto focus position). |
-| [`setManualFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position only effect once for each time the API is called). |
+| [`setManualFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position only takes effect once for each time the API is called). |
 | [`setFocalLength`]({{site.ios-zoom-setting}}zoom-focus.html#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
 
 - Basic focus settings:
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableDCEAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enabledceautofocus) | Set true/false to turn on/off DCE auto focus. |
 | [`enableDefaultAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enabledefaultautofocus) | Set true/false to turn on/off default auto focus. |
 
-- Advanced focus settings: 
+- Advanced focus settings:
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus for every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
-| [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will auto focus when clarity change is detected. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
+| [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is enabled, camera will auto focus for every 3 seconds. |
+| [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. |
 
 ## Zoom Settings
 
