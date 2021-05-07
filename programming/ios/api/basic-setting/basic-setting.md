@@ -108,7 +108,7 @@ Swift:
 
 ## enableFastMode
 
-This API is designed for users to set up DCE fast mode. DCE fast mode will cut frames into small images that contain barcode areas to improve decode efficiency. It is recommended to be enabled when decoding a single barcode.
+This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decode efficiency. It is recommended to be enabled when decoding single barcode.
 
 Objective-C:
 
@@ -171,7 +171,7 @@ Swift:
 
 ## pauseCamera and resumeCamera
 
-Note: these APIs are created to pause & resume the camera. The camera module is still working when being paused. if you want to shut down the camera module please use `stopScanning`.
+Note: these APIs are created for pausing & resuming the camera but the camera module is still working when paused. if you want to shut down camera module please use `stopScanning`.
 
 Objective-C:
 
@@ -189,7 +189,7 @@ Swift:
 
 ## stopScanning and startScanning
 
-To control the stop & start of the camera module.
+Control the stopping & starting of the camera module.
 
 Objective-C:
 
