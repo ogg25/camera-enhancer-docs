@@ -45,6 +45,7 @@ breadcrumbText: Android API References
 | [`stopScanning`]({{site.android-basic-setting}}basic-setting.html#stopscanning-and-startscanning) | Stop scanning. |
 | [`addCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Add camera listener (on preview original, filtered or fast frames). |
 | [`removeCameraListener`]({{site.android-basic-setting}}basic-setting.html#addcameralistener) | Remove camera listener. |
+| [`AcquireListFrame`]({{site.android-basic-setting}}basic-setting.html#acquirelistframe) | Get the latest frame from the frame list when this API is activated. |
 | [`setTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Set torch state. |
 | [`getTorchDesiredState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch desired state. |
 | [`getTorchCurrentState`]({{site.android-basic-setting}}basic-setting.html#torch-state) | Get torch current state. |
@@ -65,7 +66,7 @@ Focus parameters related APIs:
 | [`setManualFocusPosition`]({{site.android-zoom-setting}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position is only effected once for each time the API is called). |
 | [`setFocalLength`]({{site.android-zoom-setting}}zoom-focus.html#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
 
-Basic focus settings: 
+Basic focus settings:
 
 | Method | Description |
 |-----------------|---------------|
@@ -74,13 +75,13 @@ Basic focus settings:
 | [`enableDefaultAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enabledefaultautofocus) | Set true/false to turn on/off default auto focus. |
 | [`getEnabledDefaultAutoFocusStatus`]({{site.android-zoom-setting}}zoom-focus.html#enabledefaultautofocus) | Get the status (on/off) of camera default auto focus. |
 
-Advanced focus settings: 
+Advanced focus settings:
 
 | Method | Description |
 |-----------------|---------------|
 | [`enableRegularAutoFocus`]({{site.android-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus every 3 seconds. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
 | [`getEnabledRegularAutoFocusStatus`]({{site.android-zoom-setting}}zoom-focus.html#enableregularautofocus) | Get the current status (on/off) of this auto focus mode. |
-| [`enableAutoFocusOnSharpnessChange`]({{site.android-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will auto focus when clarity change is detected. This focus mode will start automatically if DCE auto focus is enabled. Users can manually quit this focus mode when DCE auto focus is activated. |
+| [`enableAutoFocusOnSharpnessChange`]({{site.android-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. This focus mode will start automatically if DCE autofocus is enabled. Users can manually quit this focus mode when DCE autofocus is activated. |
 | [`getEnabledAutoFocusOnSharpnessChangeStatus`]({{site.android-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | Get the current status (on/off) of this auto focus mode. |
 
 ## Zoom Settings
