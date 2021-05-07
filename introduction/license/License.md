@@ -10,23 +10,24 @@ breadcrumbText: License Initialization
 
 ## Get a trial key
 
-- 7 days public trial key is available for every new device that have never activated Dynamsoft Camera Enhancer.
-- If your free key is expired, please email trial@dynamsoft.com and include "privateTrial" in the title to get 30 days extension.
+- A 7-day public trial key is available for every new device for first use of Dynamsoft Camera Enhancer.
+- If your free key is expired, please email trial@dynamsoft.com and include "privateTrial" in the title to get a 30 day extension.
 
-## Get full key license
+## Get a full key license
 
-- [Please contact us to purchase for full key license]({{site.contact-us}}).
+- [Please contact us to purchase for full key license]({{site.contact-us}})
 
-## Set up license from License Tracking Server
+## Set up the license from License Tracking Server
 
-Since you have set up your, you can use following code to set up your license from `LTS`:
+Once you have a license you can use following code to set up your license from `LTS`:
 
 For Android users:
- 
+
 Android sample
-```Java
+
+```java
     DMLTSConnectionParameters info = new DMLTSConnectionParameters();
-    info.organizationID = "******";
+    info.organizationID = "Your organizationID";
     mCamera.initLicenseFromLTS(info, new CameraLTSLicenseVerificationListener() {
         @Override
         public void LTSLicenseVerificationCallback(boolean b, Exception e) {
@@ -37,9 +38,10 @@ Android sample
     });
 ```
 
-For iOS users: 
+For iOS users:
 
-Objective-C sample:
+Objective-C sample
+
 ```objectivec
     iDMLTSConnectionParameters* dcePara = [[iDMLTSConnectionParameters alloc] init];
     dcePara.organizationID = @"Your organizationID";
@@ -47,8 +49,9 @@ Objective-C sample:
 ```
 
 Swift sample
-```Swift
+
+```swift
     let lts = iDMLTSConnectionParameters()
-    lts.organizationID = "200001"
+    lts.organizationID = "Your organizationID"
     dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
 ```

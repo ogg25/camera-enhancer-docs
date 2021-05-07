@@ -24,6 +24,7 @@ breadcrumbText: Android Basic Setting
 - [`stopScanning`](#stopscanning-and-startscanning)
 - [`addCameraListener`](#addcameralistener)
 - [`removeCameraListener`](#addcameralistener)
+- [`AcquireListFrame`](#acquirelistframe)
 - [`setTorchDesiredState`](#torch-state)
 - [`getTorchDesiredState`](#torch-state)
 - [`getTorchCurrentState`](#torch-state)
@@ -37,19 +38,20 @@ breadcrumbText: Android Basic Setting
 ## getDeviceLevel
 
 This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high level mobile devices. 
+
 ```java
     mCamera.getDeviceLevel();
 ```
 
 ## setAutoModeLevelParam
 
-Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are settings for device level. 
+Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are settings for device-level.
 
 | CPU & RAM | If device CPUMHz > cpuMHz2 | If device CPUMHz1 < CPUMHz < cpuMHz2 | If device CPUMHz < CPUMHz1 |
 |--|--|--|--|
-| If device ramMB > ramMB2 | Device level is high | Device CPU level is mid | Device CPU level is mid |
-| If device ramMB1 < ramMB < ramMB2 | Device CPU level is mid | Device CPU level is mid | Device CPU level is mid |
-| If device ramMB < ramMB1 | Device CPU level is mid | Device CPU level is mid | Device CPU level is low |
+| If device ramMB > ramMB2 | Device-level is high | Device-level is mid | Device-level is mid |
+| If device ramMB1 < ramMB < ramMB2 | Device-level is mid | Device-level is mid | Device-level is mid |
+| If device ramMB < ramMB1 | Device-level is mid | Device-level is mid | Device-level is low |
 
 ```java
     mCamera.setAutoModeLevelParam(int,int,int,int);
@@ -57,17 +59,23 @@ Set auto mode level parameter - cpuMHz1, cpuMHz2, ramMB1, ramMB2. These are sett
 
 ## updateCameraSetting
 
-Some detailed settings that can be updated from JSON string or file.
+There are some detailed settings that can be updated from JSON.
+
 To update from JSON string:
+
 ```java
     mCamera.updateCameraSetting("{"sensorvalue":3,"graydiffthreshold":30,"conversioncountthreshold":30,"sharpnessthreshold":0.2,"sharpnessthresholdlarge":0.4,"abssharpnessthreshold":200,"absgraythreshold":35,"claritythreshold":0.1}");
 ```
+
 To update from JSON file:
+
 ```java
     mCamera.updateCameraSetting("Your file path here.");
 ```
+
 JSON file template:
-```Json
+
+```json
     {
         //Absolute sharpness value, A threshold value for controlling filter
         "abssharpnessthreshold":200,
@@ -91,7 +99,8 @@ JSON file template:
 
 ## getVersion
 
-User can check the current DCE version by using this API.
+Users can check the current DCE version by using this API.
+
 ```java
     mCamera.getVersion();
 ```
@@ -99,6 +108,7 @@ User can check the current DCE version by using this API.
 ## Fast Mode
     
 This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
+
 ```java
     //To enable fast mode
     mCamera.enableFastMode(true);
@@ -114,30 +124,40 @@ Get the current camera status (on/off).
 ```
     
 Get the cameras desired status (on/off).
+
 ```java
     mCamera.getCameraDesireState();
 ```
-    
-Use `CameraState.CAMERA_STATE_ON` to set camera on and use `CameraState.CAMERA_STATE_OFF` to set it off.
+
+Use `CameraState.CAMERA_STATE_ON` to set the camera on and use `CameraState.CAMERA_STATE_OFF` to set it off.
+
 ```java
     mCamera.setCameraDesireState(CameraState.CAMERA_STATE_OFF);
     mCamera.setCameraDesireState(CameraState.CAMERA_STATE_ON);
 ```
-    
+
 ## pauseCamera and resumeCamera
+
 Note: these APIs are created for pausing & resuming the camera but the camera module will still be working when paused. If you want to shut down the camera module please use `stopScanning`.
+
 ```java
     mCamera.pauseCamera();
     mCamera.resumeCamera();
 ```
+
 ## stopScanning and startScanning
+
 Control the stopping & starting of the camera module.
+
 ```java
     mCamera.startScanning();
     mCamera.stopScanning();
 ```
+
 ## addCameraListener
+
 Add Camera Listener
+
 ```java
     mCamera.addCameraListener(new CameraListener() {
         @Override
@@ -155,28 +175,45 @@ Add Camera Listener
         }
     });
 ```
+
 Remove Camera Listener
+
 ```java
     mCamera.removeCameraListener();
 ```
+
+## AcquireListFrame
+
+This API is designed for users to acquire a single frame. When this API is activated, it will fetch the latest frame from the DCE frame list.
+
+```java
+    mCameraEnhancer.AcquireListFrame(true);
+```
+
 ## Torch State
 
 Get current torch state (on/off)
+
 ```java
+
     mCamera.getTorchCurrentState();
 ```
 
 Get desired torch state (on/off)
+
 ```java
     mCamera.getTorchDesiredState();
 ```
 
-Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
+Use `TorchState.TORCH_STATE_ON` to set the torch on and use `TorchState.TORCH_STATE_OFF` to set it off.
+
 ```java
     mCamera.setTorchDesiredState(TorchState.TORCH_STATE_ON);
     mCamera.setTorchDesiredState(TorchState.TORCH_STATE_OFF);
 ```
+
 ## addTorchListener
+
 ```java
     mCamera.addTorchListener(new TorchListener() {
         @Override
@@ -187,25 +224,36 @@ Use `TorchState.TORCH_STATE_ON` to set torch on and use `TorchState.TORCH_STATE_
 ```
 
 ## Camera Position
-DCE will use back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
+
+DCE will use the back camera of your mobile device by default. You can use `getCameraPosition` to check which camera is activated and use `switchCameraPosition` to change the setting.
 To get camera position:
+
 ```java
     mCamera.getCameraPosition();
 ```
+
 To change settings, use `CameraPosition.CAMERA_POSITION_USER` to activate front camera and use `CameraPosition.CAMERA_POSITION_WORLD` to activate back camera
+
 ```java
     mCamera.switchCameraPosition(CameraPosition.CAMERA_POSITION_USER);
 ```
+
 ## Resolution Settings
+
 These APIs are created for you to get or change camera resolution settings.
+
 ```java
     mCamera.getResolution();
 ```
+
 Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available on the device, the device will run the closest resolution to the chosen resolution.
+
 ```java
     mCamera.setResolution(Resolution.RESOLUTION_1080P);
 ```
-Get all available resolutions that can be setted to the current camera.
+
+Get all available resolutions that can be set to the current camera.
+
 ```java
     mCamera.getResolutionList();
 ```
