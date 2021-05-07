@@ -45,8 +45,8 @@ breadcrumbText: Parameter Reference
 
 | Member (Android Only) | Value | Description |
 |-----------------------|-------|-------------|
-| `DEVICEINFO_UNKNOWN` | -1 | Device info can't be detected. |
-| `DEVICE_LEVEL_HIGH` | 2 | Device level is detected to be high. |
-| `DEVICE_LEVEL_MID` | 1 | Device level is detected to be medium. |
-| `DEVICE_LEVEL_LOW` | 0 | Device level is detected to be low. |
-| `DEVICE_LEVEL_UNKNOWN` | -2 | Device level can't be detected. |
+| `DEVICEINFO_UNKNOWN` | -1 | The device info is unavailable. |
+| `DEVICE_LEVEL_HIGH` | 2 | The device level is detected to be high. |
+| `DEVICE_LEVEL_MID` | 1 | The device level is detected to be medium. |
+| `DEVICE_LEVEL_LOW` | 0 | The device level is detected to be low. |
+| `DEVICE_LEVEL_UNKNOWN` | -2 | The device level is unavailable. |
