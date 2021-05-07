@@ -64,7 +64,7 @@ breadcrumbText: iOS API Reference
 | Method | Description |
 |-----------------|---------------|
 | [`setAutoFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setautofocusposition) | Set auto focus position (Change the default auto focus position). |
-| [`setManualFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position only effect once for each time the API is called). |
+| [`setManualFocusPosition`]({{site.ios-zoom-setting}}zoom-focus.html#setmanualfocusposition) | Set manual focus position (This focus position only takes effect once for each time the API is called). |
 | [`setFocalLength`]({{site.ios-zoom-setting}}zoom-focus.html#setfocallength) | Set focal length between 0 to 10 to enable fixed focal length mode. In fixed focal length mode, all focus parameters can't be changed until this mode is quit. To quit fixed focal length mode, please set focal length equals to -1. |
 
 - Basic focus settings:
@@ -77,8 +77,8 @@ breadcrumbText: iOS API Reference
 
 | Method | Description |
 |-----------------|---------------|
-| [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is true, camera will auto focus for every 3 seconds. |
-| [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will auto focus when clarity change is detected. |
+| [`enableRegularAutoFocus`]({{site.ios-zoom-setting}}zoom-focus.html#enableregularautofocus) | If this is enabled, camera will auto focus for every 3 seconds. |
+| [`enableAutoFocusOnSharpnessChange`]({{site.ios-zoom-setting}}zoom-focus.html#enableautofocusonsharpnesschange) | If this is enabled, camera will autofocus when clarity change is detected. |
 
 ## Zoom Settings
 
