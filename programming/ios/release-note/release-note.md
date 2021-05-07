@@ -18,4 +18,4 @@ breadcrumbText: iOS Release Note
 - Support sensor control mode.
 - Support frame filter mode.
 - Support auto zoom mode.
-- Support fast decode mode 
+- Support fast decode mode.
