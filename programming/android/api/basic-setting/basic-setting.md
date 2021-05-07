@@ -37,7 +37,7 @@ breadcrumbText: Android Basic Setting
 
 ## getDeviceLevel
 
-This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high-level mobile devices.
+This API can help you make an evaluation on your mobile device. It will be helpful to automatically turn off DCE on high level mobile devices. 
 
 ```java
     mCamera.getDeviceLevel();
@@ -106,8 +106,8 @@ Users can check the current DCE version by using this API.
 ```
 
 ## Fast Mode
-
-This API is designed for users to set up DCE fast mode. DCE fast mode will cut frames into small images that contain barcode areas to improve decode efficiency. It is recommended to be enabled when decoding a single barcode.
+    
+This API is designed for users to setup DCE fast mode. DCE fast mode will cut frames into small images that contains barcode areas to improve decoding efficiency. It is recommended to be enabled when decoding single barcodes.
 
 ```java
     //To enable fast mode
@@ -117,14 +117,13 @@ This API is designed for users to set up DCE fast mode. DCE fast mode will cut f
 ```
 
 ## Camera State
-
-Get current status (on/off) of the camera.
-
+    
+Get the current camera status (on/off). 
 ```java
     mCamera.getCameraCurrentState();
 ```
-
-Get desired status (on/off) of the camera.
+    
+Get the cameras desired status (on/off).
 
 ```java
     mCamera.getCameraDesireState();
@@ -139,7 +138,7 @@ Use `CameraState.CAMERA_STATE_ON` to set the camera on and use `CameraState.CAME
 
 ## pauseCamera and resumeCamera
 
-Note: these APIs are created to pause & resume the camera. The camera module is still working when being paused. If you want to shut down the camera module, please use `stopScanning`.
+Note: these APIs are created for pausing & resuming the camera but the camera module will still be working when paused. If you want to shut down the camera module please use `stopScanning`.
 
 ```java
     mCamera.pauseCamera();
@@ -148,7 +147,7 @@ Note: these APIs are created to pause & resume the camera. The camera module is 
 
 ## stopScanning and startScanning
 
-To control the stop & start of the camera module.
+Control the stopping & starting of the camera module.
 
 ```java
     mCamera.startScanning();
@@ -247,7 +246,7 @@ These APIs are created for you to get or change camera resolution settings.
     mCamera.getResolution();
 ```
 
-Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available in the device, the device will run the closest resolution to the set resolution.
+Camera resolution parameters can be viewed in [`parameter-resolution`]({{site.reference}}#Resolution). If the resolution setting is not available on the device, the device will run the closest resolution to the chosen resolution.
 
 ```java
     mCamera.setResolution(Resolution.RESOLUTION_1080P);
