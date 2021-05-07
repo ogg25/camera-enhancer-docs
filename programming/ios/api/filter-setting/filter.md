@@ -15,20 +15,22 @@ breadcrumbText: iOS Filter Setting
 - [`setMaxFrameRate`](#setmaxframerate)
 
 ## enableSensorControl
-    
-Turn on(off) sensor control
+
+Turn on (off) sensor control
 
 Objective-C:
+
 ```objectivec
     [dce enableSensorControl:true];
-    //To check the status of DCE sensor control
+    //To check the status of the DCE sensor control
     BOOL res= [dce enableSensorControl];
 ```
 
 Swift:
-```Swift
+
+```swift
     dce.enableSensorControl(true)
-    //To check the status of DCE sensor control
+    //To check the status of the DCE sensor control
     let res = dce.enableSensorControl
 ```
 
@@ -37,12 +39,14 @@ Swift:
 This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50.
 
 Objective-C:
+
 ```objectivec
     [dce setSensorControlThreshold:55];
 ```
 
 Swift:
-```Swift
+
+```swift
     dce.setSensorControlThreshold(55)
 ```
 
@@ -51,16 +55,18 @@ Swift:
 Turn on(off) DCE filter (recommended to be true).
 
 Objective-C:
+
 ```objectivec
     [dce enableFrameFilter:true];
-    //To check the status of DCE frame filter
+    //To check the status of the DCE frame filter
     BOOL res= [dce enableFrameFilter];
 ```
 
 Swift:
-```Swift
+
+```swift
     dce.enableFrameFilter(true)
-    //To check the status of DCE frame filter
+    //To check the status of the DCE frame filter
     let res = dce.enableFrameFilter
 ```
 
@@ -69,11 +75,13 @@ Swift:
 Set max frame rate.
 
 Objective-C:
+
 ```objectivec
     [dce setMaxFrameRate:24];
 ```
 
 Swift:
-```Swift
+
+```swift
     dce.setMaxFrameRate(24)
 ```
