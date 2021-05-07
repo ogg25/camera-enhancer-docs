@@ -36,7 +36,7 @@ Swift:
 
 ## setSensorControlThreshold
 
-This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50 if users don't make any change.
+This API is designed for developers to apply different sensor sensitivity settings on different devices. The default value is 50.
 
 Objective-C:
 
