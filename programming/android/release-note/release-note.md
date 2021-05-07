@@ -14,8 +14,8 @@ breadcrumbText: Android Release Note
 ## 1.0 (04/29/2021)
 
 - Support basic camera control
-- Support auto focus mode.
+- Support autofocus mode.
 - Support sensor control mode.
 - Support frame filter mode.
-- Support auto zoom mode.
-- Support fast decode mode 
+- Support autozoom mode.
+- Support fast decode mode.
